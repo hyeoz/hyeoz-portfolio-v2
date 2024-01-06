@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
@@ -11,6 +12,8 @@
 =======
 >>>>>>> 9bb4ada (Initialize project using Create React App)
 =======
+=======
+>>>>>>> d4d3ae4 (Initialize project using Create React App)
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 >>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
@@ -165,11 +168,14 @@ code {
 =======
 >>>>>>> 59bc721 (chore: 메인 화면 정리)
 =======
+=======
+>>>>>>> 3e6342d (Initialize project using Create React App)
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+<<<<<<< HEAD
 =======
 
   color-scheme: light dark;
@@ -179,10 +185,13 @@ body {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 3e6342d (Initialize project using Create React App)
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -256,6 +265,17 @@ button:focus-visible {
 =======
 =======
 >>>>>>> 129e54b (chore: 메인 화면 정리)
+<<<<<<< HEAD
 >>>>>>> 59bc721 (chore: 메인 화면 정리)
+<<<<<<< HEAD
 >>>>>>> 041f2c7 (chore: 메인 화면 정리)
+=======
+=======
+=======
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+>>>>>>> 3e6342d (Initialize project using Create React App)
+>>>>>>> 94e3fda (Initialize project using Create React App)
+>>>>>>> d4d3ae4 (Initialize project using Create React App)
 }
