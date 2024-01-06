@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 9bb4ada (Initialize project using Create React App)
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -44,6 +47,7 @@ section {
 a {
   color: #ff8b94;
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
@@ -91,6 +95,8 @@ a {
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 9bb4ada (Initialize project using Create React App)
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -155,5 +161,48 @@ a {
 a {
   color: #ff8b94;
 >>>>>>> f8bbc7b (chore: 메인 화면 정리)
+<<<<<<< HEAD
 >>>>>>> a0bee0f (chore: 메인 화면 정리)
+=======
+=======
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+>>>>>>> 3e6342d (Initialize project using Create React App)
+>>>>>>> 3c9ec7d (Initialize project using Create React App)
+>>>>>>> 9bb4ada (Initialize project using Create React App)
 }

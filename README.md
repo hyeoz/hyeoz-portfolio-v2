@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + TypeScript + Vite Custom boilerplate
 
 ```
@@ -24,6 +25,8 @@ npm run dev
 >>>>>>> 392f8d8 (Update README.md)
 =======
 >>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 9bb4ada (Initialize project using Create React App)
 # hyeoz's portfolio
 >>>>>>> a08e950 (Update README.md)
 
@@ -168,6 +171,8 @@ npm run dev
 =======
 # React + TypeScript + Vite
 =======
+=======
+>>>>>>> 3c9ec7d (Initialize project using Create React App)
 # React + TypeScript + Vite Custom boilerplate
 >>>>>>> 00ada06 (Update README.md)
 
@@ -176,6 +181,7 @@ npm run dev
 ```
 로 프로젝트를 시작해주세요!
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
@@ -186,4 +192,57 @@ npm run dev
 =======
 =======
 >>>>>>> 00ada06 (Update README.md)
+<<<<<<< HEAD
 >>>>>>> cbf04a9 (Update README.md)
+=======
+=======
+=======
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+>>>>>>> 3e6342d (Initialize project using Create React App)
+>>>>>>> 3c9ec7d (Initialize project using Create React App)
+>>>>>>> 9bb4ada (Initialize project using Create React App)

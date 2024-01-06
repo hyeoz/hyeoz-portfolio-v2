@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 9bb4ada (Initialize project using Create React App)
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,6 +19,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9bb4ada (Initialize project using Create React App)
 =======
 >>>>>>> a0bee0f (chore: 메인 화면 정리)
 =======
@@ -139,5 +145,24 @@ code {
 =======
 =======
 >>>>>>> f8bbc7b (chore: 메인 화면 정리)
+<<<<<<< HEAD
 >>>>>>> a0bee0f (chore: 메인 화면 정리)
+=======
+=======
+=======
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+>>>>>>> 3e6342d (Initialize project using Create React App)
+>>>>>>> 3c9ec7d (Initialize project using Create React App)
+>>>>>>> 9bb4ada (Initialize project using Create React App)
 }
