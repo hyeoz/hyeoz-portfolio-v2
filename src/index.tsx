@@ -5,12 +5,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 9bb4ada (Initialize project using Create React App)
 =======
 >>>>>>> 36d606e (add: r3f 기본 세팅)
 =======
 >>>>>>> d4d3ae4 (Initialize project using Create React App)
+=======
+>>>>>>> be6ed59 (add: r3f 기본 세팅)
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -64,6 +67,7 @@ const root = ReactDOM.createRoot(
 >>>>>>> 840b172 (add: r3f 기본 세팅)
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
+<<<<<<< HEAD
 >>>>>>> 9bb4ada (Initialize project using Create React App)
 =======
 >>>>>>> 36d606e (add: r3f 기본 세팅)
@@ -71,6 +75,16 @@ const root = ReactDOM.createRoot(
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
 >>>>>>> d4d3ae4 (Initialize project using Create React App)
+=======
+=======
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+>>>>>>> 840b172 (add: r3f 기본 세팅)
+>>>>>>> be6ed59 (add: r3f 기본 세팅)
 );
 root.render(
   <React.StrictMode>
@@ -84,6 +98,7 @@ root.render(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 36d606e (add: r3f 기본 세팅)
@@ -93,6 +108,8 @@ root.render(
 =======
 >>>>>>> 9bb4ada (Initialize project using Create React App)
 =======
+=======
+>>>>>>> be6ed59 (add: r3f 기본 세팅)
 =======
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
@@ -118,6 +135,7 @@ reportWebVitals();
 >>>>>>> 3e6342d (Initialize project using Create React App)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9bb4ada (Initialize project using Create React App)
 =======
 =======
@@ -125,3 +143,7 @@ reportWebVitals();
 >>>>>>> 36d606e (add: r3f 기본 세팅)
 =======
 >>>>>>> d4d3ae4 (Initialize project using Create React App)
+=======
+=======
+>>>>>>> 840b172 (add: r3f 기본 세팅)
+>>>>>>> be6ed59 (add: r3f 기본 세팅)

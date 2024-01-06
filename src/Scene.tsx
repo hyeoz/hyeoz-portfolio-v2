@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
 import Html from "./components/Html";
 import { Suspense } from "react";
@@ -22,6 +23,8 @@ import Html from "./components/Html";
 >>>>>>> 36d606e (add: r3f 기본 세팅)
 =======
 >>>>>>> 5daa34b (chore: change boilerplate)
+=======
+>>>>>>> be6ed59 (add: r3f 기본 세팅)
 import { Scroll, ScrollControls } from "@react-three/drei";
 import Html from "./components/Html";
 =======
@@ -31,6 +34,8 @@ import Html from "./components/Html";
 >>>>>>> 2180c30 (add: r3f 기본 세팅)
 =======
 >>>>>>> 850a42e (chore: change boilerplate)
+=======
+>>>>>>> 6396a4f (add: r3f 기본 세팅)
 import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
 import Html from "./components/Html";
 import { Suspense } from "react";
@@ -84,8 +89,18 @@ import Laptop from "./components/Laptop";
 import Ball from "./components/Ball";
 >>>>>>> c6989d8 (chore: change boilerplate)
 >>>>>>> 6ca9d52 (chore: change boilerplate)
+<<<<<<< HEAD
 >>>>>>> 850a42e (chore: change boilerplate)
+<<<<<<< HEAD
 >>>>>>> 5daa34b (chore: change boilerplate)
+=======
+=======
+=======
+import { Scroll, ScrollControls } from "@react-three/drei";
+import Html from "./components/Html";
+>>>>>>> 840b172 (add: r3f 기본 세팅)
+>>>>>>> 6396a4f (add: r3f 기본 세팅)
+>>>>>>> be6ed59 (add: r3f 기본 세팅)
 
 function Scene() {
   return (
@@ -97,6 +112,7 @@ function Scene() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Scroll>
         <Laptop />
         {/* <Ball /> */}
@@ -125,6 +141,8 @@ function Scene() {
 >>>>>>> 36d606e (add: r3f 기본 세팅)
 =======
 >>>>>>> 5daa34b (chore: change boilerplate)
+=======
+>>>>>>> be6ed59 (add: r3f 기본 세팅)
       <Scroll></Scroll>
 =======
 =======
@@ -133,6 +151,8 @@ function Scene() {
 >>>>>>> 2180c30 (add: r3f 기본 세팅)
 =======
 >>>>>>> 850a42e (chore: change boilerplate)
+=======
+>>>>>>> 6396a4f (add: r3f 기본 세팅)
       <Scroll>
         <Laptop />
         {/* <Ball /> */}
@@ -166,8 +186,17 @@ function Scene() {
       </Scroll>
 >>>>>>> c6989d8 (chore: change boilerplate)
 >>>>>>> 6ca9d52 (chore: change boilerplate)
+<<<<<<< HEAD
 >>>>>>> 850a42e (chore: change boilerplate)
+<<<<<<< HEAD
 >>>>>>> 5daa34b (chore: change boilerplate)
+=======
+=======
+=======
+      <Scroll></Scroll>
+>>>>>>> 840b172 (add: r3f 기본 세팅)
+>>>>>>> 6396a4f (add: r3f 기본 세팅)
+>>>>>>> be6ed59 (add: r3f 기본 세팅)
       <Scroll html>
         <Html />
       </Scroll>
