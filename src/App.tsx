@@ -1,19 +1,12 @@
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 import Scene from './Scene';
-// import { OrbitControls } from "@react-three/drei";
 
 function App() {
   return (
-    <Canvas
-      style={{
-        width: '100vw',
-        height: '100vh',
-      }}
-    >
+    <Canvas>
       <ambientLight />
-      {/* <OrbitControls /> */}
       <Suspense fallback={null}>
         <Scene />
       </Suspense>

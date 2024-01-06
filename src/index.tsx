@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -30,12 +31,21 @@ const root = ReactDOM.createRoot(
 >>>>>>> 840b172 (add: r3f 기본 세팅)
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
+=======
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+>>>>>>> 840b172 (add: r3f 기본 세팅)
 );
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,3 +63,5 @@ reportWebVitals();
 >>>>>>> 840b172 (add: r3f 기본 세팅)
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
+=======
+>>>>>>> 840b172 (add: r3f 기본 세팅)
