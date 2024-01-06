@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 #root {
@@ -24,6 +25,8 @@ section {
 a {
   color: #ff8b94;
 =======
+=======
+>>>>>>> 3e6342d (Initialize project using Create React App)
 .App {
   text-align: center;
 }
@@ -61,6 +64,7 @@ a {
   to {
     transform: rotate(360deg);
   }
+<<<<<<< HEAD
 >>>>>>> 3e6342d (Initialize project using Create React App)
 =======
 .logo {
@@ -104,4 +108,6 @@ a {
 a {
   color: #ff8b94;
 >>>>>>> 129e54b (chore: 메인 화면 정리)
+=======
+>>>>>>> 3e6342d (Initialize project using Create React App)
 }
