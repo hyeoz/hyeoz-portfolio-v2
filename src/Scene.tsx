@@ -1,18 +1,27 @@
+<<<<<<< HEAD
 import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
 import Html from "./components/Html";
 import { Suspense } from "react";
 import Particles from "./components/Particles";
 import Laptop from "./components/Laptop";
 import Ball from "./components/Ball";
+=======
+import { Scroll, ScrollControls } from "@react-three/drei";
+import Html from "./components/Html";
+>>>>>>> 840b172 (add: r3f 기본 세팅)
 
 function Scene() {
   return (
     <ScrollControls pages={5}>
+<<<<<<< HEAD
       <Scroll>
         <Laptop />
         {/* <Ball /> */}
         <Particles size={7000} />
       </Scroll>
+=======
+      <Scroll></Scroll>
+>>>>>>> 840b172 (add: r3f 기본 세팅)
       <Scroll html>
         <Html />
       </Scroll>
