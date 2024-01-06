@@ -5,7 +5,12 @@ import Scene from "./Scene";
 
 function App() {
   return (
-    <Canvas>
+    <Canvas
+      style={{
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
       <ambientLight />
       <Suspense fallback={null}>
         <Scene />
