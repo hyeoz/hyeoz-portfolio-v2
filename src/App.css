@@ -28,6 +28,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 129e54b (chore: 메인 화면 정리)
 =======
@@ -40,10 +41,19 @@
 >>>>>>> a0bee0f (chore: 메인 화면 정리)
 =======
 =======
+>>>>>>> 041f2c7 (chore: 메인 화면 정리)
+=======
 >>>>>>> f8bbc7b (chore: 메인 화면 정리)
 =======
 >>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
+=======
+=======
+=======
+>>>>>>> 129e54b (chore: 메인 화면 정리)
+>>>>>>> 59bc721 (chore: 메인 화면 정리)
+>>>>>>> 041f2c7 (chore: 메인 화면 정리)
 section {
   height: 100vh;
   display: flex;
@@ -52,8 +62,11 @@ section {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a0bee0f (chore: 메인 화면 정리)
+=======
+>>>>>>> 041f2c7 (chore: 메인 화면 정리)
 }
 
 a {
@@ -168,6 +181,8 @@ a {
 >>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
 =======
 =======
+=======
+>>>>>>> 59bc721 (chore: 메인 화면 정리)
 }
 
 a {
@@ -257,6 +272,18 @@ a {
 .read-the-docs {
   color: #888;
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
+=======
+=======
+=======
+}
+
+a {
+  color: #ff8b94;
+>>>>>>> 129e54b (chore: 메인 화면 정리)
+>>>>>>> 59bc721 (chore: 메인 화면 정리)
+>>>>>>> 041f2c7 (chore: 메인 화면 정리)
 }
