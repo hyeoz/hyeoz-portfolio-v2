@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -10,6 +13,7 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -67,6 +71,8 @@ a {
 <<<<<<< HEAD
 >>>>>>> 3e6342d (Initialize project using Create React App)
 =======
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -101,6 +107,7 @@ a {
 
 .read-the-docs {
   color: #888;
+<<<<<<< HEAD
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
 }
@@ -110,4 +117,6 @@ a {
 >>>>>>> 129e54b (chore: 메인 화면 정리)
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 }

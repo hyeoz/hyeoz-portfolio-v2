@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -19,6 +23,8 @@ body {
     sans-serif;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -26,13 +32,17 @@ body {
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+<<<<<<< HEAD
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 code {
@@ -40,6 +50,8 @@ code {
     monospace;
 >>>>>>> 3e6342d (Initialize project using Create React App)
 =======
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 a {
   font-weight: 500;
   color: #646cff;
@@ -92,6 +104,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+<<<<<<< HEAD
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 129e54b (chore: 메인 화면 정리)
@@ -100,4 +113,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 >>>>>>> 3e6342d (Initialize project using Create React App)
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 }
