@@ -18,12 +18,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 129e54b (chore: 메인 화면 정리)
 =======
 >>>>>>> aa23adf (chore: 메인 화면 정리)
 =======
 >>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
+=======
+=======
+>>>>>>> f8bbc7b (chore: 메인 화면 정리)
+>>>>>>> a0bee0f (chore: 메인 화면 정리)
 section {
   height: 100vh;
   display: flex;
@@ -31,6 +36,9 @@ section {
   justify-content: center;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a0bee0f (chore: 메인 화면 정리)
 }
 
 a {
@@ -138,5 +146,14 @@ a {
 >>>>>>> aa23adf (chore: 메인 화면 정리)
 =======
 >>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
+=======
+=======
+}
+
+a {
+  color: #ff8b94;
+>>>>>>> f8bbc7b (chore: 메인 화면 정리)
+>>>>>>> a0bee0f (chore: 메인 화면 정리)
 }
