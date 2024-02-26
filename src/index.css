@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
@@ -17,10 +18,17 @@
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 >>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
+=======
+=======
+>>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+>>>>>>> f92496d (init: react + vite + ts 기본 세팅)
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +54,8 @@ body {
     sans-serif;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f92496d (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 =======
@@ -168,6 +178,8 @@ code {
 =======
 >>>>>>> 59bc721 (chore: 메인 화면 정리)
 =======
+>>>>>>> 9b7452b (init: react + vite + ts 기본 세팅)
+=======
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
 body {
@@ -177,6 +189,8 @@ body {
     sans-serif;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -184,13 +198,17 @@ body {
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+<<<<<<< HEAD
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 code {
@@ -204,6 +222,8 @@ code {
 =======
 =======
 =======
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 a {
   font-weight: 500;
   color: #646cff;
@@ -256,6 +276,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+<<<<<<< HEAD
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 <<<<<<< HEAD
 >>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
@@ -276,6 +297,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 >>>>>>> 3e6342d (Initialize project using Create React App)
+<<<<<<< HEAD
 >>>>>>> 94e3fda (Initialize project using Create React App)
+<<<<<<< HEAD
 >>>>>>> d4d3ae4 (Initialize project using Create React App)
+=======
+=======
+=======
+>>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+>>>>>>> 9b7452b (init: react + vite + ts 기본 세팅)
+>>>>>>> f92496d (init: react + vite + ts 기본 세팅)
 }
