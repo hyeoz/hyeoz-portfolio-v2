@@ -7,6 +7,7 @@
   line-height: 1.5;
   font-weight: 400;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 body {
   margin: 0;
@@ -85,4 +86,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 129e54b (chore: 메인 화면 정리)
 }
