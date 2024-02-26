@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + TypeScript + Vite Custom boilerplate
 
 ```
@@ -31,6 +32,8 @@ npm run dev
 >>>>>>> 9bb4ada (Initialize project using Create React App)
 =======
 >>>>>>> 99d80f9 (Update README.md)
+=======
+>>>>>>> f1aec22 (Update README.md)
 # hyeoz's portfolio
 >>>>>>> a08e950 (Update README.md)
 
@@ -141,6 +144,8 @@ npm run dev
 >>>>>>> dd1fbc1 (Update README.md)
 =======
 >>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> d26d275 (Update README.md)
 # React + TypeScript + Vite Custom boilerplate
 >>>>>>> 00ada06 (Update README.md)
 
@@ -211,6 +216,8 @@ npm run dev
 =======
 =======
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 392f8d8 (Update README.md)
 # hyeoz's portfolio
 >>>>>>> a08e950 (Update README.md)
 
@@ -274,36 +281,31 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 =======
 =======
 # React + TypeScript + Vite
+=======
+# React + TypeScript + Vite Custom boilerplate
+>>>>>>> 00ada06 (Update README.md)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
 ```
+npm run dev
+```
+로 프로젝트를 시작해주세요!
 
+<<<<<<< HEAD
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 >>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
+=======
+=======
+=======
+=======
+>>>>>>> 00ada06 (Update README.md)
+>>>>>>> 392f8d8 (Update README.md)
+>>>>>>> d26d275 (Update README.md)
+>>>>>>> f1aec22 (Update README.md)
