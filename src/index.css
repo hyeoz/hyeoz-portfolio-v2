@@ -14,6 +14,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
@@ -26,6 +27,9 @@ body {
 =======
 =======
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+=======
+=======
+>>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -34,15 +38,19 @@ body {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 3e6342d (Initialize project using Create React App)
 =======
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +61,8 @@ code {
 =======
 =======
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+=======
+>>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
 a {
   font-weight: 500;
   color: #646cff;
@@ -106,6 +116,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 129e54b (chore: 메인 화면 정리)
@@ -118,4 +129,7 @@ code {
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> aa23adf (chore: 메인 화면 정리)
+=======
+>>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
+>>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
 }
