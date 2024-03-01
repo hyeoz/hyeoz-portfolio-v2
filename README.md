@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + TypeScript + Vite Custom boilerplate
 
 ```
@@ -27,6 +28,8 @@ npm run dev
 >>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 9bb4ada (Initialize project using Create React App)
+=======
+>>>>>>> 99d80f9 (Update README.md)
 # hyeoz's portfolio
 >>>>>>> a08e950 (Update README.md)
 
@@ -131,6 +134,8 @@ npm run dev
 =======
 # React + TypeScript + Vite
 =======
+=======
+>>>>>>> dd1fbc1 (Update README.md)
 # React + TypeScript + Vite Custom boilerplate
 >>>>>>> 00ada06 (Update README.md)
 
@@ -198,21 +203,26 @@ npm run dev
 =======
 =======
 # Getting Started with Create React App
+=======
+# hyeoz's portfolio
+>>>>>>> a08e950 (Update README.md)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이 프로젝트는 [custom-boilerplate](https://github.com/hyeoz/custom-boilerplate) 를 이용하여 제작되었고,
+[]() 를 이용하여 배포되었습니다.
 
-## Available Scripts
+## If you want to run this project
 
-In the project directory, you can run:
+프로젝트 루트 디렉토리에서 해당 명령어를 실행시켜주세요!
 
-### `npm start`
+### `npm run dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+프로젝트를 로컬에서 실행 가능합니다. \
+실행 후 [http://localhost:3000](http://localhost:3000) 에서 확인 가능합니다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+프로젝트를 실행하면 페이지가 새로고침 됩니다.
+개인적으로 수정 및 확인은 가능하지만, **재배포는 불가합니다.**
 
+<<<<<<< HEAD
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -239,5 +249,13 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 >>>>>>> 3e6342d (Initialize project using Create React App)
+<<<<<<< HEAD
 >>>>>>> 3c9ec7d (Initialize project using Create React App)
+<<<<<<< HEAD
 >>>>>>> 9bb4ada (Initialize project using Create React App)
+=======
+=======
+=======
+>>>>>>> a08e950 (Update README.md)
+>>>>>>> dd1fbc1 (Update README.md)
+>>>>>>> 99d80f9 (Update README.md)
