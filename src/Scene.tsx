@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
 import Html from "./components/Html";
 import { Suspense } from "react";
@@ -25,6 +26,8 @@ import Html from "./components/Html";
 >>>>>>> 5daa34b (chore: change boilerplate)
 =======
 >>>>>>> be6ed59 (add: r3f 기본 세팅)
+=======
+>>>>>>> d73b27c (chore: change boilerplate)
 import { Scroll, ScrollControls } from "@react-three/drei";
 import Html from "./components/Html";
 =======
@@ -36,6 +39,8 @@ import Html from "./components/Html";
 >>>>>>> 850a42e (chore: change boilerplate)
 =======
 >>>>>>> 6396a4f (add: r3f 기본 세팅)
+=======
+>>>>>>> f30e4ca (chore: change boilerplate)
 import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
 import Html from "./components/Html";
 import { Suspense } from "react";
@@ -99,8 +104,26 @@ import Ball from "./components/Ball";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import Html from "./components/Html";
 >>>>>>> 840b172 (add: r3f 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> 6396a4f (add: r3f 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> be6ed59 (add: r3f 기본 세팅)
+=======
+=======
+=======
+import { Scroll, ScrollControls } from "@react-three/drei";
+import Html from "./components/Html";
+=======
+import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
+import Html from "./components/Html";
+import { Suspense } from "react";
+import Particles from "./components/Particles";
+import Laptop from "./components/Laptop";
+import Ball from "./components/Ball";
+>>>>>>> c6989d8 (chore: change boilerplate)
+>>>>>>> 24dbc91 (chore: change boilerplate)
+>>>>>>> f30e4ca (chore: change boilerplate)
+>>>>>>> d73b27c (chore: change boilerplate)
 
 function Scene() {
   return (
@@ -113,6 +136,7 @@ function Scene() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Scroll>
         <Laptop />
         {/* <Ball /> */}
@@ -143,6 +167,8 @@ function Scene() {
 >>>>>>> 5daa34b (chore: change boilerplate)
 =======
 >>>>>>> be6ed59 (add: r3f 기본 세팅)
+=======
+>>>>>>> d73b27c (chore: change boilerplate)
       <Scroll></Scroll>
 =======
 =======
@@ -153,6 +179,8 @@ function Scene() {
 >>>>>>> 850a42e (chore: change boilerplate)
 =======
 >>>>>>> 6396a4f (add: r3f 기본 세팅)
+=======
+>>>>>>> f30e4ca (chore: change boilerplate)
       <Scroll>
         <Laptop />
         {/* <Ball /> */}
@@ -195,8 +223,24 @@ function Scene() {
 =======
       <Scroll></Scroll>
 >>>>>>> 840b172 (add: r3f 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> 6396a4f (add: r3f 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> be6ed59 (add: r3f 기본 세팅)
+=======
+=======
+=======
+      <Scroll></Scroll>
+=======
+      <Scroll>
+        <Laptop />
+        {/* <Ball /> */}
+        <Particles size={7000} />
+      </Scroll>
+>>>>>>> c6989d8 (chore: change boilerplate)
+>>>>>>> 24dbc91 (chore: change boilerplate)
+>>>>>>> f30e4ca (chore: change boilerplate)
+>>>>>>> d73b27c (chore: change boilerplate)
       <Scroll html>
         <Html />
       </Scroll>

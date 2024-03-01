@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
 =======
@@ -19,6 +20,8 @@
 =======
 >>>>>>> f92496d (init: react + vite + ts 기본 세팅)
 =======
+>>>>>>> d73b27c (chore: change boilerplate)
+=======
 >>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
 =======
 >>>>>>> 850a42e (chore: change boilerplate)
@@ -27,7 +30,12 @@
 =======
 =======
 >>>>>>> 9b7452b (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> f92496d (init: react + vite + ts 기본 세팅)
+=======
+=======
+>>>>>>> f30e4ca (chore: change boilerplate)
+>>>>>>> d73b27c (chore: change boilerplate)
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 =======
@@ -84,8 +92,18 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> 9b7452b (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> f92496d (init: react + vite + ts 기본 세팅)
+=======
+=======
+=======
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+>>>>>>> 24dbc91 (chore: change boilerplate)
+>>>>>>> f30e4ca (chore: change boilerplate)
+>>>>>>> d73b27c (chore: change boilerplate)
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -99,6 +117,7 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6ca9d52 (chore: change boilerplate)
 =======
@@ -115,6 +134,8 @@ export default defineConfig({
 =======
 >>>>>>> f92496d (init: react + vite + ts 기본 세팅)
 =======
+>>>>>>> d73b27c (chore: change boilerplate)
+=======
 >>>>>>> c6989d8 (chore: change boilerplate)
 =======
 >>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
@@ -127,7 +148,16 @@ export default defineConfig({
 =======
 >>>>>>> 6ca9d52 (chore: change boilerplate)
 >>>>>>> 850a42e (chore: change boilerplate)
+<<<<<<< HEAD
 >>>>>>> 5daa34b (chore: change boilerplate)
+=======
+=======
+=======
+>>>>>>> 6ca9d52 (chore: change boilerplate)
+=======
+>>>>>>> 24dbc91 (chore: change boilerplate)
+>>>>>>> f30e4ca (chore: change boilerplate)
+>>>>>>> d73b27c (chore: change boilerplate)
   server: {
     port: 3000,
   },
@@ -138,6 +168,7 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 })
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
@@ -159,6 +190,8 @@ export default defineConfig({
 =======
 >>>>>>> 5daa34b (chore: change boilerplate)
 =======
+>>>>>>> d73b27c (chore: change boilerplate)
+=======
 })
 >>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
 =======
@@ -176,6 +209,8 @@ export default defineConfig({
 =======
 =======
 =======
+>>>>>>> f30e4ca (chore: change boilerplate)
+=======
 })
 >>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 =======
@@ -189,5 +224,13 @@ export default defineConfig({
 =======
 })
 >>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> 9b7452b (init: react + vite + ts 기본 세팅)
+<<<<<<< HEAD
 >>>>>>> f92496d (init: react + vite + ts 기본 세팅)
+=======
+=======
+=======
+>>>>>>> 24dbc91 (chore: change boilerplate)
+>>>>>>> f30e4ca (chore: change boilerplate)
+>>>>>>> d73b27c (chore: change boilerplate)
