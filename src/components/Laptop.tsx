@@ -1,10 +1,10 @@
 import { useScroll } from '@react-three/drei';
-import { GroupProps, useFrame, useLoader } from '@react-three/fiber';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import { useFrame, useLoader } from '@react-three/fiber';
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 
-export default function Laptop(props: GroupProps) {
+export default function Laptop(props: any) {
   const scroll = useScroll();
-  const fbx = useLoader(FBXLoader, 'baseball.fbx.fbx');
+  const fbx = useLoader(FBXLoader, 'laptop.fbx');
   useFrame(() => {
     fbx.rotation.x = scroll.offset * 30;
     fbx.rotation.y = scroll.offset * 30;
