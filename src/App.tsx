@@ -10,9 +10,10 @@ function App() {
       style={{
         width: '100vw',
         height: '100vh',
+        backgroundColor: '#000',
       }}
     >
-      <ambientLight />
+      {/* <ambientLight /> */}
       {/* <OrbitControls /> */}
       <Suspense fallback={null}>
         <Scene />

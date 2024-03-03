@@ -1,8 +1,8 @@
 import { useScroll } from '@react-three/drei';
-import { useFrame, useLoader } from '@react-three/fiber';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
+import { GroupProps, useFrame, useLoader } from '@react-three/fiber';
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 
-export default function Laptop(props: any) {
+export default function Laptop(props: GroupProps) {
   const scroll = useScroll();
   const fbx = useLoader(FBXLoader, 'laptop.fbx');
   useFrame(() => {

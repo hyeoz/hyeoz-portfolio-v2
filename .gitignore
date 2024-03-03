@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -13,10 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-=======
-<<<<<<< HEAD
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
->>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 
 /node_modules
 dist
@@ -29,35 +18,6 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> d4d3ae4 (Initialize project using Create React App)
-=======
->>>>>>> f92496d (init: react + vite + ts 기본 세팅)
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
->>>>>>> 3e6342d (Initialize project using Create React App)
 .env.local
 .env.development.local
 .env.test.local
@@ -66,77 +26,6 @@ dist-ssr
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
-=======
-=======
->>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 94e3fda (Initialize project using Create React App)
-=======
->>>>>>> 9b7452b (init: react + vite + ts 기본 세팅)
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-=======
-<<<<<<< HEAD
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
->>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
-
-/node_modules
-dist
-dist-ssr
-*.local
-.env
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
->>>>>>> 3e6342d (Initialize project using Create React App)
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
-=======
 # Logs
 logs
 *.log
@@ -157,69 +46,8 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
->>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
->>>>>>> f92496d (init: react + vite + ts 기본 세팅)
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f92496d (init: react + vite + ts 기본 세팅)
->>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
->>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 3e6342d (Initialize project using Create React App)
-=======
-=======
->>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
->>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
->>>>>>> 622a969 (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
-<<<<<<< HEAD
->>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
-=======
-=======
-=======
->>>>>>> 9b7452b (init: react + vite + ts 기본 세팅)
-=======
->>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
->>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
-<<<<<<< HEAD
->>>>>>> f6d8ca3 (init: react + vite + ts 기본 세팅)
-<<<<<<< HEAD
->>>>>>> ab34f08 (init: react + vite + ts 기본 세팅)
-=======
-=======
-=======
->>>>>>> 3e6342d (Initialize project using Create React App)
-<<<<<<< HEAD
->>>>>>> 94e3fda (Initialize project using Create React App)
-<<<<<<< HEAD
->>>>>>> d4d3ae4 (Initialize project using Create React App)
-=======
-=======
-=======
->>>>>>> 8a7bf11 (init: react + vite + ts 기본 세팅)
->>>>>>> 7d5cda9 (init: react + vite + ts 기본 세팅)
->>>>>>> 9b7452b (init: react + vite + ts 기본 세팅)
->>>>>>> f92496d (init: react + vite + ts 기본 세팅)
