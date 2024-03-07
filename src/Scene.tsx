@@ -6,7 +6,7 @@ import Html from './components/Html';
 import Laptop from './components/Laptop';
 // import Ball from './components/Ball';
 import ScrollManagre from './components/ScrollManager';
-import Airplane from './components/Airplane';
+// import Airplane from './components/Airplane';
 
 function Scene() {
   const [section, setSection] = useState(0);
