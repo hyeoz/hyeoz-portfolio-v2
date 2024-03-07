@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Group, Object3DEventMap } from 'three';
+import { Group, Material, Object3D, Object3DEventMap } from 'three';
 import { useAnimations, useGLTF, useScroll } from '@react-three/drei';
 import { GroupProps } from '@react-three/fiber';
 import gsap from 'gsap';
@@ -9,7 +9,13 @@ export const FLOOR_HEIGHT = 2.3;
 export const MB_FLOORS = 3;
 
 export default function Laptop(props: GroupProps) {
-  const { nodes, materials } = useGLTF('./models/laptop-silver.glb');
+  const {
+    nodes,
+    materials,
+  }: {
+    nodes: { [name: string]: Object3D & { geometry?: any } };
+    materials: { [name: string]: Material };
+  } = useGLTF('./models/laptop-silver.glb');
   const ref = useRef<Group<Object3DEventMap> | any>(null);
 
   // gsap.timeline({
