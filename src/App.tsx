@@ -13,7 +13,6 @@ function App() {
         // backgroundColor: '#000',
       }}
     >
-      <ambientLight />
       {/* <OrbitControls /> */}
       <Suspense fallback={null}>
         <Scene />

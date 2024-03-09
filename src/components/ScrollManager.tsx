@@ -60,7 +60,7 @@ export default function ScrollManagre({
     ) {
       setSection(3);
     }
-    // TODO BOTTOM TO TOP
+    // NOTE BOTTOM TO TOP
     // 첫번째 섹션 이동
     if (
       scroll.scroll.current < lastScroll.current &&
