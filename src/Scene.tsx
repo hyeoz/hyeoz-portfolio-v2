@@ -6,6 +6,7 @@ import Html from './components/Html';
 import Laptop from './components/Laptop';
 // import Ball from './components/Ball';
 import ScrollManagre from './components/ScrollManager';
+import Baseball from './components/Baseball';
 // import Airplane from './components/Airplane';
 
 function Scene() {
@@ -15,12 +16,10 @@ function Scene() {
     <ScrollControls pages={4} damping={0.1}>
       <ScrollManagre section={section} setSection={setSection} />
       <Scroll>
-        {/* <Airplane position={[0, 0, 0]} /> */}
+        <Baseball />
+        {/* <Laptop />
         <Laptop />
-        <Laptop />
-        <Laptop />
-        <Laptop />
-        {/* <Ball /> */}
+        <Laptop /> */}
         {/* <Particles size={7000} /> */}
       </Scroll>
       <Scroll html>
