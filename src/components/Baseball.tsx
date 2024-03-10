@@ -10,10 +10,11 @@ export default function Baseball(props: GroupProps) {
     nodes: { [name: string]: Object3D & { geometry?: any } };
     materials: { [name: string]: Material };
   } = useGLTF('./models/baseball-inclue.glb');
+
   return (
     <>
       <Environment preset="forest" />
-      <group {...props} dispose={null}>
+      <group {...props} dispose={null} position={[0, -15, 0]}>
         <group
           position={[-2.299, 0.047, 0.88]}
           rotation={[-0.14, 0.201, 0.052]}

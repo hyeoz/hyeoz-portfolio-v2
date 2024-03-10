@@ -18,10 +18,10 @@ function Scene() {
     <ScrollControls pages={4} damping={0.1}>
       <ScrollManagre section={section} setSection={setSection} />
       <Scroll>
-        {/* <Baseball /> */}
-        {/* <Football /> */}
-        {/* <Laptop /> */}
+        <Laptop />
         <Airplane />
+        <Baseball />
+        <Football />
         {/* <Particles size={7000} /> */}
       </Scroll>
       <Scroll html>
