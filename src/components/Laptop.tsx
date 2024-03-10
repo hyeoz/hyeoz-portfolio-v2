@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 import {
   Environment,
@@ -14,15 +14,25 @@ export const FLOOR_HEIGHT = 2.3;
 export const MB_FLOORS = 3;
 
 export default function Laptop(props: GroupProps) {
+  const group = useRef<Group<Object3DEventMap> | any>(null);
   const {
     nodes,
     materials,
+    animations,
   }: {
     nodes: { [name: string]: Object3D & { geometry?: any } };
     materials: { [name: string]: Material };
-  } = useGLTF('./models/laptop-silver.glb');
-  const ref = useRef<Group<Object3DEventMap> | any>(null);
+    animations: any;
+  } = useGLTF('./models/laptop-rose.glb');
 
+  const { actions, names, mixer } = useAnimations(animations, group);
+  console.log({ actions, names });
+  useEffect(() => {
+    if (!group) return;
+    group.current?.rotateX((1.0 * Math.PI) / 10); // to convert from Deg to Rad.
+    actions[names[0]]?.reset().play();
+    actions[names[1]]?.reset().play();
+  }, []);
   // gsap.timeline({
   //   scrollTrigger: {
   //     scrub: 1,
@@ -54,7 +64,7 @@ export default function Laptop(props: GroupProps) {
   return (
     <>
       <Environment preset="sunset" />
-      <group ref={ref} {...props} dispose={null} scale={3}>
+      <group ref={group} {...props} dispose={null} scale={3}>
         <group name="Scene">
           <mesh
             name="Plane"
@@ -103,4 +113,4 @@ export default function Laptop(props: GroupProps) {
   );
 }
 
-useGLTF.preload('./models/laptop-silver.glb');
+useGLTF.preload('./models/laptop-rose.glb');

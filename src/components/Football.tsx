@@ -13,7 +13,7 @@ export default function Football(props: GroupProps) {
   return (
     <>
       <Environment preset="forest" />
-      <group {...props} dispose={null}>
+      <group {...props} dispose={null} position={[0, -23, 0]} scale={2}>
         <mesh
           castShadow
           receiveShadow
