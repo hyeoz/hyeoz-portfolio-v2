@@ -27,6 +27,7 @@ export default function Laptop(props: GroupProps) {
 
   const { actions, names, mixer } = useAnimations(animations, group);
   console.log({ actions, names });
+
   useEffect(() => {
     if (!group) return;
     group.current?.rotateX((1.0 * Math.PI) / 10); // to convert from Deg to Rad.
