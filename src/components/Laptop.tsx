@@ -26,7 +26,6 @@ export default function Laptop(props: GroupProps) {
   } = useGLTF('./models/laptop-rose.glb');
 
   const { actions, names, mixer } = useAnimations(animations, group);
-  console.log({ actions, names });
 
   useEffect(() => {
     if (!group) return;
@@ -34,33 +33,6 @@ export default function Laptop(props: GroupProps) {
     actions[names[0]]?.reset().play();
     actions[names[1]]?.reset().play();
   }, []);
-  // gsap.timeline({
-  //   scrollTrigger: {
-  //     scrub: 1,
-  //     trigger: '#root',
-  //     start: 'top 90%',
-  //     end: 'bottom 30%',
-  //   },
-  // });
-
-  // useFrame(() => {
-  //   if (!tl.current) return;
-  //   tl.current.seek(scroll.offset * tl.current.duration());
-  // });
-
-  // useLayoutEffect(() => {
-  //   tl.current = gsap.timeline();
-
-  //   if (!ref.current) return;
-  // }, []);
-
-  // useEffect(() => {
-  //   // actions.Animation?.play();
-  //   console.log(Object.keys(actions), actions);
-  //   Object.keys(actions).forEach((action) => {
-  //     actions[action]?.play();
-  //   });
-  // }, [actions]);
 
   return (
     <>

@@ -19,13 +19,14 @@ export default function Airplane(props: GroupProps) {
     nodes: { [name: string]: Object3D & { geometry?: any } };
     materials: { [name: string]: Material };
     animations: any;
-  } = useGLTF('./models/airplane.glb');
+  } = useGLTF('./models/airplane-keyframe.glb');
   const { actions, names, mixer } = useAnimations(animations, group);
-  console.log(actions, mixer);
 
   useEffect(() => {
     if (!group) return;
-    group.current?.rotateX((1.0 * Math.PI) / 8); // to convert from Deg to Rad.
+    group.current?.rotateX((1.0 * Math.PI) / 10); // to convert from Deg to Rad.
+    actions[names[0]]?.reset().play();
+    actions[names[1]]?.reset().play();
   }, []);
 
   return (
@@ -127,4 +128,4 @@ export default function Airplane(props: GroupProps) {
   );
 }
 
-useGLTF.preload('./models/airplane.glb');
+useGLTF.preload('./models/airplane-keyframe.glb');
