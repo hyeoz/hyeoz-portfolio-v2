@@ -1,8 +1,10 @@
 import { Environment, useGLTF } from '@react-three/drei';
-import { GroupProps } from '@react-three/fiber';
-import { Material, Object3D } from 'three';
+import { GroupProps, useFrame } from '@react-three/fiber';
+import { useRef } from 'react';
+import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
 export default function Baseball(props: GroupProps) {
+  const group = useRef<Group<Object3DEventMap> | any>(null);
   const {
     nodes,
     materials,
@@ -11,10 +13,14 @@ export default function Baseball(props: GroupProps) {
     materials: { [name: string]: Material };
   } = useGLTF('./models/baseball-inclue.glb');
 
+  useFrame((state, delta) => {
+    group.current.rotation.x += 8 * delta;
+  });
+
   return (
     <>
       <Environment preset="forest" />
-      <group {...props} dispose={null} position={[0, -15, 0]}>
+      <group {...props} ref={group} dispose={null} position={[0, -15, 0]}>
         <group
           position={[-2.299, 0.047, 0.88]}
           rotation={[-0.14, 0.201, 0.052]}
