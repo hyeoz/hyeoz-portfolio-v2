@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 import Scene from './Scene';
-// import { OrbitControls } from "@react-three/drei";
+import './App.css';
 
 function App() {
   return (
@@ -10,10 +10,8 @@ function App() {
       style={{
         width: '100vw',
         height: '100vh',
-        // backgroundColor: '#000',
       }}
     >
-      {/* <OrbitControls /> */}
       <Suspense fallback={null}>
         <Scene />
       </Suspense>
