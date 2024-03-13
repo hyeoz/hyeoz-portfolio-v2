@@ -40,6 +40,7 @@ export default function ScrollManagre({
     }
 
     const currentSection = Math.floor(scroll.scroll.current * scroll.pages);
+    // console.log(Number(scroll.scroll.current.toFixed(3)), currentSection, '??');
 
     // NOTE TOP TO BOTTOM
     // 두번째 섹션 이동
