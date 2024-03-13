@@ -28,7 +28,7 @@ export default function Football(props: GroupProps) {
         {...props}
         ref={group}
         dispose={null}
-        position={[0, -23, 0]}
+        position={[0, -25, 0]}
         scale={1.5}
       >
         <group name="Scene">
