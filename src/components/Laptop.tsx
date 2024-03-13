@@ -1,14 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
-import {
-  Environment,
-  useAnimations,
-  useGLTF,
-  useScroll,
-} from '@react-three/drei';
+import { Environment, useAnimations, useGLTF } from '@react-three/drei';
 import { GroupProps } from '@react-three/fiber';
-import gsap from 'gsap';
-// gsap.registerPlugin(ScrollTrigger);
 
 export const FLOOR_HEIGHT = 2.3;
 export const MB_FLOORS = 3;
@@ -25,7 +18,7 @@ export default function Laptop(props: GroupProps) {
     animations: any;
   } = useGLTF('./models/laptop-rose.glb');
 
-  const { actions, names, mixer } = useAnimations(animations, group);
+  const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
     if (!group) return;

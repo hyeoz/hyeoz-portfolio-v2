@@ -1,13 +1,7 @@
 import { Environment, useAnimations, useGLTF } from '@react-three/drei';
-import { GroupProps, useFrame } from '@react-three/fiber';
+import { GroupProps } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
-import {
-  AnimationMixer,
-  Group,
-  Material,
-  Object3D,
-  Object3DEventMap,
-} from 'three';
+import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
 export default function Airplane(props: GroupProps) {
   const group = useRef<Group<Object3DEventMap>>(null);
@@ -20,7 +14,7 @@ export default function Airplane(props: GroupProps) {
     materials: { [name: string]: Material };
     animations: any;
   } = useGLTF('./models/airplane-keyframe.glb');
-  const { actions, names, mixer } = useAnimations(animations, group);
+  const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
     if (!group) return;

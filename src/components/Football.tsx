@@ -1,5 +1,5 @@
 import { Environment, useAnimations, useGLTF } from '@react-three/drei';
-import { GroupProps, useFrame } from '@react-three/fiber';
+import { GroupProps } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
@@ -15,12 +15,12 @@ export default function Football(props: GroupProps) {
     animations: any;
   } = useGLTF('./models/football-animation.glb');
 
-  const { actions, names, mixer } = useAnimations(animations, group);
+  const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
     actions[names[0]]?.reset().play();
   }, []);
-  console.log(actions, names);
+
   return (
     <>
       <Environment preset="forest" />

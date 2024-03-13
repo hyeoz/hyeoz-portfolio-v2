@@ -13,7 +13,7 @@ export default function Baseball(props: GroupProps) {
     materials: { [name: string]: Material };
   } = useGLTF('./models/baseball-inclue.glb');
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     group.current.rotation.x += 8 * delta;
   });
 
