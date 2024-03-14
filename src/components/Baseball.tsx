@@ -1,6 +1,6 @@
 import { Environment, useGLTF } from '@react-three/drei';
 import { GroupProps, useFrame } from '@react-three/fiber';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
 export default function Baseball(props: GroupProps) {
@@ -13,14 +13,26 @@ export default function Baseball(props: GroupProps) {
     materials: { [name: string]: Material };
   } = useGLTF('./models/baseball-inclue.glb');
 
+  useEffect(() => {
+    if (!group) return;
+    group.current?.rotateY((1.0 * Math.PI) / 20); // to convert from Deg to Rad.
+  }, []);
+
   useFrame((_, delta) => {
     group.current.rotation.x += 8 * delta;
+    group.current.rotation.z += 6 * delta;
   });
 
   return (
     <>
       <Environment preset="forest" />
-      <group {...props} ref={group} dispose={null} position={[0, -15, 0]}>
+      <group
+        {...props}
+        ref={group}
+        dispose={null}
+        position={[2, -15, 0]}
+        scale={0.8}
+      >
         <group
           position={[-2.299, 0.047, 0.88]}
           rotation={[-0.14, 0.201, 0.052]}

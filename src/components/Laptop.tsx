@@ -30,7 +30,13 @@ export default function Laptop(props: GroupProps) {
   return (
     <>
       <Environment preset="sunset" />
-      <group ref={group} {...props} dispose={null} scale={3}>
+      <group
+        ref={group}
+        {...props}
+        dispose={null}
+        scale={3}
+        position={[2, 0, 0]}
+      >
         <group name="Scene">
           <mesh
             name="Plane"
