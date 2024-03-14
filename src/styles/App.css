@@ -1,3 +1,8 @@
+#canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
 .html-wrapper {
   section {
     height: 100vh;

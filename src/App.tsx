@@ -2,16 +2,11 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 import Scene from './Scene';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
-    <Canvas
-      style={{
-        width: '100vw',
-        height: '100vh',
-      }}
-    >
+    <Canvas id="canvas">
       <Suspense fallback={null}>
         <Scene />
       </Suspense>
