@@ -6,6 +6,7 @@ import * as THREE from 'three';
 
 export default function Football(props: GroupProps) {
   const group = useRef<Group<Object3DEventMap>>(null);
+  const ball = useRef<Group<Object3DEventMap>>(null);
   const {
     nodes,
     materials,
@@ -16,21 +17,26 @@ export default function Football(props: GroupProps) {
         geometry?: any;
         material?: any;
         morphTargetDictionary?: any;
+        morphTargetInfluences?: any;
       };
     };
     materials: { [name: string]: Material };
     animations: any;
-  } = useGLTF('./models/football-post.glb');
+  } = useGLTF('./models/goal_post.glb');
 
   const { actions, names, mixer } = useAnimations(animations, group);
   // const shapeKeys = Object.keys(nodes.Net?.morphTargetDictionary);
-  console.log(names, '???', mixer);
+  console.log(names, '???', nodes.평면.morphTargetDictionary);
+
+  const _newMorph: { [key: string]: number } = {
+    ...nodes.평면.morphTargetDictionary,
+  };
+  delete _newMorph.옷감;
 
   useEffect(() => {
-    names.map((name) => {
-      actions[name]?.reset().play();
-    });
     group.current?.rotateY(-(1.0 * Math.PI) / 10); // to convert from Deg to Rad.
+    actions[names[0]]?.play();
+    console.log(_newMorph, nodes.평면.morphTargetInfluences, '???');
     // Shape keys 애니메이션 재생
   }, []);
 
@@ -41,7 +47,7 @@ export default function Football(props: GroupProps) {
         {...props}
         ref={group}
         dispose={null}
-        position={[1.5, -26, 0]}
+        position={[1.5, -25, 0]}
         scale={1.2}
       >
         <group name="Scene">
@@ -49,6 +55,7 @@ export default function Football(props: GroupProps) {
             name="Icosphere"
             position={[-0.758, 0.527, -0.707]}
             scale={0.568}
+            ref={ball}
           >
             <mesh
               name="Icosphere001"
@@ -76,12 +83,14 @@ export default function Football(props: GroupProps) {
             scale={[1, 1, 0.636]}
           />
           <mesh
-            name="Net"
+            name="평면"
             castShadow
             receiveShadow
-            geometry={nodes.Net.geometry}
-            material={nodes.Net.material}
-            rotation={[-1.567, 0, 0]}
+            geometry={nodes.평면.geometry}
+            material={nodes.평면.material}
+            morphTargetDictionary={_newMorph}
+            morphTargetInfluences={nodes.평면.morphTargetInfluences}
+            scale={[1.034, 1.007, 1.047]}
           />
         </group>
       </group>
@@ -89,4 +98,4 @@ export default function Football(props: GroupProps) {
   );
 }
 
-useGLTF.preload('./models/football-post.glb');
+useGLTF.preload('./models/goal_post.glb');
