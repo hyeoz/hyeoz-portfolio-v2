@@ -1,4 +1,4 @@
-import { Scroll, ScrollControls } from '@react-three/drei';
+import { Environment, Scroll, ScrollControls } from '@react-three/drei';
 import { useState } from 'react';
 
 import Html from './components/Html';
@@ -16,6 +16,7 @@ function Scene() {
     <ScrollControls pages={4} damping={0.1}>
       <ScrollManagre section={section} setSection={setSection} />
       <Scroll>
+        <Environment preset="city" />
         <Laptop />
         <Airplane />
         <Baseball />

@@ -4,13 +4,32 @@ import { Canvas } from '@react-three/fiber';
 import Scene from './Scene';
 import './styles/App.css';
 
+/* TODO 
+Suspense 사용 방법 다시 확인
+Lazy Loading 사용
+*/
+
 function App() {
   return (
-    <Canvas id="canvas">
-      <Suspense fallback={null}>
+    <Suspense fallback={<Loader />}>
+      <Canvas id="canvas">
         <Scene />
-      </Suspense>
-    </Canvas>
+      </Canvas>
+    </Suspense>
+  );
+}
+
+function Loader() {
+  return (
+    <div
+      style={{
+        fontSize: 30,
+        color: 'red',
+        textAlign: 'center',
+      }}
+    >
+      LOADING...
+    </div>
   );
 }
 

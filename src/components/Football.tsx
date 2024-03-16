@@ -1,11 +1,11 @@
-import { Environment, useAnimations, useGLTF } from '@react-three/drei';
+import { useAnimations, useGLTF } from '@react-three/drei';
 import { GroupProps, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
-import * as THREE from 'three';
 
 export default function Football(props: GroupProps) {
   const group = useRef<Group<Object3DEventMap>>(null);
+  const ball = useRef<Group<Object3DEventMap>>(null);
   const {
     nodes,
     materials,
@@ -16,32 +16,33 @@ export default function Football(props: GroupProps) {
         geometry?: any;
         material?: any;
         morphTargetDictionary?: any;
+        morphTargetInfluences?: any;
       };
     };
     materials: { [name: string]: Material };
     animations: any;
-  } = useGLTF('./models/football-post.glb');
+  } = useGLTF('./models/goal_post.glb');
 
   const { actions, names, mixer } = useAnimations(animations, group);
-  // const shapeKeys = Object.keys(nodes.Net?.morphTargetDictionary);
-  console.log(names, '???', mixer);
 
   useEffect(() => {
-    names.map((name) => {
-      actions[name]?.reset().play();
-    });
     group.current?.rotateY(-(1.0 * Math.PI) / 10); // to convert from Deg to Rad.
+    actions[names[0]]?.play();
     // Shape keys 애니메이션 재생
   }, []);
 
+  useFrame((_, delta) => {
+    if (!ball.current) return;
+    ball.current.rotation.x += 8 * delta;
+  });
+
   return (
     <>
-      <Environment preset="forest" />
       <group
         {...props}
         ref={group}
         dispose={null}
-        position={[1.5, -26, 0]}
+        position={[1.5, -25, 0]}
         scale={1.2}
       >
         <group name="Scene">
@@ -49,6 +50,7 @@ export default function Football(props: GroupProps) {
             name="Icosphere"
             position={[-0.758, 0.527, -0.707]}
             scale={0.568}
+            ref={ball}
           >
             <mesh
               name="Icosphere001"
@@ -81,7 +83,9 @@ export default function Football(props: GroupProps) {
             receiveShadow
             geometry={nodes.Net.geometry}
             material={nodes.Net.material}
-            rotation={[-1.567, 0, 0]}
+            morphTargetDictionary={nodes.Net.morphTargetDictionary}
+            morphTargetInfluences={nodes.Net.morphTargetInfluences}
+            scale={[1.034, 1.007, 1.047]}
           />
         </group>
       </group>
@@ -89,4 +93,4 @@ export default function Football(props: GroupProps) {
   );
 }
 
-useGLTF.preload('./models/football-post.glb');
+useGLTF.preload('./models/goal_post.glb');
