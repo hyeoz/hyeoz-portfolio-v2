@@ -1,4 +1,4 @@
-import { Environment, useGLTF } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 import { GroupProps, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
@@ -25,7 +25,6 @@ export default function Baseball(props: GroupProps) {
 
   return (
     <>
-      <Environment preset="forest" />
       <group
         {...props}
         ref={group}

@@ -1,4 +1,4 @@
-import { Environment, useAnimations, useGLTF } from '@react-three/drei';
+import { useAnimations, useGLTF } from '@react-three/drei';
 import { GroupProps, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
@@ -38,7 +38,6 @@ export default function Football(props: GroupProps) {
 
   return (
     <>
-      <Environment preset="forest" />
       <group
         {...props}
         ref={group}
