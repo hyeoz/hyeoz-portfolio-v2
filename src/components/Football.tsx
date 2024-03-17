@@ -3,9 +3,12 @@ import { GroupProps, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
+import { useLoad } from '../store/load';
+
 export default function Football(props: GroupProps) {
   const group = useRef<Group<Object3DEventMap>>(null);
   const ball = useRef<Group<Object3DEventMap>>(null);
+  const load = useLoad();
   const {
     nodes,
     materials,
@@ -23,14 +26,16 @@ export default function Football(props: GroupProps) {
     animations: any;
   } = useGLTF('./models/goal_post.glb');
 
-  const { actions, names, mixer } = useAnimations(animations, group);
+  const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
     group.current?.rotateY(-(1.0 * Math.PI) / 10); // to convert from Deg to Rad.
-    actions[names[0]]?.play();
-    // Shape keys 애니메이션 재생
+    actions[names[0]]?.play(); // Shape keys 애니메이션 재생
+
+    load.update('football');
   }, []);
 
+  // 공 회전 애니메이션은 코드로 구현
   useFrame((_, delta) => {
     if (!ball.current) return;
     ball.current.rotation.x += 8 * delta;
