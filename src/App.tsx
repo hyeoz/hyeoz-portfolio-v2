@@ -22,20 +22,14 @@ function App() {
 }
 
 function Loader() {
-  // TODO load 값으로 progress bar 만들기
   const { progress } = useProgress();
 
-  console.log(progress, 'PROGRESS');
-
   return (
-    <div
-      style={{
-        fontSize: 30,
-        color: 'red',
-        textAlign: 'center',
-      }}
-    >
-      LOADING...{progress.toFixed()}%
+    <div className="loading-wrapper">
+      <div className="progress-wrapper">
+        <progress id="loading-progress" value={progress} max={100} />
+      </div>
+      <p className="progress-number">{progress.toFixed()}%</p>
     </div>
   );
 }
