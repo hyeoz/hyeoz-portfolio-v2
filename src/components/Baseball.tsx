@@ -3,11 +3,8 @@ import { GroupProps, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
-import { useLoad } from '../store/load';
-
 export default function Baseball(props: GroupProps) {
   const group = useRef<Group<Object3DEventMap> | any>(null);
-  const load = useLoad();
   const {
     nodes,
     materials,
@@ -19,8 +16,6 @@ export default function Baseball(props: GroupProps) {
   useEffect(() => {
     if (!group) return;
     group.current?.rotateY((1.0 * Math.PI) / 20); // to convert from Deg to Rad.
-
-    load.update('baseball');
   }, []);
 
   useFrame((_, delta) => {

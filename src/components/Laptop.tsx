@@ -3,14 +3,11 @@ import { Group, Material, Object3D, Object3DEventMap } from 'three';
 import { useAnimations, useGLTF } from '@react-three/drei';
 import { GroupProps } from '@react-three/fiber';
 
-import { useLoad } from '../store/load';
-
 export const FLOOR_HEIGHT = 2.3;
 export const MB_FLOORS = 3;
 
 export default function Laptop(props: GroupProps) {
   const group = useRef<Group<Object3DEventMap> | any>(null);
-  const load = useLoad();
   const {
     nodes,
     materials,
@@ -28,8 +25,6 @@ export default function Laptop(props: GroupProps) {
     group.current?.rotateX((1.0 * Math.PI) / 10); // to convert from Deg to Rad.
     actions[names[0]]?.reset().play();
     actions[names[1]]?.reset().play();
-
-    load.update('laptop');
   }, []);
 
   return (

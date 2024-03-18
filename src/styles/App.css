@@ -1,3 +1,45 @@
+.loading-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.progress-wrapper {
+  padding: 2px 4px;
+  height: 20px;
+  border-radius: 16px;
+  background-color: rgb(164, 149, 197);
+  box-shadow:
+    2px 2px 2px 2px #eee,
+    inset 0 -8px 2px rgb(187, 172, 213);
+}
+.progress-number {
+  font-family: 'Coiny', system-ui;
+  margin-top: 4px;
+}
+#loading-progress {
+  appearance: none;
+
+  &::-webkit-progress-bar {
+    border-radius: 8px;
+    background-color: rgb(164, 149, 200);
+    /* border: 2px solid; */
+    box-shadow: inset 1px 2px 1px 1px rgb(113, 98, 155);
+  }
+
+  &::-webkit-progress-value {
+    background: linear-gradient(
+      to right,
+      rgb(255, 220, 240),
+      rgb(255, 180, 220)
+    );
+    box-shadow: inset 0 -2px 8px rgb(180, 140, 140);
+    border-radius: 8px;
+  }
+}
+
 #canvas {
   width: 100vw !important;
   height: 100vh !important;
