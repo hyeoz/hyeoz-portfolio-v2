@@ -1,10 +1,10 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
+import { useProgress } from '@react-three/drei';
 
 // import Scene from './Scene';
 const Scene = lazy(() => import('./Scene'));
 import './styles/App.css';
-import { useLoad } from './store/load';
 
 /* NOTE 
 Suspense : 렌더링 하려는 자식 컴포넌트가 일시정지되면 fallback 화면을 띄워줌
@@ -23,19 +23,9 @@ function App() {
 
 function Loader() {
   // TODO load 값으로 progress bar 만들기
-  const [loadingState, setLoadingState] = useState(0);
-  const load = useLoad;
+  const { progress } = useProgress();
 
-  useEffect(() => {
-    const unsubscribe = load.subscribe((state) => {
-      console.log(state.state);
-    });
-
-    return () => {
-      // 구독 해제
-      unsubscribe();
-    };
-  }, []);
+  console.log(progress, 'PROGRESS');
 
   return (
     <div
@@ -45,7 +35,7 @@ function Loader() {
         textAlign: 'center',
       }}
     >
-      LOADING...
+      LOADING...{progress.toFixed()}%
     </div>
   );
 }
