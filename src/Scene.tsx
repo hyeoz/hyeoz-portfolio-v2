@@ -19,8 +19,8 @@ function Scene() {
         <Environment preset="city" />
         <Laptop />
         <Airplane />
-        <Baseball />
         <Football />
+        <Baseball />
         {/* <Particles size={7000} /> */}
       </Scroll>
       <Scroll html>
