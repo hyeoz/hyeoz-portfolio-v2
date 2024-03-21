@@ -33,7 +33,7 @@ export default function Football(props: GroupProps) {
   // 공 회전 애니메이션은 코드로 구현
   useFrame((_, delta) => {
     if (!ball.current) return;
-    ball.current.rotation.x += 8 * delta;
+    ball.current.rotation.x -= 8 * delta;
   });
 
   return (
@@ -42,7 +42,7 @@ export default function Football(props: GroupProps) {
         {...props}
         ref={group}
         dispose={null}
-        position={[1.5, -25, 0]}
+        position={[1.5, -17, 0]}
         scale={1.2}
       >
         <group name="Scene">

@@ -24,9 +24,9 @@ h1 {
     position: absolute;
     top: 20%;
     right: 5%;
-    font-size: 400px;
+    font-size: 20rem;
     text-align: right;
-    letter-spacing: 1rem;
+    /* letter-spacing: 1rem; */
   }
 }
 
