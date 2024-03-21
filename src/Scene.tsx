@@ -1,5 +1,5 @@
-import { Environment, Scroll, ScrollControls } from '@react-three/drei';
 import { useState, lazy } from 'react';
+import { Environment, Scroll, ScrollControls } from '@react-three/drei';
 
 const ScrollManager = lazy(() => import('./components/ScrollManager'));
 const Html = lazy(() => import('./components/Html'));
@@ -23,7 +23,12 @@ function Scene() {
         <Baseball />
         {/* <Particles size={7000} /> */}
       </Scroll>
-      <Scroll html>
+      <Scroll
+        html
+        style={{
+          width: '100vw',
+        }}
+      >
         <Html />
       </Scroll>
     </ScrollControls>
