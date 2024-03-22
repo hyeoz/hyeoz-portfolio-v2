@@ -26,7 +26,7 @@ export default function Football(props: GroupProps) {
   const { actions, names } = useAnimations(animations, group);
 
   useEffect(() => {
-    group.current?.rotateY(-(1.0 * Math.PI) / 10); // to convert from Deg to Rad.
+    group.current?.rotateY(-(1.0 * Math.PI) / 5); // to convert from Deg to Rad.
     actions[names[0]]?.play(); // Shape keys 애니메이션 재생
   }, []);
 
@@ -42,7 +42,7 @@ export default function Football(props: GroupProps) {
         {...props}
         ref={group}
         dispose={null}
-        position={[1.5, -17, 0]}
+        position={[3.5, -17, 0]}
         scale={1.2}
       >
         <group name="Scene">

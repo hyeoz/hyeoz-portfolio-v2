@@ -56,7 +56,11 @@ function FourthSection() {
   return (
     <section className="section-wrapper">
       <div className="back-title">
-        <h1>CONTACT</h1>
+        <h1>
+          CON-
+          <br />
+          TACT
+        </h1>
       </div>
       <div className="content-wrapper">
         <h2>내용이 들어갑니다.</h2>

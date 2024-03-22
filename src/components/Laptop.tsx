@@ -22,13 +22,19 @@ export default function Laptop(props: GroupProps) {
 
   useEffect(() => {
     if (!group) return;
-    group.current?.rotateX((1.0 * Math.PI) / 10); // to convert from Deg to Rad.
+    group.current?.rotateX((1.0 * Math.PI) / 8); // to convert from Deg to Rad.
     actions[names[0]]?.reset().play();
     actions[names[1]]?.reset().play();
   }, []);
 
   return (
-    <group ref={group} {...props} dispose={null} scale={3} position={[2, 0, 0]}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={3}
+      position={[3, -1, 0]}
+    >
       <group name="Scene">
         <mesh
           name="Plane"
