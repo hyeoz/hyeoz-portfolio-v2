@@ -1,6 +1,6 @@
 import '../styles/content.css';
 
-function Html() {
+function HtmlContent() {
   return (
     <article className="html-wrapper">
       <FirstSection />
@@ -65,4 +65,4 @@ function FourthSection() {
   );
 }
 
-export default Html;
+export default HtmlContent;
