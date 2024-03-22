@@ -25,11 +25,11 @@ h2 {
   box-sizing: border-box;
 
   h1 {
-    z-index: -99;
+    z-index: 9;
     width: 100%;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 4rem;
+    right: 3rem;
     font-size: 10rem;
     text-align: right;
     /* letter-spacing: 1rem; */
@@ -41,11 +41,11 @@ h2 {
   top: 0;
   left: 0;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.05);
-  margin: 32px;
+  margin: 128px 80px;
   padding: 16px;
   width: 50%;
-  height: calc(100% - 64px);
+  height: 100%;
   box-sizing: border-box;
-  backdrop-filter: blur(10px);
+  /* background-color: rgba(0, 0, 0, 0.05); */
+  /* backdrop-filter: blur(10px); */
 }
