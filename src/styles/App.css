@@ -45,8 +45,7 @@
   height: 100vh !important;
 }
 
-.html-wrapper {
-  section {
-    height: 100vh;
-  }
+/* TODO z index 를 위해 position relative 를 박으면 스크롤이 작동 안함...해결 필요 */
+:where(div > div:has(.html-wrapper)) {
+  transform: none !important;
 }

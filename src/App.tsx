@@ -4,7 +4,7 @@ import { useProgress } from '@react-three/drei';
 
 // import Scene from './Scene';
 const Scene = lazy(() => import('./Scene'));
-import './styles/App.css';
+import './styles/app.css';
 
 /* NOTE 
 Suspense : 렌더링 하려는 자식 컴포넌트가 일시정지되면 fallback 화면을 띄워줌
