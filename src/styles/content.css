@@ -12,6 +12,10 @@ h1 {
   margin: 0;
 }
 
+.section-wrapper {
+  position: relative;
+}
+
 .back-title {
   position: relative;
   width: 100%;

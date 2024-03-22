@@ -18,7 +18,7 @@ function Introduce() {
 
 function FirstSection() {
   return (
-    <section>
+    <section className="section-wrapper">
       <div className="back-title">
         <h1>INFO</h1>
       </div>
@@ -30,7 +30,7 @@ function FirstSection() {
 }
 function SecondSection() {
   return (
-    <section>
+    <section className="section-wrapper">
       <div className="back-title">
         <h1>STACK</h1>
       </div>
@@ -42,7 +42,7 @@ function SecondSection() {
 }
 function ThirdSection() {
   return (
-    <section>
+    <section className="section-wrapper">
       <div className="back-title">
         <h1>WORKS</h1>
       </div>
@@ -54,7 +54,7 @@ function ThirdSection() {
 }
 function FourthSection() {
   return (
-    <section>
+    <section className="section-wrapper">
       <div className="back-title">
         <h1>CONTACT</h1>
       </div>
