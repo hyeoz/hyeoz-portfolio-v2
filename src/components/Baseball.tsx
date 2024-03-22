@@ -29,7 +29,7 @@ export default function Baseball(props: GroupProps) {
         {...props}
         ref={group}
         dispose={null}
-        position={[2, -23, 0]}
+        position={[3.5, -23.5, 0]}
         scale={0.8}
       >
         <group

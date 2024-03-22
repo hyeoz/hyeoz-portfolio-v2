@@ -43,6 +43,10 @@
 #canvas {
   width: 100vw !important;
   height: 100vh !important;
+  background: url('./background.png');
+  background-size: contain;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /* TODO z index 를 위해 position relative 를 박으면 스크롤이 작동 안함...해결 필요 */
