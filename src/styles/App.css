@@ -104,6 +104,7 @@ body {
     position: relative;
     font-size: 88px;
     margin: 0;
+    min-width: 1920px;
     font-family: 'Bagel Fat One', system-ui;
     animation: move-words 6s linear infinite;
   }
