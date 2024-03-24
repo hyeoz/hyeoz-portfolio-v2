@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 .loading-wrapper {
   width: 100vw;
   height: 100vh;
@@ -43,13 +46,129 @@
 #canvas {
   width: 100vw !important;
   height: 100vh !important;
-  background: url('./background.png');
+  /* background: url('./background.png'); */
   background-size: contain;
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
-/* TODO z index 를 위해 position relative 를 박으면 스크롤이 작동 안함...해결 필요 */
-:where(div > div:has(.html-wrapper)) {
-  transform: none !important;
+.landing-wrapper {
+  height: 100vh;
+}
+.landing-header {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  padding: 16px;
+  h1 {
+    font-family: 'Coiny', system-ui;
+    text-align: center;
+    font-size: 32px;
+  }
+}
+.landing-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landing-image-wrapper {
+  width: 40%;
+  aspect-ratio: 4 / 3;
+  border-radius: 256px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background-color: rgb(164, 149, 200);
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+.landing-image {
+  margin: 8px;
+}
+.back-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+  transform: rotate(-10deg) translate(-1%, -50%);
+}
+
+.text-row {
+  display: flex;
+  white-space: no-wrap;
+  overflow: hidden;
+  width: 200%;
+
+  p {
+    position: relative;
+    font-size: 88px;
+    margin: 0;
+    font-family: 'Bagel Fat One', system-ui;
+    animation: move-words 6s linear infinite;
+  }
+
+  &:nth-of-type(2) p {
+    font-family: 'Moirai One', system-ui;
+    font-size: 80px;
+    animation: move-words-reverse 6s linear infinite;
+  }
+}
+.tooltip {
+  position: absolute;
+  bottom: 26%;
+  left: calc(50% - 150px);
+  width: 300px;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: rgb(255, 180, 220);
+  border-radius: 8px;
+  animation: bounce 1s ease-in-out infinite;
+  font-family: 'Bagel Fat One', system-ui;
+  font-size: 24px;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(255, 180, 220) transparent;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+    color: white;
+  }
+}
+
+@keyframes move-words {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes move-words-reverse {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

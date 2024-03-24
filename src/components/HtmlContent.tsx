@@ -11,11 +11,6 @@ function HtmlContent() {
   );
 }
 
-function Introduce() {
-  // TODO 가장 상단 섹션 하나 더 추가
-  // TODO 백그라운드 이미지 + 이름 + section 이동 버튼
-}
-
 function FirstSection() {
   return (
     <section className="section-wrapper">
