@@ -20,6 +20,7 @@ body {
 }
 .progress-number {
   font-family: 'Coiny', system-ui;
+  font-size: 20px;
   margin-top: 4px;
 }
 #loading-progress {
@@ -46,7 +47,6 @@ body {
 #canvas {
   width: 100vw !important;
   height: 100vh !important;
-  /* background: url('./background.png'); */
   background-size: contain;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -73,6 +73,9 @@ body {
   justify-content: center;
 }
 .landing-image-wrapper {
+  position: relative;
+}
+.landing-image-back {
   width: 40%;
   aspect-ratio: 4 / 3;
   border-radius: 256px;
@@ -104,6 +107,7 @@ body {
     position: relative;
     font-size: 88px;
     margin: 0;
+    min-width: 1920px;
     font-family: 'Bagel Fat One', system-ui;
     animation: move-words 6s linear infinite;
   }
@@ -116,7 +120,7 @@ body {
 }
 .tooltip {
   position: absolute;
-  bottom: 26%;
+  top: calc(100% + 30px);
   left: calc(50% - 150px);
   width: 300px;
   padding: 16px;
@@ -126,6 +130,7 @@ body {
   animation: bounce 1s ease-in-out infinite;
   font-family: 'Bagel Fat One', system-ui;
   font-size: 24px;
+  z-index: 9;
 
   &::after {
     content: ' ';

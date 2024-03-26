@@ -25,7 +25,7 @@ function Scene() {
           {/* <Particles size={7000} /> */}
         </Scroll>
       </ScrollControls>
-      <Html>
+      <Html position={[-7.2, 3.85, 0]}>
         <HtmlContent />
       </Html>
     </>

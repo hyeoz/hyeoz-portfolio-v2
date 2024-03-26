@@ -5,7 +5,9 @@ function Landing({
 }: {
   setState: Dispatch<SetStateAction<boolean>>;
 }) {
-  // TODO 사파리 초기 화면 따라한 랜딩페이지
+  const onClickEnter = () => {
+    setState(true);
+  };
   // TODO 랜딩페이지에서 버튼 클릭 시 스트롤 섹션으로 넘어갈 수 있도록 설정
   return (
     <article className="landing-wrapper">
@@ -14,16 +16,13 @@ function Landing({
       </section>
 
       <section className="landing-content">
-        <div
-          className="landing-image-wrapper"
-          onClick={() => {
-            setState(true);
-          }}
-        >
-          <img src="" alt="landing-image" />
-        </div>
-        <div className="tooltip">
-          <p>여기를 눌러 더 알아보세요!</p>
+        <div className="landing-image-wrapper" onClick={onClickEnter}>
+          <div className="landing-image-back">
+            <img src="" alt="landing-image" />
+          </div>
+          <div className="tooltip">
+            <p>여기를 눌러 더 알아보세요!</p>
+          </div>
         </div>
         <div className="back-text">
           <div className="text-row">
