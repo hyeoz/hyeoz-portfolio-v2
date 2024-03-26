@@ -1,13 +1,16 @@
 .html-wrapper {
   width: 100vw;
-  /* height: 100vh; */
-  /* background-color: yellow; */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -9;
+  /* left: 0; */
 
-  section {
-    height: 100%;
+  /* section {
+    height: 100vh;
     padding: 40px;
     box-sizing: border-box;
-  }
+  } */
 }
 
 h1,
@@ -16,7 +19,10 @@ h2 {
 }
 
 .section-wrapper {
-  position: relative;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  /* background: linear-gradient(to right, #f6ead5, #f6d9d5); */
 }
 
 .back-title {
@@ -30,9 +36,10 @@ h2 {
     width: 100%;
     position: absolute;
     top: 4rem;
-    right: 3rem;
+    right: 0;
     font-size: 10rem;
     text-align: right;
+    transform: rotate(90deg);
     /* letter-spacing: 1rem; */
   }
 }
@@ -42,11 +49,12 @@ h2 {
   top: 0;
   left: 0;
   border-radius: 8px;
-  margin: 128px 80px;
+  margin: auto;
   padding: 16px;
   width: 50%;
-  height: 100%;
+  height: 80%;
   box-sizing: border-box;
   /* background-color: rgba(0, 0, 0, 0.05); */
+  /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
   /* backdrop-filter: blur(10px); */
 }

@@ -3,7 +3,6 @@ import '../styles/content.css';
 function HtmlContent() {
   return (
     <article className="html-wrapper">
-      {/* <div className="html-card-back" style={{}} /> */}
       <FirstSection />
       <SecondSection />
       <ThirdSection />
@@ -27,31 +26,31 @@ function FirstSection() {
 function SecondSection() {
   return (
     <section className="section-wrapper">
-      <div className="back-title">
+      {/* <div className="back-title">
         <h1>STACK</h1>
       </div>
       <div className="content-wrapper">
         <h2>내용이 들어갑니다.</h2>
-      </div>
+      </div> */}
     </section>
   );
 }
 function ThirdSection() {
   return (
     <section className="section-wrapper">
-      <div className="back-title">
+      {/* <div className="back-title">
         <h1>WORKS</h1>
       </div>
       <div className="content-wrapper">
         <h2>내용이 들어갑니다.</h2>
-      </div>
+      </div> */}
     </section>
   );
 }
 function FourthSection() {
   return (
     <section className="section-wrapper">
-      <div className="back-title">
+      {/* <div className="back-title">
         <h1>
           CON-
           <br />
@@ -60,7 +59,7 @@ function FourthSection() {
       </div>
       <div className="content-wrapper">
         <h2>내용이 들어갑니다.</h2>
-      </div>
+      </div> */}
     </section>
   );
 }
