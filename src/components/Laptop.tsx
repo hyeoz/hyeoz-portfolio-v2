@@ -33,7 +33,7 @@ export default function Laptop(props: GroupProps) {
       {...props}
       dispose={null}
       scale={3}
-      position={[3, -1, 0]}
+      position={[2, -1, 0]}
     >
       <group name="Scene">
         <mesh

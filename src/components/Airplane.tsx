@@ -19,7 +19,7 @@ export default function Airplane(props: GroupProps) {
   useEffect(() => {
     if (!group) return;
     group.current?.rotateX((1.0 * Math.PI) / 20); // to convert from Deg to Rad.
-    group.current?.rotateY(-(1.0 * Math.PI) / 3); // to convert from Deg to Rad.
+    group.current?.rotateY(-(1.0 * Math.PI) / 5); // to convert from Deg to Rad.
     actions[names[0]]?.reset().play();
     actions[names[1]]?.reset().play();
   }, []);
@@ -30,7 +30,7 @@ export default function Airplane(props: GroupProps) {
       {...props}
       dispose={null}
       scale={0.55}
-      position={[2.5, -9, 0]}
+      position={[2, -9, 0]}
     >
       <group name="Scene">
         <group
