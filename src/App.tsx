@@ -1,6 +1,5 @@
 import { Suspense, lazy, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { useProgress } from '@react-three/drei';
 
 // import Scene from './Scene';
 const Scene = lazy(() => import('./Scene'));
