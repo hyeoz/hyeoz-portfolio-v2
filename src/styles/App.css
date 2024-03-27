@@ -150,11 +150,9 @@ body {
   }
 }
 
-/* div:has(.html-component-wrapper) {
+div:has(.html-component-wrapper) {
   transform: none !important;
-  z-index: -9 !important;
-  pointer-events: none;
-} */
+}
 
 @keyframes move-words {
   from {
