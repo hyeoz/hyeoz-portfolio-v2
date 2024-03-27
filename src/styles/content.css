@@ -29,6 +29,15 @@ h2 {
   }
 }
 
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 64px;
+  position: relative;
+  border: 1px solid black;
+  /* margin: 128px 64px; */
+}
+
 .back-title {
   position: relative;
   width: 100%;
@@ -48,7 +57,7 @@ h2 {
   }
 }
 
-.content-wrapper {
+.content {
   position: absolute;
   top: 0;
   left: 0;
