@@ -28,7 +28,13 @@ export default function Laptop(props: GroupProps) {
   }, []);
 
   return (
-    <group ref={group} {...props} dispose={null} scale={4}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={3}
+      position={[0, -1, 0]}
+    >
       <group name="Scene">
         <mesh
           name="Plane"
