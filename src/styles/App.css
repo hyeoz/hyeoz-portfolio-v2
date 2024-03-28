@@ -88,9 +88,11 @@ body {
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
+  display: flex;
 }
 .landing-image {
-  margin: 8px;
+  margin: auto;
+  height: 100%;
 }
 .back-text {
   position: absolute;
