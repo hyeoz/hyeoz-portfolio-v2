@@ -19,7 +19,7 @@ function Landing({
         <div className="landing-image-wrapper" onClick={onClickEnter}>
           <div className="landing-image-back">
             <img
-              src="/public/main_photo.png"
+              src="/main_photo.png"
               alt="landing-image"
               className="landing-image"
             />
