@@ -1,5 +1,10 @@
 # hyeoz's portfolio
 
+## Welcome
+[여기](https://hyeoz-portfolio-v2.vercel.app/) 를 눌러 확인해보세요!
+
+## Making
+
 이 프로젝트는 [custom-boilerplate](https://github.com/hyeoz/custom-boilerplate) 를 이용하여 제작되었고,
 [Vercel](https://vercel.com/) 를 이용하여 배포될 예정입니다.
 
