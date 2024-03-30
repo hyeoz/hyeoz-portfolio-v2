@@ -1,6 +1,7 @@
 # hyeoz's portfolio
 
 ## Welcome
+
 [여기](https://hyeoz-portfolio-v2.vercel.app/) 를 눌러 확인해보세요!
 
 ## Making
@@ -15,7 +16,7 @@
 ### `npm run dev`
 
 프로젝트를 로컬에서 실행 가능합니다. \
-실행 후 [http://localhost:3000](http://localhost:3000) 에서 확인 가능합니다.
+실행 후 [http://localhost:3001](http://localhost:3001) 에서 확인 가능합니다.
 
 프로젝트를 실행하면 페이지가 새로고침 됩니다.
 개인적으로 수정 및 확인은 가능하지만, **재배포는 불가합니다.**
