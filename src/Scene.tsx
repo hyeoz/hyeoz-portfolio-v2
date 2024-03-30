@@ -1,4 +1,4 @@
-import { useState, lazy, useRef } from 'react';
+import { useState, lazy } from 'react';
 import { Environment, Html, Scroll, ScrollControls } from '@react-three/drei';
 
 const ScrollManager = lazy(() => import('./components/ScrollManager'));

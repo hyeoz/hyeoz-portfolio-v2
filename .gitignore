@@ -47,7 +47,6 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
->>>>>>> 389a7d2 (init: react + vite + ts 기본 세팅)
 *.suo
 *.ntvs*
 *.njsproj

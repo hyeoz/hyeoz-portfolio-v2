@@ -98,7 +98,6 @@ body {
   position: absolute;
   top: 50%;
   width: 100%;
-  /* z-index: -1; */
   transform: rotate(-10deg) translate(-1%, -50%);
 }
 
