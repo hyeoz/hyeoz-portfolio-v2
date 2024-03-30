@@ -49,12 +49,30 @@ function SecondSection() {
         <h1>SKILLS</h1>
       </div>
       <div className="content skills">
-        <div className="js-ts"></div>
-        <div className="react"></div>
-        <div className="three"></div>
-        <div className="react-native"></div>
-        <div className="python"></div>
-        <div className="and-so-on"></div>
+        <div className="js-ts">
+          <img src="/cloud.png" alt="cloud-js" />
+          <p>JavaScript / TypeScript</p>
+        </div>
+        <div className="react">
+          <img src="/cloud.png" alt="cloud-js" />
+          <p>React</p>
+        </div>
+        <div className="three">
+          <img src="/cloud.png" alt="cloud-js" />
+          <p>Three.js / React Three Fiber</p>
+        </div>
+        <div className="react-native">
+          <img src="/cloud.png" alt="cloud-js" />
+          <p>React Native</p>
+        </div>
+        <div className="python">
+          <img src="/cloud.png" alt="cloud-js" />
+          <p>Python</p>
+        </div>
+        {/* <div className="and-so-on">
+          <img src="/cloud.png" alt="cloud-js" />
+          <p>JavaScript / TypeScript</p>
+        </div> */}
       </div>
     </section>
   );
