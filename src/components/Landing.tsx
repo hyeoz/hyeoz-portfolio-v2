@@ -8,7 +8,7 @@ function Landing({
   const onClickEnter = () => {
     setState(true);
   };
-  // TODO 랜딩페이지에서 버튼 클릭 시 스트롤 섹션으로 넘어갈 수 있도록 설정
+
   return (
     <article className="landing-wrapper">
       <section className="landing-header">

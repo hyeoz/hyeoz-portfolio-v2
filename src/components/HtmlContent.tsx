@@ -8,7 +8,13 @@ import '../styles/content.css';
 function HtmlContent() {
   return (
     <article className="html-wrapper">
-      <div className="html-header">
+      <div
+        className="html-header"
+        onClick={() => location.reload()}
+        style={{
+          cursor: 'pointer',
+        }}
+      >
         <h1>HYEOZ</h1>
       </div>
       <FirstSection />
@@ -42,8 +48,13 @@ function SecondSection() {
       <div className="back-title">
         <h1>SKILLS</h1>
       </div>
-      <div className="content">
-        <p>내용이 들어갑니다.</p>
+      <div className="content skills">
+        <div className="js-ts"></div>
+        <div className="react"></div>
+        <div className="three"></div>
+        <div className="react-native"></div>
+        <div className="python"></div>
+        <div className="and-so-on"></div>
       </div>
     </section>
   );
