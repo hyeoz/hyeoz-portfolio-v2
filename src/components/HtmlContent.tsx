@@ -110,6 +110,7 @@ function SecondSection() {
     </section>
   );
 }
+// TODO 프로젝트 정리, 어려움 극복 관련 + 사진 등 자세한 내용 모달로 띄우기
 function ThirdSection() {
   return (
     <section className="section-wrapper">
@@ -139,6 +140,7 @@ function ThirdSection() {
     </section>
   );
 }
+// TODO SNS
 function FourthSection() {
   return (
     <section className="section-wrapper">
