@@ -36,20 +36,40 @@ function FirstSection() {
           </h1>
         </div>
         <div className="content info">
-          <h2>
-            프-하!
+          <div>
+            <h2>
+              안녕하세요,
+              <br />
+              3년차 프론트엔드 개발자 이혜원입니다!
+            </h2>
             <br />
-            안녕하세요, 3년차 프론트엔드 개발자 이혜원입니다!
-          </h2>
-          <br />
-          <p>
-            저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, <br />
-            현재는 웹, 앱 프론트엔드 개발자로 일하고 있습니다. <br />
-            리액트를 주로 사용하고, 리액트-스러운 개발을 위헤 <br />
-            컴포넌트 재사용성에 대해 고민함과 동시에 <br />
-            사용자 편리성을 위해 더 나은 기능을 <br />
-            구현하려고 노력하고 있습니다!
-          </p>
+            <p>
+              저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, <br />
+              현재는 웹, 앱 프론트엔드 개발자로 일하고 있습니다. <br />
+              리액트를 주로 사용하고, 리액트-스러운 개발을 위헤 <br />
+              컴포넌트 재사용성에 대해 고민함과 동시에 <br />
+              사용자 편리성을 위해 더 나은 기능을 <br />
+              구현하려고 노력하고 있습니다!
+            </p>
+          </div>
+          <div>
+            <div>
+              <h3>1997.02.03</h3>
+              <p>출생</p>
+            </div>
+            <div>
+              <h3>2015.03 - 2020.02</h3>
+              <p>서울여자대학교 졸업</p>
+            </div>
+            <div>
+              <h3>2021.04 - 2021.10</h3>
+              <p>도미네이트 (데이터 분석)</p>
+            </div>
+            <div>
+              <h3>2022.04 - </h3>
+              <p>메이데이 파트너스 (프론트엔드 개발)</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -90,6 +110,7 @@ function SecondSection() {
     </section>
   );
 }
+// TODO 프로젝트 정리, 어려움 극복 관련 + 사진 등 자세한 내용 모달로 띄우기
 function ThirdSection() {
   return (
     <section className="section-wrapper">
@@ -98,12 +119,28 @@ function ThirdSection() {
           <span>WORKS</span>
         </h1>
       </div>
-      <div className="content">
-        <p>내용이 들어갑니다.</p>
+      <div className="content works">
+        <div>
+          <div className="shakerrr">
+            <h2>SHAKERRR</h2>
+          </div>
+          <div className="dokdo">
+            <h2>DOKDO MUSEUM</h2>
+          </div>
+        </div>
+        <div>
+          <div className="wevent">
+            <h2>WEVENT</h2>
+          </div>
+          <div className="kovo">
+            <h2>KOVO</h2>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+// TODO SNS
 function FourthSection() {
   return (
     <section className="section-wrapper">
@@ -113,9 +150,7 @@ function FourthSection() {
           <span>TACT</span>
         </h1>
       </div>
-      <div className="content">
-        <p>내용이 들어갑니다.</p>
-      </div>
+      <div className="content"></div>
     </section>
   );
 }

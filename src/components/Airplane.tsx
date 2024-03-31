@@ -30,7 +30,7 @@ export default function Airplane(props: GroupProps) {
       {...props}
       dispose={null}
       scale={0.8}
-      position={[-1, -9.5, 0]}
+      position={[-1, -10, 0]}
     >
       <group name="Scene">
         <group
