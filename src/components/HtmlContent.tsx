@@ -49,24 +49,24 @@ function SecondSection() {
         <h1>SKILLS</h1>
       </div>
       <div className="content skills">
+        <div className="react">
+          <img src="/cloud.png" alt="cloud-react" />
+          <p>React</p>
+        </div>
         <div className="js-ts">
           <img src="/cloud.png" alt="cloud-js" />
           <p>JavaScript / TypeScript</p>
         </div>
-        <div className="react">
-          <img src="/cloud.png" alt="cloud-js" />
-          <p>React</p>
-        </div>
         <div className="three">
-          <img src="/cloud.png" alt="cloud-js" />
-          <p>Three.js / React Three Fiber</p>
+          <img src="/cloud.png" alt="cloud-three" />
+          <p>Three.js</p>
         </div>
         <div className="react-native">
-          <img src="/cloud.png" alt="cloud-js" />
+          <img src="/cloud.png" alt="cloud-native" />
           <p>React Native</p>
         </div>
         <div className="python">
-          <img src="/cloud.png" alt="cloud-js" />
+          <img src="/cloud.png" alt="cloud-python" />
           <p>Python</p>
         </div>
         {/* <div className="and-so-on">
