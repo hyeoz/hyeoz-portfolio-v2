@@ -72,6 +72,7 @@ p {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
+  z-index: 1;
 
   h1 {
     display: flex;
@@ -79,7 +80,7 @@ p {
     top: 40%;
     right: 50%;
     z-index: 9;
-    opacity: 0.4;
+    opacity: 0.2;
     font-family: 'Moirai One', system-ui;
     font-size: 18rem;
     letter-spacing: 1rem;
@@ -91,22 +92,41 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 90%;
   height: 60%;
   border-radius: 8px;
   margin: auto;
   padding: 16px;
   box-sizing: border-box;
+  z-index: 3;
 
   p {
     font-size: 3rem;
     font-family: 'Bagel Fat One', system-ui;
   }
   &.info {
-    h2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > div:last-of-type {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3,
+      p {
+        text-align: right;
+        font-family: 'Jua', sans-serif;
+        font-weight: 600;
+      }
+    }
+    h2,
+    h3 {
       font-size: 3rem;
       font-family: 'Bagel Fat One', system-ui;
       margin: 0;
+    }
+    h3 {
+      font-size: 2rem;
     }
     p {
       font-size: 2rem;
@@ -134,10 +154,10 @@ p {
         width: 200px;
       }
       &:nth-of-type(4) {
-        width: 150px;
+        width: 200px;
       }
       &:nth-of-type(5) {
-        width: 100px;
+        width: 150px;
       }
 
       img {
@@ -145,10 +165,37 @@ p {
       }
       p {
         width: 100%;
-        font-size: 20px;
+        font-size: 2rem;
         text-align: center;
         position: absolute;
-        transform: translateY(-100%);
+        transform: translateY(-46px);
+      }
+    }
+  }
+  &.works {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    > div {
+      width: 25%;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 16px;
+
+      > div {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
       }
     }
   }
