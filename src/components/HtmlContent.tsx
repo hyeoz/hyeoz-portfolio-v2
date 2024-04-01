@@ -75,6 +75,7 @@ function FirstSection() {
     </section>
   );
 }
+
 function SecondSection() {
   return (
     <section className="section-wrapper">
@@ -110,6 +111,7 @@ function SecondSection() {
     </section>
   );
 }
+
 // TODO 프로젝트 정리, 어려움 극복 관련 + 사진 등 자세한 내용 모달로 띄우기
 function ThirdSection() {
   return (
@@ -150,7 +152,29 @@ function FourthSection() {
           <span>TACT</span>
         </h1>
       </div>
-      <div className="content"></div>
+      <div className="content contact">
+        <div onClick={() => window.open('https://github.com/hyeoz')}>
+          <img src="/svg/github.svg" alt="contact-github" />
+        </div>
+        <div onClick={() => window.open('https://www.instagram.com/hye_oz/')}>
+          <img src="/svg/instagram.svg" alt="contact-instagram" />
+        </div>
+        <div
+          onClick={() =>
+            window.open(
+              'https://www.linkedin.com/in/%ED%98%9C%EC%9B%90-%EC%9D%B4-5a695412b/'
+            )
+          }
+        >
+          <img src="/svg/linkedin.svg" alt="contact-linkedin" />
+        </div>
+        <div onClick={() => window.open('https://hyeoz.tistory.com/')}>
+          <img src="/svg/tistory.svg" alt="contact-tistory" />
+        </div>
+        <div onClick={() => window.open('https://www.youtube.com/@hye_oz')}>
+          <img src="/svg/youtube.svg" alt="contact-youtube" />
+        </div>
+      </div>
     </section>
   );
 }
