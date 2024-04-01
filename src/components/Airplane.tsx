@@ -29,8 +29,8 @@ export default function Airplane(props: GroupProps) {
       ref={group}
       {...props}
       dispose={null}
-      scale={0.8}
-      position={[-1, -10, 0]}
+      scale={0.65}
+      position={[-1, -9.8, 0]}
     >
       <group name="Scene">
         <group
