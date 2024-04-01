@@ -7,21 +7,25 @@ import '../styles/content.css';
 
 function HtmlContent() {
   return (
-    <article className="html-wrapper">
-      <div
-        className="html-header"
-        onClick={() => location.reload()}
-        style={{
-          cursor: 'pointer',
-        }}
-      >
-        <h1>HYEOZ</h1>
-      </div>
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
-    </article>
+    <>
+      <article className="html-wrapper">
+        <div
+          className="html-header"
+          onClick={() => location.reload()}
+          style={{
+            cursor: 'pointer',
+          }}
+        >
+          <h1>HYEOZ</h1>
+        </div>
+        <FirstSection />
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
+      </article>
+
+      <Floating />
+    </>
   );
 }
 
@@ -121,24 +125,6 @@ function ThirdSection() {
           <span>WORKS</span>
         </h1>
       </div>
-      <div className="content works">
-        <div>
-          <div className="shakerrr">
-            <h2>SHAKERRR</h2>
-          </div>
-          <div className="dokdo">
-            <h2>DOKDO MUSEUM</h2>
-          </div>
-        </div>
-        <div>
-          <div className="wevent">
-            <h2>WEVENT</h2>
-          </div>
-          <div className="kovo">
-            <h2>KOVO</h2>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
@@ -152,30 +138,58 @@ function FourthSection() {
           <span>TACT</span>
         </h1>
       </div>
-      <div className="content contact">
-        <div onClick={() => window.open('https://github.com/hyeoz')}>
-          <img src="/svg/github.svg" alt="contact-github" />
-        </div>
-        <div onClick={() => window.open('https://www.instagram.com/hye_oz/')}>
-          <img src="/svg/instagram.svg" alt="contact-instagram" />
-        </div>
-        <div
-          onClick={() =>
-            window.open(
-              'https://www.linkedin.com/in/%ED%98%9C%EC%9B%90-%EC%9D%B4-5a695412b/'
-            )
-          }
-        >
-          <img src="/svg/linkedin.svg" alt="contact-linkedin" />
-        </div>
-        <div onClick={() => window.open('https://hyeoz.tistory.com/')}>
-          <img src="/svg/tistory.svg" alt="contact-tistory" />
-        </div>
-        <div onClick={() => window.open('https://www.youtube.com/@hye_oz')}>
-          <img src="/svg/youtube.svg" alt="contact-youtube" />
-        </div>
-      </div>
     </section>
+  );
+}
+
+function Floating() {
+  return (
+    <>
+      <article className="floating-wrapper">
+        <div className="content works">
+          <div>
+            <div className="shakerrr">
+              <h2>SHAKERRR</h2>
+            </div>
+            <div className="dokdo">
+              <h2>DOKDO MUSEUM</h2>
+            </div>
+          </div>
+          <div>
+            <div className="wevent">
+              <h2>WEVENT</h2>
+            </div>
+            <div className="kovo">
+              <h2>KOVO</h2>
+            </div>
+          </div>
+        </div>
+
+        <div className="content contact">
+          <div onClick={() => window.open('https://github.com/hyeoz')}>
+            <img src="/svg/github.svg" alt="contact-github" />
+          </div>
+          <div onClick={() => window.open('https://www.instagram.com/hye_oz/')}>
+            <img src="/svg/instagram.svg" alt="contact-instagram" />
+          </div>
+          <div
+            onClick={() =>
+              window.open(
+                'https://www.linkedin.com/in/%ED%98%9C%EC%9B%90-%EC%9D%B4-5a695412b/'
+              )
+            }
+          >
+            <img src="/svg/linkedin.svg" alt="contact-linkedin" />
+          </div>
+          <div onClick={() => window.open('https://hyeoz.tistory.com/')}>
+            <img src="/svg/tistory.svg" alt="contact-tistory" />
+          </div>
+          <div onClick={() => window.open('https://www.youtube.com/@hye_oz')}>
+            <img src="/svg/youtube.svg" alt="contact-youtube" />
+          </div>
+        </div>
+      </article>
+    </>
   );
 }
 

@@ -5,6 +5,13 @@
   top: 0;
   z-index: -1;
 }
+.floating-wrapper {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
 .html-header {
   box-sizing: border-box;
   position: fixed;
@@ -99,7 +106,6 @@ p {
   padding: 16px;
   box-sizing: border-box;
   /* z-index: 3; */
-  z-index: 9999 !important;
 
   p {
     font-size: 3rem;
@@ -176,16 +182,19 @@ p {
       }
     }
   }
+  /* works 컴포넌트는 floating-wrapper 의 자식 */
   &.works {
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    top: 230vh;
 
     > div {
       width: 25%;
+      height: 300px;
       display: grid;
       grid-template-rows: 1fr 1fr;
       gap: 16px;
-      z-index: 10 !important;
 
       > div {
         background-color: rgba(255, 255, 255, 0.1);
@@ -203,13 +212,21 @@ p {
       }
     }
   }
+  /* contact 컴포넌트는 floating-wrapper 의 자식 */
   &.contact {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
     width: 30%;
     height: fit-content;
-    top: 30%;
-    z-index: 19 !important;
+    position: absolute;
+    top: 330vh;
+
+    > div:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
   }
+  transition: all 0.3s;
 }
