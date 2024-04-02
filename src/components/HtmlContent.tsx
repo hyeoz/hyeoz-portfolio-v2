@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import '../styles/content.css';
+import Modal from './Modal';
 
 /* TODO
   - HTML 찐 내용 채우기 (텍스트)
@@ -24,7 +26,8 @@ function HtmlContent() {
         <FourthSection />
       </article>
 
-      <Floating />
+      <FloatingWorks />
+      <FloatingContact />
     </>
   );
 }
@@ -142,55 +145,103 @@ function FourthSection() {
   );
 }
 
-function Floating() {
-  return (
-    <>
-      <article className="floating-wrapper">
-        <div className="content works">
-          <div>
-            <div className="shakerrr">
-              <h2>SHAKERRR</h2>
-            </div>
-            <div className="dokdo">
-              <h2>DOKDO MUSEUM</h2>
-            </div>
-          </div>
-          <div>
-            <div className="wevent">
-              <h2>WEVENT</h2>
-            </div>
-            <div className="kovo">
-              <h2>KOVO</h2>
-            </div>
-          </div>
-        </div>
+function FloatingWorks() {
+  const [modalType, setModalType] = useState('');
 
-        <div className="content contact">
-          <div onClick={() => window.open('https://github.com/hyeoz')}>
-            <img src="/svg/github.svg" alt="contact-github" />
+  const onClickWorks = (works: string) => {
+    setModalType(works);
+  };
+
+  const renderComponent = () => {
+    switch (modalType) {
+      case 'shakerrr':
+        return <Shakerrr />;
+      case 'dokdo':
+        return <Dokdo />;
+      case 'wevent':
+        return <Wevent />;
+      case 'kovo':
+        return <Kovo />;
+      default:
+        return <></>;
+    }
+  };
+
+  return (
+    <article className="floating-wrapper">
+      <div className="content works">
+        <div>
+          <div className="shakerrr" onClick={() => onClickWorks('shakerrr')}>
+            <img src="/online-store.png" alt="shakerrr-icon" />
+            <h2>SHAKERRR</h2>
           </div>
-          <div onClick={() => window.open('https://www.instagram.com/hye_oz/')}>
-            <img src="/svg/instagram.svg" alt="contact-instagram" />
-          </div>
-          <div
-            onClick={() =>
-              window.open(
-                'https://www.linkedin.com/in/%ED%98%9C%EC%9B%90-%EC%9D%B4-5a695412b/'
-              )
-            }
-          >
-            <img src="/svg/linkedin.svg" alt="contact-linkedin" />
-          </div>
-          <div onClick={() => window.open('https://hyeoz.tistory.com/')}>
-            <img src="/svg/tistory.svg" alt="contact-tistory" />
-          </div>
-          <div onClick={() => window.open('https://www.youtube.com/@hye_oz')}>
-            <img src="/svg/youtube.svg" alt="contact-youtube" />
+          <div className="dokdo" onClick={() => onClickWorks('dokdo')}>
+            <img src="/museum.png" alt="dokdo-icon" />
+            <h2>DOKDO MUSEUM</h2>
           </div>
         </div>
-      </article>
-    </>
+        <div>
+          <div className="wevent" onClick={() => onClickWorks('wevent')}>
+            <img src="/event.png" alt="wevent-icon" />
+            <h2>WEVENT</h2>
+          </div>
+          <div className="kovo" onClick={() => onClickWorks('kovo')}>
+            <img src="/ball.png" alt="kovo-icon" />
+            <h2>KOVO</h2>
+          </div>
+        </div>
+      </div>
+
+      <Modal
+        open={!!modalType}
+        title={modalType.toLocaleUpperCase()}
+        content={renderComponent()}
+        onClose={() => setModalType('')}
+      />
+    </article>
   );
 }
 
+function Shakerrr() {
+  return <div>Shakerrr</div>;
+}
+function Dokdo() {
+  return <div>DokDo</div>;
+}
+function Wevent() {
+  return <div>Wevent</div>;
+}
+function Kovo() {
+  return <div>Kovo</div>;
+}
+
+function FloatingContact() {
+  return (
+    <article className="floating-wrapper">
+      <div className="content contact">
+        <div onClick={() => window.open('https://github.com/hyeoz')}>
+          <img src="/svg/github.svg" alt="contact-github" />
+        </div>
+        <div onClick={() => window.open('https://www.instagram.com/hye_oz/')}>
+          <img src="/svg/instagram.svg" alt="contact-instagram" />
+        </div>
+        <div
+          onClick={() =>
+            window.open(
+              'https://www.linkedin.com/in/%ED%98%9C%EC%9B%90-%EC%9D%B4-5a695412b/'
+            )
+          }
+        >
+          <img src="/svg/linkedin.svg" alt="contact-linkedin" />
+        </div>
+        <div onClick={() => window.open('https://hyeoz.tistory.com/')}>
+          <img src="/svg/tistory.svg" alt="contact-tistory" />
+        </div>
+        <div onClick={() => window.open('https://www.youtube.com/@hye_oz')}>
+          <img src="/svg/youtube.svg" alt="contact-youtube" />
+        </div>
+      </div>
+    </article>
+  );
+}
 export default HtmlContent;
