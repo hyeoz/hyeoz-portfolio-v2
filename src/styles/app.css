@@ -236,6 +236,23 @@ div:has(.html-component-wrapper) {
   width: 60%; /* This just a default width */
   height: 600px;
   animation: modal-up 0.4s;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.modal-content {
+  height: 100%;
+}
+.works-modal-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: 100%;
+
+  div {
+    border: 1px solid red;
+    padding: 16px;
+  }
 }
 
 @keyframes modal-up {

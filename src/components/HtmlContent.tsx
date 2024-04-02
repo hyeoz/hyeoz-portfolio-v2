@@ -203,16 +203,21 @@ function FloatingWorks() {
 }
 
 function Shakerrr() {
-  return <div>Shakerrr</div>;
+  return (
+    <div className="works-modal-wrapper">
+      <div>프로젝트 설명이 들어갑니다</div>
+      <div>프로젝트 이미지가 슬라이더로 들어갑니다</div>
+    </div>
+  );
 }
 function Dokdo() {
-  return <div>DokDo</div>;
+  return <div className="works-modal-wrapper">DokDo</div>;
 }
 function Wevent() {
-  return <div>Wevent</div>;
+  return <div className="works-modal-wrapper">Wevent</div>;
 }
 function Kovo() {
-  return <div>Kovo</div>;
+  return <div className="works-modal-wrapper">Kovo</div>;
 }
 
 function FloatingContact() {
