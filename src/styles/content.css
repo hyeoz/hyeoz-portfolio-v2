@@ -227,7 +227,7 @@ p {
             display: none;
           }
         }
-        transition: all 0.2s;
+        transition: all 0.3s;
       }
 
       &:nth-of-type(1) {
@@ -258,11 +258,14 @@ p {
     position: absolute;
     top: 330vh;
 
-    > div:hover {
+    > div {
       img {
-        transform: scale(1.1);
+        &:hover {
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+        }
+        transition: all 0.3s;
       }
     }
   }
-  transition: all 0.3s;
 }

@@ -211,13 +211,28 @@ function Shakerrr() {
   );
 }
 function Dokdo() {
-  return <div className="works-modal-wrapper">DokDo</div>;
+  return (
+    <div className="works-modal-wrapper">
+      <div>프로젝트 설명이 들어갑니다</div>
+      <div>프로젝트 이미지가 슬라이더로 들어갑니다</div>
+    </div>
+  );
 }
 function Wevent() {
-  return <div className="works-modal-wrapper">Wevent</div>;
+  return (
+    <div className="works-modal-wrapper">
+      <div>프로젝트 설명이 들어갑니다</div>
+      <div>프로젝트 이미지가 슬라이더로 들어갑니다</div>
+    </div>
+  );
 }
 function Kovo() {
-  return <div className="works-modal-wrapper">Kovo</div>;
+  return (
+    <div className="works-modal-wrapper">
+      <div>프로젝트 설명이 들어갑니다</div>
+      <div>프로젝트 이미지가 슬라이더로 들어갑니다</div>
+    </div>
+  );
 }
 
 function FloatingContact() {
