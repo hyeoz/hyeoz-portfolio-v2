@@ -359,6 +359,21 @@ function Wevent() {
             </li>
           </ul>
           <li>
+            해당 프로젝트 개발 시 편리한 공통 컴포넌트 관리를 위해 디자인
+            시스템을 도맡아 개발하고 npm 을 통해 배포하는 경험을 쌓았습니다.
+          </li>
+          <ul>
+            <li>
+              <a
+                href="https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design
+              </a>
+            </li>
+          </ul>
+          <li>
             <a href="https://wevent.co.kr/" target="_blank" rel="noreferrer">
               https://wevent.co.kr/
             </a>
@@ -371,8 +386,10 @@ function Wevent() {
           <div className="stack-tag">REACT</div>
           <div className="stack-tag">Next.js</div>
           <div className="stack-tag">Stomp</div>
+          <div className="stack-tag">Recoil</div>
           <div className="stack-tag">ANTD</div>
           <div className="stack-tag">AWS</div>
+          <div className="stack-tag">npm</div>
         </div>
       </div>
       <div>
@@ -384,7 +401,65 @@ function Wevent() {
 function Kovo() {
   return (
     <div className="works-modal-wrapper">
-      <div>프로젝트 설명이 들어갑니다</div>
+      <div>
+        <ul>
+          <li>
+            한국 배구연맹(KOVO) 의 통합 웹사이트와 앱을 개발하는 데
+            참여했습니다. KOVO 및 14개 구단의 홈페이지를 같은 도메인으로
+            통합시키고, 통합 로그인을 통해 웹사이트 및 공식 스토어를 이용할 수
+            있도록 개발하였습니다. 추가로 관리자 페이지를 이용하여 각 구단별
+            콘텐츠를 업로드 하거나 메뉴 노출 여부, 새로운 하위 메뉴를 생성하는
+            등 통합적으로 운영하는 동시에 개별성을 가질 수 있도록
+            구현하였습니다.
+          </li>
+          <li>메인</li>
+          <ul>
+            <li>
+              구단 메인은 두 가지 디자인 중 하나를 선택하여 보여줄 수 있도록
+              개발하였습니다.
+            </li>
+            <li>
+              경기 일정 및 데이터를 시각화하여 KOVO 및 구단 홈페이지에
+              노출하였습니다.
+            </li>
+            <li>
+              이벤트를 생성하거나, 사진 / 영상 등을 업로드하고 인터파크와
+              협업하여 통합 홈페이지 내에서 티켓을 예매할 수 있도록
+              구현하였습니다.
+            </li>
+          </ul>
+          <li>CMS</li>
+          <ul>
+            <li>
+              홈페이지에 올라가는 모든 콘텐츠를 관리할 수 있는 관리자 페이지
+              개발에 참여하였습니다.
+            </li>
+            <li>
+              로그인 권한을 부여하여 최고관리자 / 구단관리자를 구분하여
+              웹사이트를 관리할 수 있도록 하였습니다.
+            </li>
+          </ul>
+          <li>APP</li>
+          <ul>
+            <li>
+              네이티브 앱과 웹뷰를 이용하여 통합 앱을 개발하는 데 참여했습니다.
+            </li>
+            <li>
+              구단별로 다른 바텀탭 컬러와 애니메이션을 이용해 통합 앱의 장점을
+              극대화할 수 있도록 구현하였습니다.
+            </li>
+          </ul>
+        </ul>
+        <div className="stack-tag-wrapper">
+          <div className="stack-tag">TypeScript</div>
+          <div className="stack-tag">JavaScript</div>
+          <div className="stack-tag">REACT</div>
+          <div className="stack-tag">REACT Native</div>
+          <div className="stack-tag">Recoil</div>
+          <div className="stack-tag">ANTD</div>
+          <div className="stack-tag">vercel</div>
+        </div>
+      </div>
       <div>
         <Swiper />
       </div>
