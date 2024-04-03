@@ -249,9 +249,21 @@ div:has(.html-component-wrapper) {
   gap: 16px;
   height: 100%;
 
-  div {
+  > div {
     border: 1px solid red;
     padding: 16px;
+  }
+  .stack-tag-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+  .stack-tag {
+    &::before {
+      content: '#';
+    }
+    padding: 6px;
+    border-radius: 16px;
+    border: 1px solid red;
   }
 }
 
