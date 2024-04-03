@@ -202,7 +202,7 @@ div:has(.html-component-wrapper) {
   width: 100%;
   height: 100%;
   z-index: 995;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.7);
 }
 .modal-header {
   display: flex;
@@ -231,8 +231,8 @@ div:has(.html-component-wrapper) {
   background: #fff;
   box-sizing: border-box;
   padding: 20px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
-  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
   width: 60%; /* This just a default width */
   height: 600px;
   animation: modal-up 0.4s;
@@ -249,9 +249,21 @@ div:has(.html-component-wrapper) {
   gap: 16px;
   height: 100%;
 
-  div {
+  > div {
     border: 1px solid red;
     padding: 16px;
+  }
+  .stack-tag-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+  .stack-tag {
+    &::before {
+      content: '#';
+    }
+    padding: 6px;
+    border-radius: 16px;
+    border: 1px solid red;
   }
 }
 
