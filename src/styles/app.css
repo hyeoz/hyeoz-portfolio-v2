@@ -248,6 +248,17 @@ div:has(.html-component-wrapper) {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   height: 100%;
+  font-family: 'Jua', sans-serif;
+
+  a {
+    color: cornflowerblue;
+  }
+  .disabled-link {
+    color: #444;
+    text-decoration: line-through;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
 
   > div {
     border: 1px solid red;
@@ -261,9 +272,15 @@ div:has(.html-component-wrapper) {
     &::before {
       content: '#';
     }
-    padding: 6px;
+    padding: 8px 10px;
     border-radius: 16px;
-    border: 1px solid red;
+    background-color: rgb(255, 180, 220);
+    color: #fff;
+    white-space: nowrap;
+
+    &:nth-child(2n + 1) {
+      background-color: rgb(113, 98, 155);
+    }
   }
 }
 
