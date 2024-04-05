@@ -3,7 +3,10 @@ import { GroupProps, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
+import useIsMobile from '../hooks/useIsMobile';
+
 export default function Baseball(props: GroupProps) {
+  const isMobile = useIsMobile();
   const group = useRef<Group<Object3DEventMap> | any>(null);
   const {
     nodes,
@@ -29,8 +32,8 @@ export default function Baseball(props: GroupProps) {
         {...props}
         ref={group}
         dispose={null}
+        scale={isMobile ? 0.8 : 1}
         position={[0, -23.5, 0]}
-        scale={1}
       >
         <group
           position={[-2.299, 0.047, 0.88]}

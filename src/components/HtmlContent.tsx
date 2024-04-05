@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import '../styles/content.css';
 import Modal from './Modal';
-import Swiper from './Swiper';
+import Carousel from './Carousel';
+import '../styles/content.css';
 
 /* TODO
   - HTML 찐 내용 채우기 (텍스트)
@@ -28,6 +28,7 @@ function HtmlContent() {
         <FourthSection />
       </article>
 
+      <MobileFloatingInfo />
       <FloatingWorks />
       <FloatingContact />
     </>
@@ -121,7 +122,6 @@ function SecondSection() {
   );
 }
 
-// TODO 프로젝트 정리, 어려움 극복 관련 + 사진 등 자세한 내용 모달로 띄우기
 function ThirdSection() {
   return (
     <section className="section-wrapper">
@@ -133,7 +133,7 @@ function ThirdSection() {
     </section>
   );
 }
-// TODO SNS
+
 function FourthSection() {
   return (
     <section className="section-wrapper">
@@ -144,6 +144,47 @@ function FourthSection() {
         </h1>
       </div>
     </section>
+  );
+}
+
+function MobileFloatingInfo() {
+  return (
+    <article className="floating-wrapper">
+      <div className="content info">
+        <div className="information">
+          <h2>
+            안녕하세요,
+            <br />
+            3년차 프론트엔드 개발자 이혜원입니다!
+          </h2>
+          <br />
+          <p>
+            저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, 현재는 웹, 앱
+            프론트엔드 개발자로 일하고 있습니다. 리액트를 주로 사용하고,
+            리액트-스러운 개발을 위헤 컴포넌트 재사용성에 대해 고민함과 동시에
+            사용자 편리성을 위해 더 나은 기능을 구현하려고 노력하고 있습니다!
+          </p>
+        </div>
+        <div className="history">
+          <div>
+            <h3>1997.02.03</h3>
+            <p>출생</p>
+          </div>
+          <div>
+            <h3>2015.03 - 2020.02</h3>
+            <p>서울여자대학교 졸업</p>
+          </div>
+          <div>
+            <h3>2021.04 - 2021.10</h3>
+            <p>도미네이트 (데이터 분석)</p>
+          </div>
+          <div>
+            <h3>2022.04 - </h3>
+            <p>메이데이 파트너스 (프론트엔드 개발)</p>
+          </div>
+        </div>
+      </div>
+    </article>
   );
 }
 
@@ -207,7 +248,15 @@ function FloatingWorks() {
 function Shakerrr() {
   return (
     <div className="works-modal-wrapper">
-      <div>
+      <Carousel
+        images={[
+          '/works/shakerrr_1.png',
+          '/works/shakerrr_2.png',
+          '/works/shakerrr_3.png',
+          '/works/shakerrr_4.png',
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
             인플루언서 공동구매 쇼핑몰 플랫폼으로서, 일반 유저로서 구매와 동시에
@@ -235,24 +284,42 @@ function Shakerrr() {
           <div className="stack-tag">ANTD</div>
         </div>
       </div>
-      <div>
-        <Swiper />
-      </div>
     </div>
   );
 }
 function Dokdo() {
   return (
     <div className="works-modal-wrapper">
-      <div>
+      <Carousel
+        images={[
+          '/works/dokdo_1.png',
+          '/works/dokdo_2.png',
+          '/works/dokdo_3.png',
+          '/works/dokdo_4.png',
+          '/works/dokdo_5.png',
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
             독도체험관이 이전함에 따라 노후화된 웹페이지를 차세대 기술을
-            이용하여 새롭게 개발하였습니다.
+            이용하여 새롭게 개발하였습니다. (
+            <a
+              href="http://admindokdomuseum.nahf.kr/"
+              target="_blank"
+              rel="noreferrer"
+              className="disabled-link"
+            >
+              LINK
+            </a>
+            )
           </li>
           <li>
             관리자 페이지를 도맡아 개발하였고, 디자인 없이 핵심 기능만 구현
             가능하도록 개발되었습니다.
+            <br />
+            변화하는 클라이언트의 요구사항을 반영하여 예약 관리 시스템 구축 및
+            통계 기능을 개발하였습니다.
           </li>
           <ul>
             <li>
@@ -268,15 +335,6 @@ function Dokdo() {
               갤러리 등을 관리할 수 있도록 하였습니다.
             </li>
           </ul>
-          <li>
-            <a
-              href="http://admindokdomuseum.nahf.kr/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              http://admindokdomuseum.nahf.kr/
-            </a>
-          </li>
         </ul>
         <div className="stack-tag-wrapper">
           <div className="stack-tag">TypeScript</div>
@@ -285,16 +343,30 @@ function Dokdo() {
           <div className="stack-tag">pm2</div>
         </div>
       </div>
-      <div>
-        <Swiper />
-      </div>
     </div>
   );
 }
 function Wevent() {
   return (
     <div className="works-modal-wrapper">
-      <div>
+      <Carousel
+        images={[
+          '/works/wevent_main_1.png',
+          '/works/wevent_main_2.png',
+
+          '/works/wevent_manager_1.png',
+          '/works/wevent_manager_2.png',
+          '/works/wevent_manager_3.png',
+          '/works/wevent_manager_4.png',
+          '/works/wevent_manager_5.png',
+
+          '/works/wevent_user_1.png',
+          '/works/wevent_user_2.png',
+          '/works/wevent_user_3.png',
+          '/works/wevent_user_4.png',
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
             MICE 플랫폼으로서 온/오프라인 이벤트 개최를 통해 아이디어 교환,
@@ -304,7 +376,13 @@ function Wevent() {
             메인페이지와 관리자페이지, 유저페이지(온라인 이벤트 참여 페이지)
             개발에 참여하였습니다.
           </li>
-          <li>메인</li>
+          <li>
+            메인 (
+            <a href="https://wevent.co.kr/" target="_blank" rel="noreferrer">
+              LINK
+            </a>
+            )
+          </li>
           <ul>
             <li>
               일반 유저와 관리자 모두 접근 가능한 메인 페이지 개발에
@@ -321,7 +399,13 @@ function Wevent() {
               상태를 확인할 수 있도록 구현하였습니다.
             </li>
           </ul>
-          <li>관리자</li>
+          <li>
+            관리자 (
+            <a className="disabled-link" href="https://manager.wevent.co.kr/">
+              LINK
+            </a>
+            )
+          </li>
           <ul>
             <li>
               이벤트를 개최한 관리자가 볼 수 있는 관리자 페이지 개발에
@@ -342,9 +426,17 @@ function Wevent() {
               하였습니다.
             </li>
           </ul>
-          <li>유저</li>
+          <li>
+            유저 (
+            <a
+              className="disabled-link"
+              href="https://user.wevent.co.kr/:id/lobby"
+            >
+              LINK
+            </a>
+            )
+          </li>
           <ul>
-            <li></li>
             <li>
               온라인 이벤트 개최 시 세션 기능을 맡아 라이브 영상 시청과 함께
               stomp.js 를 활용한 실시간 채팅 기능을 개발하였습니다.
@@ -360,25 +452,16 @@ function Wevent() {
           </ul>
           <li>
             해당 프로젝트 개발 시 편리한 공통 컴포넌트 관리를 위해 디자인
-            시스템을 도맡아 개발하고 npm 을 통해 배포하는 경험을 쌓았습니다.
-          </li>
-          <ul>
-            <li>
-              <a
-                href="https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design
-              </a>
-            </li>
-          </ul>
-          <li>
-            <a href="https://wevent.co.kr/" target="_blank" rel="noreferrer">
-              https://wevent.co.kr/
+            시스템을 도맡아, 시멘틱 마크업을 활용한 컴포넌트를 개발하고 npm 을
+            통해 배포하는 경험을 쌓았습니다. (
+            <a
+              href="https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LINK
             </a>
-            <a className="disabled-link">https://manager.wevent.co.kr/</a>
-            <a className="disabled-link">https://user.wevent.co.kr/:id/lobby</a>
+            )
           </li>
         </ul>
         <div className="stack-tag-wrapper">
@@ -392,16 +475,28 @@ function Wevent() {
           <div className="stack-tag">npm</div>
         </div>
       </div>
-      <div>
-        <Swiper />
-      </div>
     </div>
   );
 }
 function Kovo() {
   return (
     <div className="works-modal-wrapper">
-      <div>
+      <Carousel
+        images={[
+          '/works/kovo_web_1.png',
+          '/works/kovo_web_2.png',
+          '/works/kovo_web_3.png',
+
+          '/works/kovo_cms_1.png',
+
+          '/works/kovo_app_1.png',
+          '/works/kovo_app_2.png',
+          '/works/kovo_app_3.png',
+          '/works/kovo_app_4.png',
+          '/works/kovo_app_5.png',
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
             한국 배구연맹(KOVO) 의 통합 웹사이트와 앱을 개발하는 데
@@ -419,8 +514,8 @@ function Kovo() {
               개발하였습니다.
             </li>
             <li>
-              경기 일정 및 데이터를 시각화하여 KOVO 및 구단 홈페이지에
-              노출하였습니다.
+              경기 일정 및 선수 데이터와 같이 다량의 스포츠 데이터를 시각화하여
+              KOVO 및 구단 홈페이지에 노출하였습니다.
             </li>
             <li>
               Youtube 데이터를 이용하여 영상 및 숏츠가 메인에 노출되도록
@@ -463,9 +558,6 @@ function Kovo() {
           <div className="stack-tag">ANTD</div>
           <div className="stack-tag">vercel</div>
         </div>
-      </div>
-      <div>
-        <Swiper />
       </div>
     </div>
   );

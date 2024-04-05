@@ -3,10 +3,10 @@ import { Group, Material, Object3D, Object3DEventMap } from 'three';
 import { useAnimations, useGLTF } from '@react-three/drei';
 import { GroupProps } from '@react-three/fiber';
 
-export const FLOOR_HEIGHT = 2.3;
-export const MB_FLOORS = 3;
+import useIsMobile from '../hooks/useIsMobile';
 
 export default function Laptop(props: GroupProps) {
+  const isMobile = useIsMobile();
   const group = useRef<Group<Object3DEventMap> | any>(null);
   const {
     nodes,
@@ -32,8 +32,8 @@ export default function Laptop(props: GroupProps) {
       ref={group}
       {...props}
       dispose={null}
-      scale={3}
-      position={[0, -1, 0]}
+      scale={isMobile ? 2 : 3}
+      position={isMobile ? [-0.5, -2.5, 0] : [0, -1, 0]}
     >
       <group name="Scene">
         <mesh
