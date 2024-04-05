@@ -303,6 +303,10 @@ p {
         transition: all 0.3s;
       }
     }
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
   }
 }
 /* info 영역 PC->html-wrapper mobile->floating */
