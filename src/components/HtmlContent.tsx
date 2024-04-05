@@ -215,7 +215,7 @@ function Shakerrr() {
           '/works/shakerrr_4.png',
         ]}
       />
-      <div>
+      <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
             인플루언서 공동구매 쇼핑몰 플랫폼으로서, 일반 유저로서 구매와 동시에
@@ -249,18 +249,16 @@ function Shakerrr() {
 function Dokdo() {
   return (
     <div className="works-modal-wrapper">
-      <div>
-        <Carousel
-          images={[
-            '/works/dokdo_1.png',
-            '/works/dokdo_2.png',
-            '/works/dokdo_3.png',
-            '/works/dokdo_4.png',
-            '/works/dokdo_5.png',
-          ]}
-        />
-      </div>
-      <div>
+      <Carousel
+        images={[
+          '/works/dokdo_1.png',
+          '/works/dokdo_2.png',
+          '/works/dokdo_3.png',
+          '/works/dokdo_4.png',
+          '/works/dokdo_5.png',
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
             독도체험관이 이전함에 따라 노후화된 웹페이지를 차세대 기술을
@@ -307,26 +305,24 @@ function Dokdo() {
 function Wevent() {
   return (
     <div className="works-modal-wrapper">
-      <div>
-        <Carousel
-          images={[
-            '/works/wevent_main_1.png',
-            '/works/wevent_main_2.png',
+      <Carousel
+        images={[
+          '/works/wevent_main_1.png',
+          '/works/wevent_main_2.png',
 
-            '/works/wevent_manager_1.png',
-            '/works/wevent_manager_2.png',
-            '/works/wevent_manager_3.png',
-            '/works/wevent_manager_4.png',
-            '/works/wevent_manager_5.png',
+          '/works/wevent_manager_1.png',
+          '/works/wevent_manager_2.png',
+          '/works/wevent_manager_3.png',
+          '/works/wevent_manager_4.png',
+          '/works/wevent_manager_5.png',
 
-            '/works/wevent_user_1.png',
-            '/works/wevent_user_2.png',
-            '/works/wevent_user_3.png',
-            '/works/wevent_user_4.png',
-          ]}
-        />
-      </div>
-      <div>
+          '/works/wevent_user_1.png',
+          '/works/wevent_user_2.png',
+          '/works/wevent_user_3.png',
+          '/works/wevent_user_4.png',
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
             MICE 플랫폼으로서 온/오프라인 이벤트 개최를 통해 아이디어 교환,
@@ -440,24 +436,22 @@ function Wevent() {
 function Kovo() {
   return (
     <div className="works-modal-wrapper">
-      <div>
-        <Carousel
-          images={[
-            '/works/kovo_web_1.png',
-            '/works/kovo_web_2.png',
-            '/works/kovo_web_3.png',
+      <Carousel
+        images={[
+          '/works/kovo_web_1.png',
+          '/works/kovo_web_2.png',
+          '/works/kovo_web_3.png',
 
-            '/works/kovo_cms_1.png',
+          '/works/kovo_cms_1.png',
 
-            '/works/kovo_app_1.png',
-            '/works/kovo_app_2.png',
-            '/works/kovo_app_3.png',
-            '/works/kovo_app_4.png',
-            '/works/kovo_app_5.png',
-          ]}
-        />
-      </div>
-      <div className="works-content-wrapper">
+          '/works/kovo_app_1.png',
+          '/works/kovo_app_2.png',
+          '/works/kovo_app_3.png',
+          '/works/kovo_app_4.png',
+          '/works/kovo_app_5.png',
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
             한국 배구연맹(KOVO) 의 통합 웹사이트와 앱을 개발하는 데

@@ -251,7 +251,7 @@ div:has(.html-component-wrapper) {
   animation: modal-up 0.4s;
   display: flex;
   flex-direction: column;
-  /* gap: 32px; */
+  overflow: hidden;
 }
 .modal-header {
   display: flex;
@@ -298,6 +298,7 @@ div:has(.html-component-wrapper) {
   .stack-tag-wrapper {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
   }
   .stack-tag {
     &::before {
