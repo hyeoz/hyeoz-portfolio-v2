@@ -89,6 +89,11 @@ body {
   cursor: pointer;
   z-index: 1;
   display: flex;
+
+  @media (max-width: 768px) {
+    width: 55%;
+    border-radius: 128px;
+  }
 }
 .landing-image {
   margin: auto;
@@ -121,6 +126,19 @@ body {
     font-size: 80px;
     animation: move-words-reverse 6s linear infinite;
   }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 35px;
+      animation: move-words 6s linear infinite;
+      min-width: 768px;
+    }
+    &:nth-of-type(2) p {
+      font-family: 'Moirai One', system-ui;
+      font-size: 30px;
+      animation: move-words-reverse 6s linear infinite;
+    }
+  }
 }
 .tooltip {
   position: absolute;
@@ -151,6 +169,17 @@ body {
     margin: 0;
     text-align: center;
     color: white;
+  }
+
+  @media (max-width: 768px) {
+    width: 200px;
+    left: calc(50% - 100px);
+    font-size: 16px;
+    padding: 10px;
+
+    &::after {
+      top: -35%;
+    }
   }
 }
 
@@ -250,6 +279,17 @@ div:has(.html-component-wrapper) {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   height: 100%;
+  font-family: 'Jua', sans-serif;
+
+  a {
+    color: cornflowerblue;
+  }
+  .disabled-link {
+    color: #444;
+    text-decoration: line-through;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
 
   > div {
     /* border: 1px solid red; */
@@ -263,9 +303,15 @@ div:has(.html-component-wrapper) {
     &::before {
       content: '#';
     }
-    padding: 6px;
+    padding: 8px 10px;
     border-radius: 16px;
-    border: 1px solid red;
+    background-color: rgb(255, 180, 220);
+    color: #fff;
+    white-space: nowrap;
+
+    &:nth-child(2n + 1) {
+      background-color: rgb(113, 98, 155);
+    }
   }
 }
 

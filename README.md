@@ -9,6 +9,11 @@
 이 프로젝트는 [custom-boilerplate](https://github.com/hyeoz/custom-boilerplate) 를 이용하여 제작되었고,
 [Vercel](https://vercel.com/) 를 이용하여 배포될 예정입니다.
 
+### RESPONSIVE DESIGN
+
+PC와 모바일 환경에 적합하도록 반응형 디자인이 적용되어 있습니다.
+PC의 경우 1920 \* 1080 을 기준으로 디자인 되어있습니다.
+
 ## If you want to run this project
 
 프로젝트 루트 디렉토리에서 해당 명령어를 실행시켜주세요!

@@ -264,7 +264,16 @@ function Dokdo() {
         <ul>
           <li>
             독도체험관이 이전함에 따라 노후화된 웹페이지를 차세대 기술을
-            이용하여 새롭게 개발하였습니다.
+            이용하여 새롭게 개발하였습니다. (
+            <a
+              href="http://admindokdomuseum.nahf.kr/"
+              target="_blank"
+              rel="noreferrer"
+              className="disabled-link"
+            >
+              LINK
+            </a>
+            )
           </li>
           <li>
             관리자 페이지를 도맡아 개발하였고, 디자인 없이 핵심 기능만 구현
@@ -284,15 +293,6 @@ function Dokdo() {
               갤러리 등을 관리할 수 있도록 하였습니다.
             </li>
           </ul>
-          <li>
-            <a
-              href="http://admindokdomuseum.nahf.kr/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              http://admindokdomuseum.nahf.kr/
-            </a>
-          </li>
         </ul>
         <div className="stack-tag-wrapper">
           <div className="stack-tag">TypeScript</div>
@@ -336,7 +336,13 @@ function Wevent() {
             메인페이지와 관리자페이지, 유저페이지(온라인 이벤트 참여 페이지)
             개발에 참여하였습니다.
           </li>
-          <li>메인</li>
+          <li>
+            메인 (
+            <a href="https://wevent.co.kr/" target="_blank" rel="noreferrer">
+              LINK
+            </a>
+            )
+          </li>
           <ul>
             <li>
               일반 유저와 관리자 모두 접근 가능한 메인 페이지 개발에
@@ -353,7 +359,13 @@ function Wevent() {
               상태를 확인할 수 있도록 구현하였습니다.
             </li>
           </ul>
-          <li>관리자</li>
+          <li>
+            관리자 (
+            <a className="disabled-link" href="https://manager.wevent.co.kr/">
+              LINK
+            </a>
+            )
+          </li>
           <ul>
             <li>
               이벤트를 개최한 관리자가 볼 수 있는 관리자 페이지 개발에
@@ -374,9 +386,17 @@ function Wevent() {
               하였습니다.
             </li>
           </ul>
-          <li>유저</li>
+          <li>
+            유저 (
+            <a
+              className="disabled-link"
+              href="https://user.wevent.co.kr/:id/lobby"
+            >
+              LINK
+            </a>
+            )
+          </li>
           <ul>
-            <li></li>
             <li>
               온라인 이벤트 개최 시 세션 기능을 맡아 라이브 영상 시청과 함께
               stomp.js 를 활용한 실시간 채팅 기능을 개발하였습니다.
@@ -392,25 +412,15 @@ function Wevent() {
           </ul>
           <li>
             해당 프로젝트 개발 시 편리한 공통 컴포넌트 관리를 위해 디자인
-            시스템을 도맡아 개발하고 npm 을 통해 배포하는 경험을 쌓았습니다.
-          </li>
-          <ul>
-            <li>
-              <a
-                href="https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design
-              </a>
-            </li>
-          </ul>
-          <li>
-            <a href="https://wevent.co.kr/" target="_blank" rel="noreferrer">
-              https://wevent.co.kr/
+            시스템을 도맡아 개발하고 npm 을 통해 배포하는 경험을 쌓았습니다. (
+            <a
+              href="https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LINK
             </a>
-            <a className="disabled-link">https://manager.wevent.co.kr/</a>
-            <a className="disabled-link">https://user.wevent.co.kr/:id/lobby</a>
+            )
           </li>
         </ul>
         <div className="stack-tag-wrapper">
