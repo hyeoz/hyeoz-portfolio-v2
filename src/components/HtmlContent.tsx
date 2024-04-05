@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import '../styles/content.css';
 import Modal from './Modal';
-import Swiper from './Swiper';
+import Carousel from './Carousel';
+import '../styles/content.css';
 
 /* TODO
   - HTML 찐 내용 채우기 (텍스트)
@@ -207,6 +207,14 @@ function FloatingWorks() {
 function Shakerrr() {
   return (
     <div className="works-modal-wrapper">
+      <Carousel
+        images={[
+          '/works/shakerrr_1.png',
+          '/works/shakerrr_2.png',
+          '/works/shakerrr_3.png',
+          '/works/shakerrr_4.png',
+        ]}
+      />
       <div>
         <ul>
           <li>
@@ -235,15 +243,23 @@ function Shakerrr() {
           <div className="stack-tag">ANTD</div>
         </div>
       </div>
-      <div>
-        <Swiper />
-      </div>
     </div>
   );
 }
 function Dokdo() {
   return (
     <div className="works-modal-wrapper">
+      <div>
+        <Carousel
+          images={[
+            '/works/dokdo_1.png',
+            '/works/dokdo_2.png',
+            '/works/dokdo_3.png',
+            '/works/dokdo_4.png',
+            '/works/dokdo_5.png',
+          ]}
+        />
+      </div>
       <div>
         <ul>
           <li>
@@ -285,15 +301,31 @@ function Dokdo() {
           <div className="stack-tag">pm2</div>
         </div>
       </div>
-      <div>
-        <Swiper />
-      </div>
     </div>
   );
 }
 function Wevent() {
   return (
     <div className="works-modal-wrapper">
+      <div>
+        <Carousel
+          images={[
+            '/works/wevent_main_1.png',
+            '/works/wevent_main_2.png',
+
+            '/works/wevent_manager_1.png',
+            '/works/wevent_manager_2.png',
+            '/works/wevent_manager_3.png',
+            '/works/wevent_manager_4.png',
+            '/works/wevent_manager_5.png',
+
+            '/works/wevent_user_1.png',
+            '/works/wevent_user_2.png',
+            '/works/wevent_user_3.png',
+            '/works/wevent_user_4.png',
+          ]}
+        />
+      </div>
       <div>
         <ul>
           <li>
@@ -392,9 +424,6 @@ function Wevent() {
           <div className="stack-tag">npm</div>
         </div>
       </div>
-      <div>
-        <Swiper />
-      </div>
     </div>
   );
 }
@@ -402,6 +431,23 @@ function Kovo() {
   return (
     <div className="works-modal-wrapper">
       <div>
+        <Carousel
+          images={[
+            '/works/kovo_web_1.png',
+            '/works/kovo_web_2.png',
+            '/works/kovo_web_3.png',
+
+            '/works/kovo_cms_1.png',
+
+            '/works/kovo_app_1.png',
+            '/works/kovo_app_2.png',
+            '/works/kovo_app_3.png',
+            '/works/kovo_app_4.png',
+            '/works/kovo_app_5.png',
+          ]}
+        />
+      </div>
+      <div className="works-content-wrapper">
         <ul>
           <li>
             한국 배구연맹(KOVO) 의 통합 웹사이트와 앱을 개발하는 데
@@ -463,9 +509,6 @@ function Kovo() {
           <div className="stack-tag">ANTD</div>
           <div className="stack-tag">vercel</div>
         </div>
-      </div>
-      <div>
-        <Swiper />
       </div>
     </div>
   );
