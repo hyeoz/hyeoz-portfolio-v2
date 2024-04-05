@@ -276,6 +276,9 @@ function Dokdo() {
           <li>
             관리자 페이지를 도맡아 개발하였고, 디자인 없이 핵심 기능만 구현
             가능하도록 개발되었습니다.
+            <br />
+            변화하는 클라이언트의 요구사항을 반영하여 예약 관리 시스템 구축 및
+            통계 기능을 개발하였습니다.
           </li>
           <ul>
             <li>
@@ -408,7 +411,8 @@ function Wevent() {
           </ul>
           <li>
             해당 프로젝트 개발 시 편리한 공통 컴포넌트 관리를 위해 디자인
-            시스템을 도맡아 개발하고 npm 을 통해 배포하는 경험을 쌓았습니다. (
+            시스템을 도맡아, 시멘틱 마크업을 활용한 컴포넌트를 개발하고 npm 을
+            통해 배포하는 경험을 쌓았습니다. (
             <a
               href="https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design"
               target="_blank"
