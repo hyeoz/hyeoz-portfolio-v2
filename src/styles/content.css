@@ -22,7 +22,11 @@
   h1 {
     font-family: 'Coiny', system-ui;
     text-align: center;
-    font-size: 32px;
+    font-size: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 }
 h1,
@@ -93,6 +97,10 @@ p {
     font-size: 18rem;
     letter-spacing: 1rem;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .content {
   position: absolute;
@@ -110,37 +118,6 @@ p {
   p {
     font-size: 3rem;
     font-family: 'Bagel Fat One', system-ui;
-  }
-  &.info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    > div:last-of-type {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 8px;
-
-      h3,
-      p {
-        text-align: right;
-        font-family: 'Jua', sans-serif;
-        font-weight: 600;
-        color: #222;
-      }
-    }
-    h2,
-    h3 {
-      font-size: 3rem;
-      font-family: 'Bagel Fat One', system-ui;
-      margin: 0;
-    }
-    h3 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 2rem;
-    }
   }
   &.skills {
     padding: 0 5%;
@@ -267,6 +244,81 @@ p {
         transition: all 0.3s;
       }
     }
+  }
+}
+/* info 영역 PC->html-wrapper mobile->floating */
+.html-wrapper .content.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+
+    h3,
+    p {
+      text-align: right;
+      font-family: 'Jua', sans-serif;
+      font-weight: 600;
+      color: #222;
+    }
+  }
+  h2,
+  h3 {
+    font-size: 3rem;
+    font-family: 'Bagel Fat One', system-ui;
+    margin: 0;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.floating-wrapper .content.info {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, 15%);
+
+  .information {
+    h2 {
+      font-size: 2rem;
+      font-family: 'Bagel Fat One', system-ui;
+      margin: 0;
+    }
+    margin-bottom: 12px;
+  }
+
+  .history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+
+    h3,
+    p {
+      text-align: right;
+      font-family: 'Jua', sans-serif;
+      font-weight: 600;
+      color: #222;
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
   }
 }
 
