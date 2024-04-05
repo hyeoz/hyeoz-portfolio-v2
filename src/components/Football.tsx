@@ -3,7 +3,10 @@ import { GroupProps, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
+import useIsMobile from '../hooks/useIsMobile';
+
 export default function Football(props: GroupProps) {
+  const isMobile = useIsMobile();
   const group = useRef<Group<Object3DEventMap>>(null);
   const ball = useRef<Group<Object3DEventMap>>(null);
   const {
@@ -42,8 +45,8 @@ export default function Football(props: GroupProps) {
         {...props}
         ref={group}
         dispose={null}
-        position={[-0.4, -17, 0]}
-        scale={1.2}
+        scale={isMobile ? 1 : 1.2}
+        position={isMobile ? [0, -17.5, 0] : [-0.4, -17, 0]}
       >
         <group name="Scene">
           <group

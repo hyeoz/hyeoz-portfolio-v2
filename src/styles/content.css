@@ -214,7 +214,6 @@ p {
       gap: 16px;
 
       > div {
-        /* background-color: rgba(255, 255, 255, 0.3); */
         background-color: #f0f7da;
         border-radius: 32px;
         box-shadow: rgba(2, 2, 3, 0.2) 0px 8px 24px;
@@ -231,11 +230,10 @@ p {
           display: none;
         }
         h2 {
-          font-size: 32px;
+          font-size: 2rem;
           font-family: 'Moirai One', system-ui;
         }
         &:hover {
-          /* background-color: rgba(255, 255, 255, 0.5); */
           background-color: #c9df8a;
           img {
             display: block;
@@ -266,6 +264,24 @@ p {
     }
 
     @media (max-width: 768px) {
+      top: 230vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+
+      > div {
+        width: 100%;
+        height: 150px;
+
+        > div {
+          padding: 0 8px;
+          box-sizing: border-box;
+
+          h2 {
+            font-size: 0.8rem;
+          }
+        }
+      }
     }
   }
   /* contact 컴포넌트는 floating-wrapper 의 자식 */

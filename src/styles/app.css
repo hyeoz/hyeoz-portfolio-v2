@@ -252,6 +252,11 @@ div:has(.html-component-wrapper) {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    max-height: 80%;
+  }
 }
 .modal-header {
   display: flex;
@@ -263,10 +268,15 @@ div:has(.html-component-wrapper) {
     font-family: 'Jua', sans-serif;
 
     &:first-of-type {
-      font-size: 32px;
+      font-size: 2rem;
     }
     &:last-of-type {
       cursor: pointer;
+    }
+  }
+  @media (max-width: 768px) {
+    h1:first-of-type {
+      font-size: 1.5rem;
     }
   }
 }
@@ -312,6 +322,16 @@ div:has(.html-component-wrapper) {
 
     &:nth-child(2n + 1) {
       background-color: rgb(113, 98, 155);
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 0;
+
+    ul {
+      padding-left: 10px;
     }
   }
 }
