@@ -121,7 +121,6 @@ function SecondSection() {
   );
 }
 
-// TODO 프로젝트 정리, 어려움 극복 관련 + 사진 등 자세한 내용 모달로 띄우기
 function ThirdSection() {
   return (
     <section className="section-wrapper">
@@ -133,7 +132,7 @@ function ThirdSection() {
     </section>
   );
 }
-// TODO SNS
+
 function FourthSection() {
   return (
     <section className="section-wrapper">
@@ -473,8 +472,8 @@ function Kovo() {
               개발하였습니다.
             </li>
             <li>
-              경기 일정 및 데이터를 시각화하여 KOVO 및 구단 홈페이지에
-              노출하였습니다.
+              경기 일정 및 선수 데이터와 같이 다량의 스포츠 데이터를 시각화하여
+              KOVO 및 구단 홈페이지에 노출하였습니다.
             </li>
             <li>
               Youtube 데이터를 이용하여 영상 및 숏츠가 메인에 노출되도록
