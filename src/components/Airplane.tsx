@@ -3,7 +3,10 @@ import { GroupProps } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
+import useIsMobile from '../hooks/useIsMobile';
+
 export default function Airplane(props: GroupProps) {
+  const isMobile = useIsMobile();
   const group = useRef<Group<Object3DEventMap>>(null);
   const {
     nodes,
@@ -29,8 +32,8 @@ export default function Airplane(props: GroupProps) {
       ref={group}
       {...props}
       dispose={null}
-      scale={0.65}
-      position={[-1, -9.8, 0]}
+      scale={isMobile ? 0.4 : 0.65}
+      position={isMobile ? [0, -7, 0] : [-1, -9.8, 0]}
     >
       <group name="Scene">
         <group
