@@ -7,7 +7,7 @@
 ## Making
 
 이 프로젝트는 [custom-boilerplate](https://github.com/hyeoz/custom-boilerplate) 를 이용하여 제작되었고,
-[Vercel](https://vercel.com/) 를 이용하여 배포될 예정입니다.
+[Vercel](https://vercel.com/) 를 이용하여 배포되었습니다.
 
 ### RESPONSIVE DESIGN
 
