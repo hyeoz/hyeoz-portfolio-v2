@@ -371,6 +371,9 @@ function Wevent() {
           '/works/wevent_user_2.png',
           '/works/wevent_user_3.png',
           '/works/wevent_user_4.png',
+
+          '/works/wevent_chat_1.png',
+          '/works/wevent_chat_2.png',
         ]}
       />
       <div className="works-content-wrapper hide-scroll-bar">
@@ -421,6 +424,10 @@ function Wevent() {
             <li>
               세션설정 기능을 통해 이벤트 내의 복수의 세션을 생성하고 설정할 수
               있도록 하였습니다.
+            </li>
+            <li>
+              세션채팅 기능을 담당하여 이벤트 담당자가 채팅을 관리하고
+              공지사항을 설정할 수 있도록 구현하였습니다.
             </li>
             <li>
               설문조사 기능을 개발하여 이벤트 / 세션 / 연사에 관한 설문조사를
