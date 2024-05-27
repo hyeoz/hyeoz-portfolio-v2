@@ -387,6 +387,10 @@ function Wevent() {
             개발에 참여하였습니다.
           </li>
           <li>
+            해당 사업은 2023년도 테스트베드 서울 실증지원 사업에 최종
+            선정되었습니다.
+          </li>
+          <li>
             메인 (
             <a href="https://wevent.co.kr/" target="_blank" rel="noreferrer">
               LINK
