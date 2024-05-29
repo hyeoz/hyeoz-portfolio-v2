@@ -555,6 +555,12 @@ function Kovo() {
               협업하여 통합 홈페이지 내에서 티켓을 예매할 수 있도록
               구현하였습니다.
             </li>
+            <li>
+              {' '}
+              <a href="https://www.kovo.co.kr" target="_blank" rel="noreferrer">
+                LINK
+              </a>
+            </li>
           </ul>
           <li>CMS</li>
           <ul>
@@ -576,6 +582,15 @@ function Kovo() {
               구단별로 다른 바텀탭 컬러와 애니메이션을 이용해 통합 앱의 장점을
               극대화할 수 있도록 구현하였습니다.
             </li>
+            <li>
+              <a
+                href="https://apps.apple.com/kr/app/kovo-%ED%95%9C%EA%B5%AD%EB%B0%B0%EA%B5%AC%EC%97%B0%EB%A7%B9/id6466750160?l=en-GB"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LINK
+              </a>
+            </li>
           </ul>
         </ul>
         <div className="stack-tag-wrapper">
@@ -591,7 +606,7 @@ function Kovo() {
     </div>
   );
 }
-
+// TODO 앱스토어 올라가면 링크 추가하기
 function MatchDiary() {
   return (
     <div className="works-modal-wrapper">
