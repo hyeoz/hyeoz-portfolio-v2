@@ -536,7 +536,13 @@ function Kovo() {
             등 통합적으로 운영하는 동시에 개별성을 가질 수 있도록
             구현하였습니다.
           </li>
-          <li>메인</li>
+          <li>
+            메인(
+            <a href="https://www.kovo.co.kr" target="_blank" rel="noreferrer">
+              LINK
+            </a>
+            )
+          </li>
           <ul>
             <li>
               구단 메인은 두 가지 디자인 중 하나를 선택하여 보여줄 수 있도록
@@ -555,12 +561,6 @@ function Kovo() {
               협업하여 통합 홈페이지 내에서 티켓을 예매할 수 있도록
               구현하였습니다.
             </li>
-            <li>
-              {' '}
-              <a href="https://www.kovo.co.kr" target="_blank" rel="noreferrer">
-                LINK
-              </a>
-            </li>
           </ul>
           <li>CMS</li>
           <ul>
@@ -573,7 +573,17 @@ function Kovo() {
               웹사이트를 관리할 수 있도록 하였습니다.
             </li>
           </ul>
-          <li>APP</li>
+          <li>
+            APP(
+            <a
+              href="https://apps.apple.com/kr/app/kovo-%ED%95%9C%EA%B5%AD%EB%B0%B0%EA%B5%AC%EC%97%B0%EB%A7%B9/id6466750160?l=en-GB"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LINK
+            </a>
+            )
+          </li>
           <ul>
             <li>
               네이티브 앱과 웹뷰를 이용하여 통합 앱을 개발하는 데 참여했습니다.
@@ -581,15 +591,6 @@ function Kovo() {
             <li>
               구단별로 다른 바텀탭 컬러와 애니메이션을 이용해 통합 앱의 장점을
               극대화할 수 있도록 구현하였습니다.
-            </li>
-            <li>
-              <a
-                href="https://apps.apple.com/kr/app/kovo-%ED%95%9C%EA%B5%AD%EB%B0%B0%EA%B5%AC%EC%97%B0%EB%A7%B9/id6466750160?l=en-GB"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LINK
-              </a>
             </li>
           </ul>
         </ul>
@@ -641,9 +642,11 @@ function MatchDiary() {
       </div>
       <div className="stack-tag-wrapper">
         <div className="stack-tag">REACT Native</div>
+        <div className="stack-tag">zustand</div>
         <div className="stack-tag">python</div>
         <div className="stack-tag">strapi</div>
         <div className="stack-tag">heroku</div>
+        <div className="stack-tag">naver map api</div>
       </div>
     </div>
   );
