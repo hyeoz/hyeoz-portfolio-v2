@@ -213,7 +213,7 @@ function FloatingWorks() {
       case 'kovo':
         return <Kovo />;
       default:
-        return <></>;
+        return <MatchDiary />;
     }
   };
 
@@ -228,6 +228,17 @@ function FloatingWorks() {
           <div className="dokdo" onClick={() => onClickWorks('dokdo')}>
             <img src="/museum.png" alt="dokdo-icon" />
             <h2>DOKDO MUSEUM</h2>
+          </div>
+        </div>
+        <div
+          style={{
+            marginTop: '-10%',
+          }}
+          onClick={() => onClickWorks('match-diary')}
+        >
+          <div className="match-diary">
+            <img src="/baseball.png" alt="match-diary-icon" />
+            <h2>직관일기</h2>
           </div>
         </div>
         <div>
@@ -387,6 +398,10 @@ function Wevent() {
             개발에 참여하였습니다.
           </li>
           <li>
+            해당 사업은 2023년도 테스트베드 서울 실증지원 사업에 최종
+            선정되었습니다.
+          </li>
+          <li>
             메인 (
             <a href="https://wevent.co.kr/" target="_blank" rel="noreferrer">
               LINK
@@ -500,6 +515,8 @@ function Kovo() {
           '/works/kovo_web_1.png',
           '/works/kovo_web_2.png',
           '/works/kovo_web_3.png',
+          '/works/kovo_web_4.png',
+          '/works/kovo_web_5.png',
 
           '/works/kovo_cms_1.png',
 
@@ -536,9 +553,18 @@ function Kovo() {
               구현하였습니다.
             </li>
             <li>
-              이벤트를 생성하거나, 사진 / 영상 등을 업로드하고 인터파크와
-              협업하여 통합 홈페이지 내에서 티켓을 예매할 수 있도록
+              통합 혹은 구단 이벤트를 생성하거나, 사진 / 영상 등을 업로드하고
+              인터파크와 협업하여 통합 홈페이지 내에서 티켓을 예매할 수 있도록
               구현하였습니다.
+            </li>
+            <li>
+              실시간 데이터 fetching 을 통해 문자 중계 화면을 구현하였습니다.
+            </li>
+
+            <li>
+              <a href="https://www.kovo.co.kr" target="_blank" rel="noreferrer">
+                LINK
+              </a>
             </li>
           </ul>
           <li>CMS</li>
@@ -551,6 +577,10 @@ function Kovo() {
               로그인 권한을 부여하여 최고관리자 / 구단관리자를 구분하여
               웹사이트를 관리할 수 있도록 하였습니다.
             </li>
+            <li>
+              사이트 접근 시 확인할 수 있는 배너 및 팝업창을 관리할 수 있는
+              기능을 구현하였습니다.
+            </li>
           </ul>
           <li>APP</li>
           <ul>
@@ -560,6 +590,17 @@ function Kovo() {
             <li>
               구단별로 다른 바텀탭 컬러와 애니메이션을 이용해 통합 앱의 장점을
               극대화할 수 있도록 구현하였습니다.
+            </li>
+            <li>
+              API 호출에 생기는 대기시간에 따라 스켈레톤 애니메이션을 추가하여
+              유저 경험을 개선하였습니다.
+              <a
+                href="https://apps.apple.com/kr/app/kovo-%ED%95%9C%EA%B5%AD%EB%B0%B0%EA%B5%AC%EC%97%B0%EB%A7%B9/id6466750160?l=en-GB"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LINK
+              </a>
             </li>
           </ul>
         </ul>
@@ -572,6 +613,58 @@ function Kovo() {
           <div className="stack-tag">ANTD</div>
           <div className="stack-tag">vercel</div>
         </div>
+      </div>
+    </div>
+  );
+}
+// TODO 앱스토어 올라가면 링크 추가하기
+function MatchDiary() {
+  return (
+    <div className="works-modal-wrapper">
+      <Carousel
+        images={[
+          "/works/5.5' (1).png",
+          "/works/5.5' (2).png",
+          "/works/5.5' (3).png",
+          "/works/5.5' (4).png",
+          "/works/5.5' (5).png",
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
+        <ul>
+          <li>
+            쉽게 나의 직관 일기를 기록할 수 있는 <strong>직관일기</strong>{' '}
+            서비스를 기획 / 디자인 / 개발 하여 앱스토어에 배포했습니다.
+          </li>
+          <li>
+            파이썬을 이용하여 경기 일정 및 결과를 크롤링하고, strapi 를 통해
+            구축한 백엔드 서버에 데이터를 저장하였습니다.
+          </li>
+          <li>
+            기록한 사진과 텍스트에 대해서는 스토리지를 이용하여 기기 자체에
+            저장하도록 구현하여 로그인 및 인증 로직이 필요없도록 개발하였습니다.
+          </li>
+          <li>
+            네이버 맵 API 와 위치 정보를 이용하여 경기장괴의 거리를 측정하고,
+            경기장 근처에서 푸쉬 알림을 받을 수 있도록 구현하였습니다.
+          </li>
+          <li>
+            <a
+              href=""
+              target="_blank"
+              rel="noreferrer"
+              className="disabled-link"
+            >
+              LINK(최종 심사 대기중)
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="stack-tag-wrapper">
+        <div className="stack-tag">REACT Native</div>
+        <div className="stack-tag">python</div>
+        <div className="stack-tag">strapi</div>
+        <div className="stack-tag">heroku</div>
       </div>
     </div>
   );
