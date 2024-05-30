@@ -213,7 +213,7 @@ function FloatingWorks() {
       case 'kovo':
         return <Kovo />;
       default:
-        return <></>;
+        return <MatchDiary />;
     }
   };
 
@@ -228,6 +228,17 @@ function FloatingWorks() {
           <div className="dokdo" onClick={() => onClickWorks('dokdo')}>
             <img src="/museum.png" alt="dokdo-icon" />
             <h2>DOKDO MUSEUM</h2>
+          </div>
+        </div>
+        <div
+          style={{
+            marginTop: '-10%',
+          }}
+          onClick={() => onClickWorks('match-diary')}
+        >
+          <div className="match-diary">
+            <img src="/baseball.png" alt="match-diary-icon" />
+            <h2>직관일기</h2>
           </div>
         </div>
         <div>
@@ -549,6 +560,12 @@ function Kovo() {
             <li>
               실시간 데이터 fetching 을 통해 문자 중계 화면을 구현하였습니다.
             </li>
+
+            <li>
+              <a href="https://www.kovo.co.kr" target="_blank" rel="noreferrer">
+                LINK
+              </a>
+            </li>
           </ul>
           <li>CMS</li>
           <ul>
@@ -577,6 +594,13 @@ function Kovo() {
             <li>
               API 호출에 생기는 대기시간에 따라 스켈레톤 애니메이션을 추가하여
               유저 경험을 개선하였습니다.
+              <a
+                href="https://apps.apple.com/kr/app/kovo-%ED%95%9C%EA%B5%AD%EB%B0%B0%EA%B5%AC%EC%97%B0%EB%A7%B9/id6466750160?l=en-GB"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LINK
+              </a>
             </li>
           </ul>
         </ul>
@@ -589,6 +613,48 @@ function Kovo() {
           <div className="stack-tag">ANTD</div>
           <div className="stack-tag">vercel</div>
         </div>
+      </div>
+    </div>
+  );
+}
+// TODO 앱스토어 올라가면 링크 추가하기
+function MatchDiary() {
+  return (
+    <div className="works-modal-wrapper">
+      <Carousel
+        images={[
+          "/works/5.5' (1).png",
+          "/works/5.5' (2).png",
+          "/works/5.5' (3).png",
+          "/works/5.5' (4).png",
+          "/works/5.5' (5).png",
+        ]}
+      />
+      <div className="works-content-wrapper hide-scroll-bar">
+        <ul>
+          <li>
+            쉽게 나의 직관 일기를 기록할 수 있는 <strong>직관일기</strong>{' '}
+            서비스를 기획 / 디자인 / 개발 하여 앱스토어에 배포했습니다.
+          </li>
+          <li>
+            파이썬을 이용하여 경기 일정 및 결과를 크롤링하고, strapi 를 통해
+            구축한 백엔드 서버에 데이터를 저장하였습니다.
+          </li>
+          <li>
+            기록한 사진과 텍스트에 대해서는 스토리지를 이용하여 기기 자체에
+            저장하도록 구현하여 로그인 및 인증 로직이 필요없도록 개발하였습니다.
+          </li>
+          <li>
+            네이버 맵 API 와 위치 정보를 이용하여 경기장괴의 거리를 측정하고,
+            경기장 근처에서 푸쉬 알림을 받을 수 있도록 구현하였습니다.
+          </li>
+        </ul>
+      </div>
+      <div className="stack-tag-wrapper">
+        <div className="stack-tag">REACT Native</div>
+        <div className="stack-tag">python</div>
+        <div className="stack-tag">strapi</div>
+        <div className="stack-tag">heroku</div>
       </div>
     </div>
   );
