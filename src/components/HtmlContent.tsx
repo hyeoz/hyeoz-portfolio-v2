@@ -515,6 +515,8 @@ function Kovo() {
           '/works/kovo_web_1.png',
           '/works/kovo_web_2.png',
           '/works/kovo_web_3.png',
+          '/works/kovo_web_4.png',
+          '/works/kovo_web_5.png',
 
           '/works/kovo_cms_1.png',
 
@@ -557,9 +559,18 @@ function Kovo() {
               구현하였습니다.
             </li>
             <li>
-              이벤트를 생성하거나, 사진 / 영상 등을 업로드하고 인터파크와
-              협업하여 통합 홈페이지 내에서 티켓을 예매할 수 있도록
+              통합 혹은 구단 이벤트를 생성하거나, 사진 / 영상 등을 업로드하고
+              인터파크와 협업하여 통합 홈페이지 내에서 티켓을 예매할 수 있도록
               구현하였습니다.
+            </li>
+            <li>
+              실시간 데이터 fetching 을 통해 문자 중계 화면을 구현하였습니다.
+            </li>
+
+            <li>
+              <a href="https://www.kovo.co.kr" target="_blank" rel="noreferrer">
+                LINK
+              </a>
             </li>
           </ul>
           <li>CMS</li>
@@ -571,6 +582,10 @@ function Kovo() {
             <li>
               로그인 권한을 부여하여 최고관리자 / 구단관리자를 구분하여
               웹사이트를 관리할 수 있도록 하였습니다.
+            </li>
+            <li>
+              사이트 접근 시 확인할 수 있는 배너 및 팝업창을 관리할 수 있는
+              기능을 구현하였습니다.
             </li>
           </ul>
           <li>
@@ -591,6 +606,10 @@ function Kovo() {
             <li>
               구단별로 다른 바텀탭 컬러와 애니메이션을 이용해 통합 앱의 장점을
               극대화할 수 있도록 구현하였습니다.
+            </li>
+            <li>
+              API 호출에 생기는 대기시간에 따라 스켈레톤 애니메이션을 추가하여
+              유저 경험을 개선하였습니다.
             </li>
           </ul>
         </ul>
@@ -637,6 +656,16 @@ function MatchDiary() {
           <li>
             네이버 맵 API 와 위치 정보를 이용하여 경기장괴의 거리를 측정하고,
             경기장 근처에서 푸쉬 알림을 받을 수 있도록 구현하였습니다.
+          </li>
+          <li>
+            <a
+              href=""
+              target="_blank"
+              rel="noreferrer"
+              className="disabled-link"
+            >
+              LINK(최종 심사 대기중)
+            </a>
           </li>
         </ul>
       </div>
