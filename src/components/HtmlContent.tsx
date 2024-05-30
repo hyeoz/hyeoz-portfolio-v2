@@ -648,6 +648,16 @@ function MatchDiary() {
             네이버 맵 API 와 위치 정보를 이용하여 경기장괴의 거리를 측정하고,
             경기장 근처에서 푸쉬 알림을 받을 수 있도록 구현하였습니다.
           </li>
+          <li>
+            <a
+              href=""
+              target="_blank"
+              rel="noreferrer"
+              className="disabled-link"
+            >
+              LINK(최종 심사 대기중)
+            </a>
+          </li>
         </ul>
       </div>
       <div className="stack-tag-wrapper">
