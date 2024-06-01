@@ -5,11 +5,14 @@ import Carousel from './Carousel';
 import '../styles/content.css';
 
 /* TODO
-  - HTML 찐 내용 채우기 (텍스트)
   - 모바일 반응형 적용
 */
 
-function HtmlContent() {
+type SetSectionType = {
+  setSection: React.Dispatch<React.SetStateAction<number>>;
+};
+
+function HtmlContent({ setSection }: SetSectionType) {
   return (
     <>
       <article className="html-wrapper">
@@ -22,10 +25,10 @@ function HtmlContent() {
         >
           <h1>HYEOZ</h1>
         </div>
-        <FirstSection />
-        <SecondSection />
-        <ThirdSection />
-        <FourthSection />
+        <FirstSection setSection={setSection} />
+        <SecondSection setSection={setSection} />
+        <ThirdSection setSection={setSection} />
+        <FourthSection setSection={setSection} />
       </article>
 
       <MobileFloatingInfo />
@@ -35,7 +38,7 @@ function HtmlContent() {
   );
 }
 
-function FirstSection() {
+function FirstSection({ setSection }: SetSectionType) {
   return (
     <section className="section-wrapper">
       <div className="content-wrapper">
@@ -48,52 +51,110 @@ function FirstSection() {
         <div className="content info">
           <div>
             <h2>
-              안녕하세요,
-              <br />
-              3년차 프론트엔드 개발자 이혜원입니다!
+              안녕하세요, {/* <br /> */} 3년차 프론트엔드 개발자 이혜원입니다!
             </h2>
             <br />
             <p>
-              저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, <br />
-              현재는 웹, 앱 프론트엔드 개발자로 일하고 있습니다. <br />
-              리액트를 주로 사용하고, 리액트-스러운 개발을 위헤 <br />
+              저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, 현재는 웹, 앱
+              프론트엔드 개발자로 일하고 있습니다.
+              {/* 리액트를 주로 사용하고, 리액트-스러운 개발을 위헤 <br />
               컴포넌트 재사용성에 대해 고민함과 동시에 <br />
               사용자 편리성을 위해 더 나은 기능을 <br />
-              구현하려고 노력하고 있습니다!
+              구현하려고 노력하고 있습니다! */}
             </p>
           </div>
           <div>
             <div>
-              <h3>1997.02.03</h3>
-              <p>출생</p>
+              <div
+                style={{
+                  alignItems: 'flex-start',
+                }}
+              >
+                <h3>1997.02.03</h3>
+                <p>출생</p>
+              </div>
+              <div
+                style={{
+                  alignItems: 'flex-end',
+                }}
+              >
+                <h3>2015.03 - 2020.02</h3>
+                <p>서울여자대학교 졸업</p>
+              </div>
+              <div
+                style={{
+                  alignItems: 'flex-start',
+                }}
+              >
+                <h3>2021.04 - 2021.10</h3>
+                <p>도미네이트 (데이터 분석)</p>
+              </div>
             </div>
             <div>
-              <h3>2015.03 - 2020.02</h3>
-              <p>서울여자대학교 졸업</p>
-            </div>
-            <div>
-              <h3>2021.04 - 2021.10</h3>
-              <p>도미네이트 (데이터 분석)</p>
-            </div>
-            <div>
-              <h3>2022.04 - </h3>
-              <p>메이데이 파트너스 (프론트엔드 개발)</p>
-            </div>
-            <div>
-              <h3>2023.12 - </h3>
-              <p>
-                프로그래머스 <br /> KDT 클라우딩 어플리케이션 엔지니어링 과정
-                (멘토)
-              </p>
+              <div
+                style={{
+                  alignItems: 'flex-start',
+                }}
+              >
+                <h3>2022.04 - </h3>
+                <p>
+                  메이데이 파트너스 <br />
+                  (프론트엔드 개발)
+                </p>
+              </div>
+              <div
+                style={{
+                  alignItems: 'flex-end',
+                }}
+              >
+                <h3>2023.12 - 2024.05</h3>
+                <p
+                  style={{
+                    textAlign: 'right',
+                  }}
+                >
+                  프로그래머스 <br /> KDT 클라우딩 어플리케이션 <br />
+                  엔지니어링 과정 1기 (멘토)
+                </p>
+              </div>
+              <div
+                style={{
+                  alignItems: 'flex-start',
+                }}
+              >
+                <h3>2024.05 - 5</h3>
+                <p
+                  style={{
+                    textAlign: 'left',
+                  }}
+                >
+                  프로그래머스 <br /> KDT 클라우딩 어플리케이션 <br />
+                  엔지니어링 과정 2기 (멘토)
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <button
+        className="down-button"
+        onClick={() => setSection((prev) => prev + 1)}
+      >
+        <img
+          src="/svg/chevron.svg"
+          alt="main-chevron-down"
+          style={{
+            width: 60,
+            height: 60,
+            rotate: '-90deg',
+          }}
+        />
+      </button>
     </section>
   );
 }
 
-function SecondSection() {
+function SecondSection({ setSection }: SetSectionType) {
   return (
     <section className="section-wrapper">
       <div className="back-title">
@@ -106,7 +167,7 @@ function SecondSection() {
         </div>
         <div className="js-ts">
           <img src="/cloud.png" alt="cloud-js" />
-          <p>JavaScript / TypeScript</p>
+          <p>TypeScript</p>
         </div>
         <div className="three">
           <img src="/cloud.png" alt="cloud-three" />
@@ -120,16 +181,12 @@ function SecondSection() {
           <img src="/cloud.png" alt="cloud-python" />
           <p>Python</p>
         </div>
-        {/* <div className="and-so-on">
-          <img src="/cloud.png" alt="cloud-js" />
-          <p>JavaScript / TypeScript</p>
-        </div> */}
       </div>
     </section>
   );
 }
 
-function ThirdSection() {
+function ThirdSection({ setSection }: SetSectionType) {
   return (
     <section className="section-wrapper">
       <div className="back-title">
@@ -141,7 +198,7 @@ function ThirdSection() {
   );
 }
 
-function FourthSection() {
+function FourthSection({ setSection }: SetSectionType) {
   return (
     <section className="section-wrapper">
       <div className="back-title">
@@ -167,9 +224,10 @@ function MobileFloatingInfo() {
           <br />
           <p>
             저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, 현재는 웹, 앱
-            프론트엔드 개발자로 일하고 있습니다. 리액트를 주로 사용하고,
+            프론트엔드 개발자로 일하고 있습니다.
+            {/* 리액트를 주로 사용하고,
             리액트-스러운 개발을 위헤 컴포넌트 재사용성에 대해 고민함과 동시에
-            사용자 편리성을 위해 더 나은 기능을 구현하려고 노력하고 있습니다!
+            사용자 편리성을 위해 더 나은 기능을 구현하려고 노력하고 있습니다! */}
           </p>
         </div>
         <div className="history">
@@ -188,6 +246,20 @@ function MobileFloatingInfo() {
           <div>
             <h3>2022.04 - </h3>
             <p>메이데이 파트너스 (프론트엔드 개발)</p>
+          </div>
+          <div>
+            <h3>2023.12 - 2024.05</h3>
+            <p>
+              프로그래머스 <br /> KDT 클라우딩 어플리케이션 엔지니어링 과정 1기
+              (멘토)
+            </p>
+          </div>
+          <div>
+            <h3>2024.05 - 5</h3>
+            <p>
+              프로그래머스 <br /> KDT 클라우딩 어플리케이션 엔지니어링 과정 2기
+              (멘토)
+            </p>
           </div>
         </div>
       </div>
@@ -229,26 +301,25 @@ function FloatingWorks() {
             <img src="/museum.png" alt="dokdo-icon" />
             <h2>DOKDO MUSEUM</h2>
           </div>
-        </div>
-        <div
-          style={{
-            marginTop: '-10%',
-          }}
-          onClick={() => onClickWorks('match-diary')}
-        >
-          <div className="match-diary">
-            <img src="/baseball.png" alt="match-diary-icon" />
-            <h2>직관일기</h2>
-          </div>
-        </div>
-        <div>
           <div className="wevent" onClick={() => onClickWorks('wevent')}>
             <img src="/event.png" alt="wevent-icon" />
             <h2>WEVENT</h2>
           </div>
+        </div>
+
+        <div>
           <div className="kovo" onClick={() => onClickWorks('kovo')}>
             <img src="/ball.png" alt="kovo-icon" />
             <h2>KOVO</h2>
+          </div>
+          <div
+            className="match-diary"
+            onClick={() => onClickWorks('match-diary')}
+          >
+            <div className="match-diary">
+              <img src="/baseball.png" alt="match-diary-icon" />
+              <h2>직관일기</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -566,14 +637,14 @@ function Kovo() {
             <li>
               실시간 데이터 fetching 을 통해 문자 중계 화면을 구현하였습니다.
             </li>
-
-            <li>
-              <a href="https://www.kovo.co.kr" target="_blank" rel="noreferrer">
-                LINK
-              </a>
-            </li>
           </ul>
-          <li>CMS</li>
+          <li>
+            CMS(
+            <a href="https://www.admin.kovo.co.kr" className="disabled-link">
+              LINK
+            </a>
+            )
+          </li>
           <ul>
             <li>
               홈페이지에 올라가는 모든 콘텐츠를 관리할 수 있는 관리자 페이지
@@ -642,8 +713,16 @@ function MatchDiary() {
       <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
-            쉽게 나의 직관 일기를 기록할 수 있는 <strong>직관일기</strong>{' '}
-            서비스를 기획 / 디자인 / 개발 하여 앱스토어에 배포했습니다.
+            쉽게 나의 직관 일기를 기록할 수 있는 <strong>직관일기</strong>(
+            <a
+              href=""
+              target="_blank"
+              rel="noreferrer"
+              className="disabled-link"
+            >
+              LINK
+            </a>
+            ) 서비스를 기획 / 디자인 / 개발 하여 앱스토어에 배포했습니다.
           </li>
           <li>
             파이썬을 이용하여 경기 일정 및 결과를 크롤링하고, strapi 를 통해
@@ -656,16 +735,6 @@ function MatchDiary() {
           <li>
             네이버 맵 API 와 위치 정보를 이용하여 경기장괴의 거리를 측정하고,
             경기장 근처에서 푸쉬 알림을 받을 수 있도록 구현하였습니다.
-          </li>
-          <li>
-            <a
-              href=""
-              target="_blank"
-              rel="noreferrer"
-              className="disabled-link"
-            >
-              LINK(최종 심사 대기중)
-            </a>
           </li>
         </ul>
       </div>
