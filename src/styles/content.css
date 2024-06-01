@@ -117,7 +117,7 @@ p {
 
   p {
     font-size: 3rem;
-    font-family: 'Bagel Fat One', system-ui;
+    font-family: 'Jua', system-ui;
   }
 
   &.skills {
@@ -133,19 +133,19 @@ p {
       position: relative;
 
       &.react {
-        width: 300px;
+        width: 330px;
       }
       &.js-ts {
-        width: 250px;
+        width: 280px;
       }
       &.three {
-        width: 200px;
+        width: 250px;
       }
       &.react-native {
-        width: 200px;
+        width: 250px;
       }
       &.python {
-        width: 150px;
+        width: 190px;
       }
 
       img {
@@ -201,21 +201,34 @@ p {
   }
   /* works 컴포넌트는 floating-wrapper 의 자식 */
   &.works {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
     position: absolute;
-    top: 240vh;
+    top: 220vh;
 
     > div {
-      width: 30%;
-      height: 300px;
-      display: grid;
-      grid-template-rows: 1fr 1fr;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: space-between;
+      /* flex-wrap: wrap */
+      /* display: grid;
+      grid-template-rows: 1fr 1fr; */
       gap: 16px;
 
+      &:first-of-type {
+        margin-bottom: 150px;
+      }
+      &:nth-of-type(2) {
+        width: 80%;
+        margin: auto;
+      }
+
       > div {
+        width: 200px;
         background-color: #f0f7da;
-        border-radius: 32px;
+        border-radius: 99px;
         box-shadow: rgba(2, 2, 3, 0.2) 0px 8px 24px;
         display: flex;
         /* flex-direction: column; */
@@ -227,25 +240,26 @@ p {
         img {
           width: 64px;
           aspect-ratio: 1 / 1;
-          display: none;
+          /* display: none; */
         }
         h2 {
-          font-size: 2rem;
-          font-family: 'Moirai One', system-ui;
+          /* font-size: 2rem;
+          font-family: 'Moirai One', system-ui; */
+          display: none;
         }
         &:hover {
           background-color: #c9df8a;
-          img {
+          /* img {
             display: block;
           }
           h2 {
             display: none;
-          }
+          } */
         }
         transition: all 0.3s;
       }
 
-      &:nth-of-type(1) {
+      /* &:nth-of-type(1) {
         > div:first-of-type {
           border-bottom-right-radius: 4px;
         }
@@ -260,7 +274,7 @@ p {
         > div:last-of-type {
           border-top-left-radius: 4px;
         }
-      }
+      } */
     }
 
     @media (max-width: 768px) {
@@ -311,25 +325,48 @@ p {
 }
 /* info 영역 PC->html-wrapper mobile->floating */
 .html-wrapper .content.info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 
   > div:last-of-type {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    /* gap: 8px; */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+
+    > div {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
 
     h3,
     p {
-      text-align: right;
+      text-align: center;
       font-family: 'Jua', sans-serif;
       font-weight: 600;
-      color: #222;
+      color: #333;
+    }
+    h3 {
+      color: #000;
     }
   }
   h2,
   h3 {
+    text-align: center;
     font-size: 3rem;
     font-family: 'Bagel Fat One', system-ui;
     margin: 0;
@@ -338,6 +375,7 @@ p {
     font-size: 2rem;
   }
   p {
+    text-align: center;
     font-size: 2rem;
   }
   @media (max-width: 768px) {

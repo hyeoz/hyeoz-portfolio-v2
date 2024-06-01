@@ -1,4 +1,4 @@
-import { useState, lazy } from 'react';
+import { useState, lazy, Dispatch, SetStateAction } from 'react';
 import { Environment, Html, Scroll, ScrollControls } from '@react-three/drei';
 
 const ScrollManager = lazy(() => import('./components/ScrollManager'));
@@ -9,9 +9,13 @@ const Baseball = lazy(() => import('./components/Baseball'));
 const Football = lazy(() => import('./components/Football'));
 // import Particles from './components/Particles';
 
-function Scene() {
-  const [section, setSection] = useState(0);
-
+function Scene({
+  section,
+  setSection,
+}: {
+  section: number;
+  setSection: Dispatch<SetStateAction<number>>;
+}) {
   return (
     <>
       <ScrollControls pages={4} damping={0.1}>
