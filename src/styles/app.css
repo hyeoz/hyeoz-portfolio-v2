@@ -193,7 +193,7 @@ div:has(.html-component-wrapper) {
     z-index: 99;
     border: none;
     background-color: inherit;
-    animation: bounce 1s ease-in-out infinite;
+    animation: bounce-down-button 1s ease-in-out infinite;
 
     &:hover {
       cursor: pointer !important;
@@ -226,6 +226,17 @@ div:has(.html-component-wrapper) {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@keyframes bounce-down-button {
+  0% {
+    transform: translate(-50%, 0px);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    transform: translate(-50%, 0px);
   }
 }
 
