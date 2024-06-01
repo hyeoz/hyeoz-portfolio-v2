@@ -77,19 +77,6 @@ p {
       font-size: 14rem;
     }
   }
-
-  .down-button {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    z-index: 99;
-    border: none;
-    background-color: inherit;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }
 
 .back-title {

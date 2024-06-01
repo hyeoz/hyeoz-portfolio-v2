@@ -12,7 +12,7 @@ type SetSectionType = {
   setSection: React.Dispatch<React.SetStateAction<number>>;
 };
 
-function HtmlContent({ setSection }: SetSectionType) {
+function HtmlContent() {
   return (
     <>
       <article className="html-wrapper">
@@ -25,10 +25,10 @@ function HtmlContent({ setSection }: SetSectionType) {
         >
           <h1>HYEOZ</h1>
         </div>
-        <FirstSection setSection={setSection} />
-        <SecondSection setSection={setSection} />
-        <ThirdSection setSection={setSection} />
-        <FourthSection setSection={setSection} />
+        <FirstSection />
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
       </article>
 
       <MobileFloatingInfo />
@@ -38,7 +38,7 @@ function HtmlContent({ setSection }: SetSectionType) {
   );
 }
 
-function FirstSection({ setSection }: SetSectionType) {
+function FirstSection() {
   return (
     <section className="section-wrapper">
       <div className="content-wrapper">
@@ -136,25 +136,11 @@ function FirstSection({ setSection }: SetSectionType) {
           </div>
         </div>
       </div>
-      <button
-        className="down-button"
-        onClick={() => setSection((prev) => prev + 1)}
-      >
-        <img
-          src="/svg/chevron.svg"
-          alt="main-chevron-down"
-          style={{
-            width: 60,
-            height: 60,
-            rotate: '-90deg',
-          }}
-        />
-      </button>
     </section>
   );
 }
 
-function SecondSection({ setSection }: SetSectionType) {
+function SecondSection() {
   return (
     <section className="section-wrapper">
       <div className="back-title">
@@ -186,7 +172,7 @@ function SecondSection({ setSection }: SetSectionType) {
   );
 }
 
-function ThirdSection({ setSection }: SetSectionType) {
+function ThirdSection() {
   return (
     <section className="section-wrapper">
       <div className="back-title">
@@ -198,7 +184,7 @@ function ThirdSection({ setSection }: SetSectionType) {
   );
 }
 
-function FourthSection({ setSection }: SetSectionType) {
+function FourthSection() {
   return (
     <section className="section-wrapper">
       <div className="back-title">

@@ -185,6 +185,20 @@ body {
 
 div:has(.html-component-wrapper) {
   transform: none !important;
+
+  .down-button {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    z-index: 99;
+    border: none;
+    background-color: inherit;
+    animation: bounce 1s ease-in-out infinite;
+
+    &:hover {
+      cursor: pointer !important;
+    }
+  }
 }
 
 @keyframes move-words {
