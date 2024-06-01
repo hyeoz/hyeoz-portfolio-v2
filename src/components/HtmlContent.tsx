@@ -8,10 +8,6 @@ import '../styles/content.css';
   - 모바일 반응형 적용
 */
 
-type SetSectionType = {
-  setSection: React.Dispatch<React.SetStateAction<number>>;
-};
-
 function HtmlContent() {
   return (
     <>
