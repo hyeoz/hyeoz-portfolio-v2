@@ -163,8 +163,8 @@ p {
     @media (max-width: 768px) {
       top: 60%;
       display: grid;
-
       grid-template-columns: repeat(6, minmax(0, 1fr));
+      height: 200px;
 
       > div {
         margin: auto;
