@@ -32,8 +32,8 @@ export default function Laptop(props: GroupProps) {
       ref={group}
       {...props}
       dispose={null}
-      scale={isMobile ? 2 : 3}
-      position={isMobile ? [-0.5, -2.5, 0] : [0, -1, 0]}
+      scale={isMobile ? 1.7 : 3}
+      position={isMobile ? [-1, -1.3, 0] : [0, -1, 0]}
     >
       <group name="Scene">
         <mesh
