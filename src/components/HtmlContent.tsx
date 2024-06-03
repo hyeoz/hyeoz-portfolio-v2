@@ -680,7 +680,6 @@ function Kovo() {
     </div>
   );
 }
-// TODO 앱스토어 올라가면 링크 추가하기
 function MatchDiary() {
   return (
     <div className="works-modal-wrapper">
@@ -697,6 +696,7 @@ function MatchDiary() {
         <ul>
           <li>
             쉽게 나의 직관 일기를 기록할 수 있는 <strong>직관일기</strong>(
+            {/* TODO 앱스토어 올라가면 링크 추가하기 */}
             <a
               href=""
               target="_blank"
@@ -718,6 +718,17 @@ function MatchDiary() {
           <li>
             네이버 맵 API 와 위치 정보를 이용하여 경기장괴의 거리를 측정하고,
             경기장 근처에서 푸쉬 알림을 받을 수 있도록 구현하였습니다.
+          </li>
+          <li>
+            레포지토리 확인하러가기(
+            <a
+              href="https://github.com/hyeoz/match-diary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LINK
+            </a>
+            )
           </li>
         </ul>
         <div className="stack-tag-wrapper">
