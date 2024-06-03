@@ -304,8 +304,6 @@ p {
 }
 /* info 영역 PC->html-wrapper mobile->floating */
 .html-wrapper .content.info {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
   display: flex;
   flex-direction: column;
   gap: 64px;
@@ -314,10 +312,6 @@ p {
     flex: 1;
     display: flex;
     justify-content: space-between;
-    /* flex-direction: column; */
-    /* gap: 8px; */
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
 
     > div {
       width: 30%;
@@ -365,7 +359,7 @@ p {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  transform: translate(-50%, 15%);
+  transform: translate(-50%, 10%);
 
   .information {
     h2 {

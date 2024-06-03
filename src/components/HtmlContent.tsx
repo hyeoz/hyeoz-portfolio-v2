@@ -118,7 +118,7 @@ function FirstSection() {
                   alignItems: 'flex-start',
                 }}
               >
-                <h3>2024.05 - 5</h3>
+                <h3>2024.05 -</h3>
                 <p
                   style={{
                     textAlign: 'left',
@@ -238,7 +238,7 @@ function MobileFloatingInfo() {
             </p>
           </div>
           <div>
-            <h3>2024.05 - 5</h3>
+            <h3>2024.05 -</h3>
             <p>
               프로그래머스 <br /> KDT 클라우딩 어플리케이션 엔지니어링 과정 2기
               (멘토)
