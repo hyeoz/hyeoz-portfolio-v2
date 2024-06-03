@@ -201,7 +201,8 @@ function MobileFloatingInfo() {
           <h2>
             안녕하세요,
             <br />
-            3년차 프론트엔드 개발자 이혜원입니다!
+            3년차 프론트엔드 개발자
+            <br /> 이혜원입니다!
           </h2>
           <br />
           <p>
@@ -719,14 +720,14 @@ function MatchDiary() {
             경기장 근처에서 푸쉬 알림을 받을 수 있도록 구현하였습니다.
           </li>
         </ul>
-      </div>
-      <div className="stack-tag-wrapper">
-        <div className="stack-tag">REACT Native</div>
-        <div className="stack-tag">zustand</div>
-        <div className="stack-tag">python</div>
-        <div className="stack-tag">strapi</div>
-        <div className="stack-tag">heroku</div>
-        <div className="stack-tag">naver map api</div>
+        <div className="stack-tag-wrapper">
+          <div className="stack-tag">REACT Native</div>
+          <div className="stack-tag">zustand</div>
+          <div className="stack-tag">python</div>
+          <div className="stack-tag">strapi</div>
+          <div className="stack-tag">heroku</div>
+          <div className="stack-tag">naver map api</div>
+        </div>
       </div>
     </div>
   );

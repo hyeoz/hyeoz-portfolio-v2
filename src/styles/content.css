@@ -201,9 +201,6 @@ p {
   }
   /* works 컴포넌트는 floating-wrapper 의 자식 */
   &.works {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
     position: absolute;
     top: 220vh;
 
@@ -212,9 +209,6 @@ p {
       height: 200px;
       display: flex;
       justify-content: space-between;
-      /* flex-wrap: wrap */
-      /* display: grid;
-      grid-template-rows: 1fr 1fr; */
       gap: 16px;
 
       &:first-of-type {
@@ -243,54 +237,39 @@ p {
           /* display: none; */
         }
         h2 {
-          /* font-size: 2rem;
-          font-family: 'Moirai One', system-ui; */
           display: none;
         }
         &:hover {
           background-color: #c9df8a;
-          /* img {
-            display: block;
-          }
-          h2 {
-            display: none;
-          } */
         }
         transition: all 0.3s;
       }
-
-      /* &:nth-of-type(1) {
-        > div:first-of-type {
-          border-bottom-right-radius: 4px;
-        }
-        > div:last-of-type {
-          border-top-right-radius: 4px;
-        }
-      }
-      &:nth-of-type(3) {
-        > div:first-of-type {
-          border-bottom-left-radius: 4px;
-        }
-        > div:last-of-type {
-          border-top-left-radius: 4px;
-        }
-      } */
     }
 
     @media (max-width: 768px) {
-      top: 230vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      top: 220vh;
       gap: 16px;
 
       > div {
-        width: 100%;
-        height: 150px;
+        height: 88px;
 
+        &:first-of-type {
+          width: 100%;
+          margin-bottom: 24px;
+        }
+        &:nth-of-type(2) {
+          width: 100%;
+          justify-content: space-evenly;
+        }
         > div {
+          width: 88px;
+          aspect-ratio: 1 / 1;
           padding: 0 8px;
           box-sizing: border-box;
 
+          img {
+            width: 32px;
+          }
           h2 {
             font-size: 0.8rem;
           }
@@ -390,7 +369,7 @@ p {
 
   .information {
     h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-family: 'Bagel Fat One', system-ui;
       margin: 0;
     }
