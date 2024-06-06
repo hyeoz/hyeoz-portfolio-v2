@@ -295,10 +295,7 @@ function FloatingWorks() {
             <img src="/ball.png" alt="kovo-icon" />
             <h2>KOVO</h2>
           </div>
-          <div
-            className="match-diary"
-            onClick={() => onClickWorks('match-diary')}
-          >
+          <div className="match-diary" onClick={() => onClickWorks('직관일기')}>
             <div className="match-diary">
               <img src="/baseball.png" alt="match-diary-icon" />
               <h2>직관일기</h2>
