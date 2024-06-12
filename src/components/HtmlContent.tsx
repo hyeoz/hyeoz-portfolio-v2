@@ -295,10 +295,7 @@ function FloatingWorks() {
             <img src="/ball.png" alt="kovo-icon" />
             <h2>KOVO</h2>
           </div>
-          <div
-            className="match-diary"
-            onClick={() => onClickWorks('match-diary')}
-          >
+          <div className="match-diary" onClick={() => onClickWorks('직관일기')}>
             <div className="match-diary">
               <img src="/baseball.png" alt="match-diary-icon" />
               <h2>직관일기</h2>
@@ -695,17 +692,17 @@ function MatchDiary() {
       <div className="works-content-wrapper hide-scroll-bar">
         <ul>
           <li>
-            쉽게 나의 직관 일기를 기록할 수 있는 <strong>직관일기</strong>(
-            {/* TODO 앱스토어 올라가면 링크 추가하기 */}
+            쉽게 나의 직관 일기를 기록할 수 있는 <strong>직관일기</strong>{' '}
+            서비스를 기획 / 디자인 / 개발 하여 앱스토어에 배포했습니다.(
             <a
-              href=""
+              href="https://apps.apple.com/kr/app/%EC%A7%81%EA%B4%80%EC%9D%BC%EA%B8%B0/id6503297796?l=en-GB"
               target="_blank"
               rel="noreferrer"
-              className="disabled-link"
+              // className="disabled-link"
             >
               LINK
             </a>
-            ) 서비스를 기획 / 디자인 / 개발 하여 앱스토어에 배포했습니다.
+            )
           </li>
           <li>
             파이썬을 이용하여 경기 일정 및 결과를 크롤링하고, strapi 를 통해
@@ -724,17 +721,27 @@ function MatchDiary() {
             네이버 맵 API 와 위치 정보를 이용하여 경기장괴의 거리를 측정하고,
             경기장 근처에서 푸쉬 알림을 받을 수 있도록 구현하였습니다.
           </li>
-          <li>
-            레포지토리 확인하러가기(
-            <a
-              href="https://github.com/hyeoz/match-diary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LINK
-            </a>
-            )
-          </li>
+          <li>레포지토리 확인</li>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/hyeoz/match-diary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                IOS 앱 레포지토리
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/hyeoz/2024_match_crawling"
+                target="_blank"
+                rel="noreferrer"
+              >
+                웹 크롤링 레포지토리
+              </a>
+            </li>
+          </ul>
         </ul>
         <div className="stack-tag-wrapper">
           <div className="stack-tag">REACT Native</div>
