@@ -712,6 +712,11 @@ function MatchDiary() {
             구축한 백엔드 서버에 데이터를 저장하였습니다.
           </li>
           <li>
+            크롤링은 heroku 스케쥴러를 설정하여 매일 밤 12시에 작동합니다.
+            크롤링이 정상적으로 작동했는지는 Slack webhook을 이용하여 메세지로
+            확인할 수 있습니다.
+          </li>
+          <li>
             기록한 사진과 텍스트에 대해서는 스토리지를 이용하여 기기 자체에
             저장하도록 구현하여 로그인 및 인증 로직이 필요없도록 개발하였습니다.
           </li>
@@ -738,6 +743,7 @@ function MatchDiary() {
           <div className="stack-tag">strapi</div>
           <div className="stack-tag">heroku</div>
           <div className="stack-tag">naver map api</div>
+          <div className="stack-tag">slack webhook</div>
         </div>
       </div>
     </div>
