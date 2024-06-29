@@ -51,8 +51,13 @@ function FirstSection() {
             </h2>
             <br />
             <p>
-              저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, 현재는 웹, 앱
-              프론트엔드 개발자로 일하고 있습니다.
+              데이터 분석을 시작으로 프론트엔드 개발을 접하게 되었고, 현재는
+              리액트와 리액트 네이티브를 주로 사용하는 웹/앱 개발자가
+              되었습니다.
+              <br /> 동시에 프론트엔드 교육 과정의 멘토로 2기째 활동중이고, 직접
+              개발한 직관일기 라는 서비스를 운영하는 운영자 이기도 합니다.
+              {/* 저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, 현재는 웹, 앱
+              프론트엔드 개발자로 일하고 있습니다. */}
               {/* 리액트를 주로 사용하고, 리액트-스러운 개발을 위헤 <br />
               컴포넌트 재사용성에 대해 고민함과 동시에 <br />
               사용자 편리성을 위해 더 나은 기능을 <br />
@@ -71,7 +76,7 @@ function FirstSection() {
               </div>
               <div
                 style={{
-                  alignItems: 'flex-end',
+                  alignItems: 'flex-start',
                 }}
               >
                 <h3>2015.03 - 2020.02</h3>
@@ -89,11 +94,15 @@ function FirstSection() {
             <div>
               <div
                 style={{
-                  alignItems: 'flex-start',
+                  alignItems: 'flex-end',
                 }}
               >
                 <h3>2022.04 - </h3>
-                <p>
+                <p
+                  style={{
+                    textAlign: 'right',
+                  }}
+                >
                   메이데이 파트너스 <br />
                   (프론트엔드 개발)
                 </p>
@@ -103,31 +112,31 @@ function FirstSection() {
                   alignItems: 'flex-end',
                 }}
               >
-                <h3>2023.12 - 2024.05</h3>
+                <h3>2023.12 -</h3>
                 <p
                   style={{
                     textAlign: 'right',
                   }}
                 >
                   프로그래머스 <br /> KDT 클라우딩 어플리케이션 <br />
-                  엔지니어링 과정 1기 (멘토)
+                  엔지니어링 과정 멘토 (1기, 2기)
                 </p>
               </div>
-              <div
+              {/* <div
                 style={{
-                  alignItems: 'flex-start',
+                  alignItems: 'flex-end',
                 }}
               >
                 <h3>2024.05 -</h3>
                 <p
                   style={{
-                    textAlign: 'left',
+                    textAlign: 'right',
                   }}
                 >
                   프로그래머스 <br /> KDT 클라우딩 어플리케이션 <br />
                   엔지니어링 과정 2기 (멘토)
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -104,7 +104,7 @@ p {
 }
 .content {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
@@ -116,8 +116,9 @@ p {
   /* z-index: 3; */
 
   p {
-    font-size: 3rem;
-    font-family: 'Jua', system-ui;
+    font-size: 2rem;
+    /* font-family: 'Jua', system-ui; */
+    font-family: 'IBM Plex Sans KR', sans-serif;
   }
 
   &.skills {
@@ -329,7 +330,8 @@ p {
     h3,
     p {
       text-align: center;
-      font-family: 'Jua', sans-serif;
+      /* font-family: 'Jua', sans-serif; */
+      font-family: 'IBM Plex Sans KR', sans-serif;
       font-weight: 600;
       color: #333;
     }
@@ -341,8 +343,12 @@ p {
   h3 {
     text-align: center;
     font-size: 3rem;
-    font-family: 'Bagel Fat One', system-ui;
+    /* font-family: 'Bagel Fat One', system-ui; */
+    font-family: 'IBM Plex Sans KR', sans-serif;
     margin: 0;
+  }
+  h2 {
+    font-weight: 700;
   }
   h3 {
     font-size: 2rem;
@@ -379,7 +385,9 @@ p {
     h3,
     p {
       text-align: right;
-      font-family: 'Jua', sans-serif;
+      /* font-family: 'Jua', sans-serif; */
+      font-family: 'IBM Plex Sans KR', sans-serif;
+
       font-weight: 600;
       color: #222;
       margin: 0;
