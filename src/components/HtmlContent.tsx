@@ -12,15 +12,8 @@ function HtmlContent() {
   return (
     <>
       <article className="html-wrapper">
-        <div
-          className="html-header"
-          onClick={() => location.reload()}
-          style={{
-            cursor: 'pointer',
-          }}
-        >
-          <h1>HYEOZ</h1>
-        </div>
+        <Header />
+
         <FirstSection />
         <SecondSection />
         <ThirdSection />
@@ -31,6 +24,38 @@ function HtmlContent() {
       <FloatingWorks />
       <FloatingContact />
     </>
+  );
+}
+
+function Header() {
+  return (
+    <div
+      className="html-header"
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      <h1>hyeoz</h1>
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: 48,
+          width: '100%',
+          fontFamily: 'IBM Plex Sans KR',
+          fontWeight: 700,
+          fontSize: '1.5rem',
+        }}
+      >
+        <p>INFO</p>
+        <p>SKILLS</p>
+        <p>WORKS</p>
+        <p>CONTACT</p>
+      </div>
+    </div>
   );
 }
 

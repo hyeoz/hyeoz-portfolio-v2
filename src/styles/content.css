@@ -20,8 +20,9 @@
   z-index: 9;
 
   h1 {
-    font-family: 'Coiny', system-ui;
-    text-align: center;
+    /* font-family: 'Coiny', system-ui; */
+    font-family: 'Bagel Fat One', system-ui;
+    /* text-align: center; */
     font-size: 2rem;
 
     @media (max-width: 768px) {

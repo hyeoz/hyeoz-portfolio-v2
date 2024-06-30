@@ -15,7 +15,7 @@ lazy : 처음 렌더링될 때까지 컴포넌트 코드를 지연시킴
 
 function App() {
   const [isScrollPage, setIsScrollPage] = useState(false);
-  const [section, setSection] = useState(0);
+  // const [section, setSection] = useState(0);
   const isMobile = useIsMobile();
 
   // NOTE 모바일에서 스크롤을 막습니다. 개발자도구를 통해 스크롤 하는 액션은 제외됩니다.
@@ -38,11 +38,15 @@ function App() {
   return (
     <Suspense fallback={<Loading />}>
       {isScrollPage ? (
-        <>
+        <article
+          style={{
+            height: '100%',
+          }}
+        >
           <Canvas id="canvas">
-            <Scene section={section} setSection={setSection} />
+            <Scene />
           </Canvas>
-          <button
+          {/* <button
             className="down-button"
             onClick={() =>
               setSection((prev) => {
@@ -63,8 +67,8 @@ function App() {
                 rotate: section === 3 ? '90deg' : '-90deg',
               }}
             />
-          </button>
-        </>
+          </button> */}
+        </article>
       ) : (
         <Landing setState={setIsScrollPage} />
       )}

@@ -3,29 +3,23 @@ import { Environment, Html, Scroll, ScrollControls } from '@react-three/drei';
 
 const ScrollManager = lazy(() => import('./components/ScrollManager'));
 const HtmlContent = lazy(() => import('./components/HtmlContent'));
-const Laptop = lazy(() => import('./components/Laptop'));
-const Airplane = lazy(() => import('./components/Airplane'));
-const Baseball = lazy(() => import('./components/Baseball'));
-const Football = lazy(() => import('./components/Football'));
+const Laptop = lazy(() => import('./components/model/Laptop'));
+const Airplane = lazy(() => import('./components/model/Airplane'));
+const Baseball = lazy(() => import('./components/model/Baseball'));
+const Football = lazy(() => import('./components/model/Football'));
 // import Particles from './components/Particles';
 
-function Scene({
-  section,
-  setSection,
-}: {
-  section: number;
-  setSection: Dispatch<SetStateAction<number>>;
-}) {
+function Scene() {
   return (
     <>
-      <ScrollControls pages={4} damping={0.1}>
-        <ScrollManager section={section} setSection={setSection} />
+      <ScrollControls pages={1} damping={0.1}>
+        {/* <ScrollManager section={section} setSection={setSection} /> */}
         <Scroll>
           <Environment preset="city" />
           <Laptop />
-          <Airplane />
+          {/* <Airplane />
           <Football />
-          <Baseball />
+          <Baseball /> */}
           {/* <Particles size={7000} /> */}
         </Scroll>
       </ScrollControls>
