@@ -22,9 +22,9 @@ export default function Laptop(props: GroupProps) {
   useEffect(() => {
     if (!group || !actions[names[0]] || !actions[names[1]]) return;
     group.current.rotateX((1.0 * Math.PI) / 8); // to convert from Deg to Rad.
-    group.current.rotateY((-1.0 * Math.PI) / 4); // to convert from Deg to Rad.
+    group.current.rotateY((-1.0 * Math.PI) / 2); // to convert from Deg to Rad.
     // @ts-ignore
-    actions[names[0]].play().paused = true;
+    actions[names[0]].play().paused = false;
     // @ts-ignore
     actions[names[1]].play().paused = true;
   }, []);
@@ -40,9 +40,12 @@ export default function Laptop(props: GroupProps) {
     )
       return;
 
-    // 스크롤에 따라 위치 변경
+    // 스크롤에 따라 position / scale 변경
     if (scroll.offset <= 1.2) {
       group.current.position.x = 2 - (scroll.offset * 4) / 1.2;
+      // group.current.scale.x = 2.4 - (scroll.offset * 2.4) / 1.2;
+      // group.current.scale.y = 2.4 - (scroll.offset * 2.4) / 1.2;
+      // group.current.scale.z = 2.4 - (scroll.offset * 2.4) / 1.2;
     } else if (scroll.offset <= 2.4) {
       group.current.position.x = -2 + ((scroll.offset - 1.2) / 1.2) * 2;
     } else {
@@ -50,11 +53,11 @@ export default function Laptop(props: GroupProps) {
     }
 
     // 스크롤에 따라 애니메이션
-    const action1 = actions[names[0]];
+    // const action1 = actions[names[0]];
     const action2 = actions[names[1]];
 
     // @ts-ignore
-    action1.time = (action1.getClip().duration * scroll.offset) / 2;
+    // action1.time = (action1.getClip().duration * scroll.offset) / 2;
     // @ts-ignore
     action2.time = (action2.getClip().duration * scroll.offset) / 3;
 

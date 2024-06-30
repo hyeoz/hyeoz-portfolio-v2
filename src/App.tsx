@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 // import Scene from './Scene';
@@ -15,7 +15,6 @@ lazy : 처음 렌더링될 때까지 컴포넌트 코드를 지연시킴
 
 function App() {
   const [isScrollPage, setIsScrollPage] = useState(false);
-  // const [section, setSection] = useState(0);
   const isMobile = useIsMobile();
 
   // NOTE 모바일에서 스크롤을 막습니다. 개발자도구를 통해 스크롤 하는 액션은 제외됩니다.

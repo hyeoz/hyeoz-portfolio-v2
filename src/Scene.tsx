@@ -1,5 +1,11 @@
-import { lazy, Dispatch, SetStateAction } from 'react';
-import { Environment, Html, Scroll, ScrollControls } from '@react-three/drei';
+import { lazy, Dispatch, SetStateAction, useEffect } from 'react';
+import {
+  Environment,
+  Html,
+  Scroll,
+  ScrollControls,
+  useScroll,
+} from '@react-three/drei';
 
 const ScrollManager = lazy(() => import('./components/ScrollManager'));
 const HtmlContent = lazy(() => import('./components/HtmlContent'));
@@ -13,13 +19,12 @@ function Scene() {
   return (
     <>
       <ScrollControls pages={1} damping={0.1}>
-        {/* <ScrollManager section={section} setSection={setSection} /> */}
         <Scroll>
           <Environment preset="city" />
           <Laptop />
-          {/* <Airplane />
-          <Football />
-          <Baseball /> */}
+          {/* <Baseball /> */}
+          {/* <Airplane /> */}
+          {/* <Football /> */}
           {/* <Particles size={7000} /> */}
         </Scroll>
       </ScrollControls>

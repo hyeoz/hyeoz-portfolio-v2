@@ -17,7 +17,7 @@
   position: fixed;
   width: 100%;
   padding: 16px;
-  z-index: 9;
+  z-index: 999;
 
   h1 {
     /* font-family: 'Coiny', system-ui; */
@@ -311,33 +311,44 @@ p {
   gap: 64px;
 
   > div:last-of-type {
-    flex: 1;
+    /* flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; */
 
-    > div {
-      width: 30%;
+    /* > div {
+      width: 50%;
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 24px;
 
-      > div {
+      &:first-of-type > div {
         display: flex;
         flex-direction: column;
+        align-items: center;
       }
-    }
+      &:last-of-type > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    } */
 
     h3,
     p {
-      text-align: center;
+      /* text-align: center; */
       /* font-family: 'Jua', sans-serif; */
       font-family: 'IBM Plex Sans KR', sans-serif;
-      font-weight: 600;
-      color: #333;
+      color: #000;
+      font-size: 2vw;
     }
     h3 {
-      color: #000;
+      color: #555;
+      font-weight: 600;
+    }
+    p {
+      font-weight: 700;
     }
   }
   h2,
