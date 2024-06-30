@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Modal from './Modal';
 import Carousel from './Carousel';
@@ -6,19 +6,21 @@ import '../styles/content.css';
 
 /* TODO
   - 모바일 반응형 적용
+  - 헤더 스크롤링 적용
+  - 라우팅
 */
 
 function HtmlContent() {
   return (
     <>
-      <article className="html-wrapper">
+      <section className="html-wrapper">
         <Header />
 
         <FirstSection />
         <SecondSection />
         <ThirdSection />
         <FourthSection />
-      </article>
+      </section>
 
       <MobileFloatingInfo />
       <FloatingWorks />
@@ -44,10 +46,13 @@ function Header() {
           justifyContent: 'center',
           alignItems: 'center',
           gap: 48,
-          width: '100%',
           fontFamily: 'IBM Plex Sans KR',
           fontWeight: 700,
           fontSize: '1.5rem',
+          backgroundColor: '#fff',
+          padding: '8px 48px',
+          borderRadius: '32px',
+          margin: '0 auto',
         }}
       >
         <p>INFO</p>
@@ -63,12 +68,6 @@ function FirstSection() {
   return (
     <section className="section-wrapper">
       <div className="content-wrapper">
-        <div className="back-title">
-          <h1>
-            <span>IN</span>
-            <span>FO</span>
-          </h1>
-        </div>
         <div className="content info">
           <div>
             <h2>
@@ -81,88 +80,64 @@ function FirstSection() {
               되었습니다.
               <br /> 동시에 프론트엔드 교육 과정의 멘토로 2기째 활동중이고, 직접
               개발한 직관일기 라는 서비스를 운영하는 운영자 이기도 합니다.
-              {/* 저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, 현재는 웹, 앱
-              프론트엔드 개발자로 일하고 있습니다. */}
-              {/* 리액트를 주로 사용하고, 리액트-스러운 개발을 위헤 <br />
-              컴포넌트 재사용성에 대해 고민함과 동시에 <br />
-              사용자 편리성을 위해 더 나은 기능을 <br />
-              구현하려고 노력하고 있습니다! */}
             </p>
           </div>
           <div>
-            <div>
-              <div
-                style={{
-                  alignItems: 'flex-start',
-                }}
-              >
+            <div
+              style={{
+                aspectRatio: 1 / 1,
+                backgroundColor: 'rgba(255,255,255,0.8)',
+                padding: 'auto',
+                width: '50%',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '8px',
+                justifyContent: 'center',
+                borderRadius: 999,
+              }}
+            >
+              <div>
                 <h3>1997.02.03</h3>
                 <p>출생</p>
               </div>
-              <div
-                style={{
-                  alignItems: 'flex-start',
-                }}
-              >
+              <div>
                 <h3>2015.03 - 2020.02</h3>
                 <p>서울여자대학교 졸업</p>
               </div>
-              <div
-                style={{
-                  alignItems: 'flex-start',
-                }}
-              >
+              <div>
                 <h3>2021.04 - 2021.10</h3>
                 <p>도미네이트 (데이터 분석)</p>
               </div>
-            </div>
-            <div>
-              <div
-                style={{
-                  alignItems: 'flex-end',
-                }}
-              >
+              <div>
                 <h3>2022.04 - </h3>
-                <p
-                  style={{
-                    textAlign: 'right',
-                  }}
-                >
+                <p>
                   메이데이 파트너스 <br />
                   (프론트엔드 개발)
                 </p>
               </div>
-              <div
-                style={{
-                  alignItems: 'flex-end',
-                }}
-              >
+              <div>
                 <h3>2023.12 -</h3>
-                <p
-                  style={{
-                    textAlign: 'right',
-                  }}
-                >
-                  프로그래머스 <br /> KDT 클라우딩 어플리케이션 <br />
-                  엔지니어링 과정 멘토 (1기, 2기)
+                <p className="text-left">
+                  프로그래머스 <br /> KDT 클라우딩 어플리케이션
+                  <br /> 엔지니어링 과정 멘토
                 </p>
               </div>
-              {/* <div
-                style={{
-                  alignItems: 'flex-end',
-                }}
-              >
-                <h3>2024.05 -</h3>
-                <p
-                  style={{
-                    textAlign: 'right',
-                  }}
-                >
-                  프로그래머스 <br /> KDT 클라우딩 어플리케이션 <br />
-                  엔지니어링 과정 2기 (멘토)
-                </p>
-              </div> */}
             </div>
+            <div
+              style={{
+                aspectRatio: 1 / 1,
+                borderRadius: 999,
+                width: '30vw',
+                height: '30vw',
+                backgroundColor: 'rgba(0,0,0,0.2)',
+                margin: '0 32px',
+                position: 'absolute',
+                left: '60%',
+                top: '80%',
+                transform: 'translate(-100%, -10%)',
+                zIndex: 0,
+              }}
+            />
           </div>
         </div>
       </div>
@@ -173,28 +148,28 @@ function FirstSection() {
 function SecondSection() {
   return (
     <section className="section-wrapper">
-      <div className="back-title">
+      {/* <div className="back-title">
         <h1>SKILLS</h1>
-      </div>
+      </div> */}
       <div className="content skills">
         <div className="react">
-          <img src="/cloud.png" alt="cloud-react" />
+          {/* <img src="/cloud.png" alt="cloud-react" /> */}
           <p>React</p>
         </div>
         <div className="js-ts">
-          <img src="/cloud.png" alt="cloud-js" />
+          {/* <img src="/cloud.png" alt="cloud-js" /> */}
           <p>TypeScript</p>
         </div>
         <div className="three">
-          <img src="/cloud.png" alt="cloud-three" />
+          {/* <img src="/cloud.png" alt="cloud-three" /> */}
           <p>Three.js</p>
         </div>
         <div className="react-native">
-          <img src="/cloud.png" alt="cloud-native" />
+          {/* <img src="/cloud.png" alt="cloud-native" /> */}
           <p>React Native</p>
         </div>
         <div className="python">
-          <img src="/cloud.png" alt="cloud-python" />
+          {/* <img src="/cloud.png" alt="cloud-python" /> */}
           <p>Python</p>
         </div>
       </div>
@@ -205,11 +180,11 @@ function SecondSection() {
 function ThirdSection() {
   return (
     <section className="section-wrapper">
-      <div className="back-title">
+      {/* <div className="back-title">
         <h1>
           <span>WORKS</span>
         </h1>
-      </div>
+      </div> */}
     </section>
   );
 }
