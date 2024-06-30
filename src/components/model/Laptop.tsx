@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Group, Material, Object3D, Object3DEventMap } from 'three';
+import { Group, Object3DEventMap } from 'three';
 import { useAnimations, useGLTF, useScroll } from '@react-three/drei';
 import { GroupProps, useFrame } from '@react-three/fiber';
 
@@ -40,6 +40,16 @@ export default function Laptop(props: GroupProps) {
     )
       return;
 
+    // 스크롤에 따라 위치 변경
+    if (scroll.offset <= 1.2) {
+      group.current.position.x = 2 - (scroll.offset * 4) / 1.2;
+    } else if (scroll.offset <= 2.4) {
+      group.current.position.x = -2 + ((scroll.offset - 1.2) / 1.2) * 2;
+    } else {
+      group.current.position.x = 0;
+    }
+
+    // 스크롤에 따라 애니메이션
     const action1 = actions[names[0]];
     const action2 = actions[names[1]];
 
@@ -47,6 +57,8 @@ export default function Laptop(props: GroupProps) {
     action1.time = (action1.getClip().duration * scroll.offset) / 2;
     // @ts-ignore
     action2.time = (action2.getClip().duration * scroll.offset) / 3;
+
+    // console.log(scroll.offset);
   });
 
   return (
@@ -55,52 +67,9 @@ export default function Laptop(props: GroupProps) {
       {...props}
       dispose={null}
       scale={isMobile ? 1.7 : 3}
-      position={isMobile ? [-1, -0.5, 0] : [0, -1, 0]}
+      position={isMobile ? [-1, -0.5, 0] : [-2, -1, 0]}
     >
       <primitive object={scene} />
-      {/* <group name="Scene">
-        <mesh
-          name="Plane"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane.geometry}
-          material={materials.laptop}
-          rotation={[0, 1.392, 0]}
-        >
-          <mesh
-            name="Plane001"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane001.geometry}
-            material={materials.laptop}
-            position={[0, 0.093, -0.309]}
-          >
-            <mesh
-              name="Plane003"
-              castShadow
-              receiveShadow
-              geometry={nodes.Plane003.geometry}
-              material={materials['Material.003']}
-            />
-          </mesh>
-          <group name="Plane002" position={[0, 0.068, -0.09]} scale={0.972}>
-            <mesh
-              name="Plane002_1"
-              castShadow
-              receiveShadow
-              geometry={nodes.Plane002_1.geometry}
-              material={materials['Material.005']}
-            />
-            <mesh
-              name="Plane002_2"
-              castShadow
-              receiveShadow
-              geometry={nodes.Plane002_2.geometry}
-              material={materials['Material.006']}
-            />
-          </group>
-        </mesh>
-      </group> */}
     </group>
   );
 }
