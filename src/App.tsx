@@ -6,6 +6,12 @@ const Scene = lazy(() => import('./Scene'));
 import Landing from './components/Landing';
 import Loading from './components/Loading';
 import useIsMobile from './hooks/useIsMobile';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Shakerrr } from './components/works/Shakerrr';
+import { Dokdo } from './components/works/Dokdo';
+import { Wevent } from './components/works/Wevent';
+import { Kovo } from './components/works/Kovo';
+import { MatchDiary } from './components/works/MatchDiary';
 
 /* NOTE 
 Suspense : 렌더링 하려는 자식 컴포넌트가 일시정지되면 fallback 화면을 띄워줌
@@ -34,43 +40,35 @@ function App() {
   }, [isMobile]);
 
   return (
-    <Suspense fallback={<Loading />}>
-      {isScrollPage ? (
-        <article
-          style={{
-            height: '100%',
-          }}
-        >
-          <Canvas id="canvas">
-            <Scene />
-          </Canvas>
-          {/* <button
-            className="down-button"
-            onClick={() =>
-              setSection((prev) => {
-                if (prev === 3) {
-                  return 0;
-                } else {
-                  return prev + 1;
-                }
-              })
-            }
-          >
-            <img
-              src="/svg/chevron.svg"
-              alt="main-chevron-down"
-              style={{
-                width: 60,
-                height: 60,
-                rotate: section === 3 ? '90deg' : '-90deg',
-              }}
-            />
-          </button> */}
-        </article>
-      ) : (
-        <Landing setState={setIsScrollPage} />
-      )}
-    </Suspense>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<Loading />}>
+              {isScrollPage ? (
+                <article
+                  style={{
+                    height: '100%',
+                  }}
+                >
+                  <Canvas id="canvas">
+                    <Scene />
+                  </Canvas>
+                </article>
+              ) : (
+                <Landing setState={setIsScrollPage} />
+              )}
+            </Suspense>
+          }
+        />
+        <Route path="shakerrr" element={<Shakerrr isModal={false} />} />
+        <Route path="dokdo" element={<Dokdo isModal={false} />} />
+        <Route path="wevent" element={<Wevent isModal={false} />} />
+        <Route path="kovo" element={<Kovo isModal={false} />} />
+        <Route path="match-diary" element={<MatchDiary isModal={false} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
