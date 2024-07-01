@@ -349,13 +349,14 @@ div:has(.html-component-wrapper) {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    margin-top: 12px;
   }
   .stack-tag {
     &::before {
       content: '#';
     }
     padding: 8px 10px;
-    border-radius: 16px;
+    border-radius: 32px;
     background-color: rgb(255, 180, 220);
     color: #fff;
     white-space: nowrap;
