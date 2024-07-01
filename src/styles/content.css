@@ -121,86 +121,10 @@ p {
     /* font-family: 'Jua', system-ui; */
     font-family: 'IBM Plex Sans KR', sans-serif;
   }
-
-  &.skills {
-    padding: 0 5%;
-    width: 100%;
-    height: fit-content;
-    top: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    > div {
-      position: relative;
-
-      &.react {
-        width: 330px;
-      }
-      &.js-ts {
-        width: 280px;
-      }
-      &.three {
-        width: 250px;
-      }
-      &.react-native {
-        width: 250px;
-      }
-      &.python {
-        width: 190px;
-      }
-
-      img {
-        width: 100%;
-      }
-      p {
-        width: 100%;
-        font-size: 2rem;
-        text-align: center;
-        position: absolute;
-        transform: translateY(-46px);
-      }
-    }
-
-    @media (max-width: 768px) {
-      top: 60%;
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      height: 200px;
-
-      > div {
-        margin: auto;
-        &.react {
-          width: 100%;
-          grid-column: 1 / 3;
-        }
-        &.js-ts {
-          width: 85%;
-          grid-column: 3 / 5;
-        }
-        &.three {
-          width: 75%;
-          grid-column: 5 / 7;
-        }
-        &.react-native {
-          width: 70%;
-          grid-column: 2 / 4;
-        }
-        &.python {
-          width: 60%;
-          grid-column: 4 / 6;
-        }
-
-        p {
-          width: 100%;
-          font-size: 1rem;
-          text-align: center;
-          position: absolute;
-          transform: translateY(-30px);
-        }
-      }
-    }
+  .skills-hide {
+    display: none;
   }
+
   /* works 컴포넌트는 floating-wrapper 의 자식 */
   &.works {
     position: absolute;
@@ -311,30 +235,6 @@ p {
   gap: 64px;
 
   > div:last-of-type {
-    /* flex: 1;
-    display: flex;
-    justify-content: space-between; */
-
-    /* > div {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 24px;
-
-      &:first-of-type > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      &:last-of-type > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    } */
-
     h3,
     p {
       /* text-align: center; */
@@ -373,6 +273,55 @@ p {
     display: none;
   }
 }
+
+.skills-animation {
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.start {
+    opacity: 1; /* 특정 지점에 도달하면 리스트를 보이게 함 */
+
+    > div {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  div {
+    transform: translateY(-100px);
+    transition:
+      transform 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
+  }
+
+  /* Sequential animation delays */
+  div:nth-of-type(1) {
+    transition-delay: 0s;
+  }
+  div:nth-of-type(2) {
+    transition-delay: 0.1s;
+  }
+  div:nth-of-type(3) {
+    transition-delay: 0.2s;
+  }
+  div:nth-of-type(4) {
+    transition-delay: 0.3s;
+  }
+  div:nth-of-type(5) {
+    transition-delay: 0.4s;
+  }
+
+  div p {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #999;
+    margin-top: 2px;
+  }
+}
+
 .floating-wrapper .content.info {
   position: absolute;
   width: 100vw;
