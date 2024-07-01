@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import Modal from './Modal';
 import Carousel from './Carousel';
 import '../styles/content.css';
+import { CustomScrollStateType } from '../types/canvas';
 
 /* TODO
   - 모바일 반응형 적용
@@ -10,14 +11,17 @@ import '../styles/content.css';
   - 라우팅
 */
 
-function HtmlContent() {
+function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
   return (
     <>
       <section className="html-wrapper">
-        <Header />
+        <Header scrollState={scrollState} setScrollState={setScrollState} />
 
         <FirstSection />
-        <SecondSection />
+        <SecondSection
+          scrollState={scrollState}
+          setScrollState={setScrollState}
+        />
         <ThirdSection />
         <FourthSection />
       </section>
@@ -29,7 +33,26 @@ function HtmlContent() {
   );
 }
 
-function Header() {
+function Header({ scrollState, setScrollState }: CustomScrollStateType) {
+  const isSelected = () => {
+    if (scrollState <= 3 / 4) {
+      return 'INFO';
+    } else if (scrollState <= 6 / 4) {
+      return 'SKILLS';
+    } else if (scrollState <= 9 / 4) {
+      return 'WORKS';
+    } else {
+      return 'CONTACT';
+    }
+  };
+
+  const onClickTab = (tab: string) => {
+    switch (tab) {
+      case 'INFO':
+      default:
+    }
+  };
+
   return (
     <div
       className="html-header"
@@ -55,10 +78,39 @@ function Header() {
           margin: '0 auto',
         }}
       >
-        <p>INFO</p>
-        <p>SKILLS</p>
-        <p>WORKS</p>
-        <p>CONTACT</p>
+        <p
+          className="transition ease-in-out delay-150"
+          style={{
+            color: isSelected() === 'INFO' ? '#f6ead5' : '#000',
+          }}
+          onClick={() => onClickTab('INFO')}
+        >
+          INFO
+        </p>
+        <p
+          className="transition ease-in-out delay-150"
+          style={{
+            color: isSelected() === 'SKILLS' ? '#f6d9d5' : '#000',
+          }}
+        >
+          SKILLS
+        </p>
+        <p
+          className="transition ease-in-out delay-150"
+          style={{
+            color: isSelected() === 'WORKS' ? '#bae1ff' : '#000',
+          }}
+        >
+          WORKS
+        </p>
+        <p
+          className="transition ease-in-out delay-150"
+          style={{
+            color: isSelected() === 'CONTACT' ? '#c9df8a' : '#000',
+          }}
+        >
+          CONTACT
+        </p>
       </div>
     </div>
   );
@@ -145,33 +197,80 @@ function FirstSection() {
   );
 }
 
-function SecondSection() {
+function SecondSection({ scrollState }: CustomScrollStateType) {
+  const isAnimationStart = scrollState >= 3 / 4;
   return (
     <section className="section-wrapper">
       {/* <div className="back-title">
         <h1>SKILLS</h1>
       </div> */}
-      <div className="content skills">
-        <div className="react">
-          {/* <img src="/cloud.png" alt="cloud-react" /> */}
-          <p>React</p>
+      <div className="flex items-center justify-end h-full mr-12">
+        {/* {isAnimationStart && ( */}
+        <div
+          className={`skills-animation ${isAnimationStart ? 'start' : ''} w-1/2 text-right flex flex-col gap-[120px]`}
+        >
+          <div className="relative">
+            <img
+              src="/svg/typescript.svg"
+              alt="skills-typescript"
+              width={64}
+              className="absolute top-[-24px] right-[45%] translate-x-[100%]"
+            />
+            <span className="absolute top-[48px] right-0 w-[45%] h-[32px] bg-[#a3ff00] rounded-[32px] shadow-xl">
+              <p className="ml-2 text-left">TypeScript</p>
+            </span>
+            {/* <span className="absolute w-1/2 h-[2px] bg-[#b4b4b4] bottom-[-50px] right-0" /> */}
+          </div>
+          <div className="relative">
+            <img
+              src="/svg/react.svg"
+              alt="skills-react"
+              width={64}
+              className="absolute top-[-24px] right-[50%] translate-x-[100%]"
+            />
+            <span className="absolute top-[48px] right-0 w-[50%] h-[32px] bg-[#a3ff00] rounded-[32px] shadow-xl">
+              <p className="ml-2 text-left">React</p>
+            </span>
+            {/* <span className="absolute w-1/2 h-[2px] bg-[#b4b4b4] bottom-[-50px] right-0" /> */}
+          </div>
+          <div className="relative">
+            <img
+              src="/svg/react.svg"
+              alt="skills-react-native"
+              width={64}
+              className="absolute top-[-24px] right-[40%] translate-x-[100%]"
+            />
+
+            <span className="absolute top-[48px] right-0 w-[40%] h-[32px] bg-[#e3ff00] rounded-[32px] shadow-xl">
+              <p className="ml-2 text-left">React Native</p>
+            </span>
+            {/* <span className="absolute w-1/2 h-[2px] bg-[#b4b4b4] bottom-[-50px] right-0" /> */}
+          </div>
+          <div className="relative">
+            <img
+              src="/svg/three.svg"
+              alt="skills-three"
+              width={64}
+              className="absolute top-[-24px] right-[35%] translate-x-[100%]"
+            />
+            <span className="absolute top-[48px] right-0 w-[35%] h-[32px] bg-[#e3ff00] rounded-[32px] shadow-xl">
+              <p className="ml-2 text-left">Three.js</p>
+            </span>
+            {/* <span className="absolute w-1/2 h-[2px] bg-[#b4b4b4] bottom-[-50px] right-0" /> */}
+          </div>
+          <div className="relative">
+            <img
+              src="/svg/python.svg"
+              alt="skills-python"
+              width={64}
+              className="absolute top-[-24px] right-[30%] translate-x-[100%]"
+            />
+            <span className="absolute top-[48px] right-0 w-[30%] h-[32px] bg-[#ffa300] rounded-[32px] shadow-xl">
+              <p className="ml-2 text-left">Python</p>
+            </span>
+          </div>
         </div>
-        <div className="js-ts">
-          {/* <img src="/cloud.png" alt="cloud-js" /> */}
-          <p>TypeScript</p>
-        </div>
-        <div className="three">
-          {/* <img src="/cloud.png" alt="cloud-three" /> */}
-          <p>Three.js</p>
-        </div>
-        <div className="react-native">
-          {/* <img src="/cloud.png" alt="cloud-native" /> */}
-          <p>React Native</p>
-        </div>
-        <div className="python">
-          {/* <img src="/cloud.png" alt="cloud-python" /> */}
-          <p>Python</p>
-        </div>
+        {/* )} */}
       </div>
     </section>
   );

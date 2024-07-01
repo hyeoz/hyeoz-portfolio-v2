@@ -4,8 +4,11 @@ import { useAnimations, useGLTF, useScroll } from '@react-three/drei';
 import { GroupProps, useFrame } from '@react-three/fiber';
 
 import useIsMobile from '../../hooks/useIsMobile';
+import { CustomScrollStateType } from '../../types/canvas';
 
-export default function Laptop(props: GroupProps) {
+export default function Laptop(props: GroupProps & CustomScrollStateType) {
+  const { scrollState, setScrollState } = props;
+
   const isMobile = useIsMobile();
   const group = useRef<Group<Object3DEventMap> | any>(null);
   const {
@@ -39,6 +42,8 @@ export default function Laptop(props: GroupProps) {
       !actions[names[1]].getClip().duration
     )
       return;
+
+    setScrollState(scroll.offset);
 
     // 스크롤에 따라 position / scale 변경
     if (scroll.offset <= 1.2) {

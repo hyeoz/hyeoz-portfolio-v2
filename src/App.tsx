@@ -3,7 +3,6 @@ import { Canvas } from '@react-three/fiber';
 
 // import Scene from './Scene';
 const Scene = lazy(() => import('./Scene'));
-import './styles/app.css';
 import Landing from './components/Landing';
 import Loading from './components/Loading';
 import useIsMobile from './hooks/useIsMobile';
