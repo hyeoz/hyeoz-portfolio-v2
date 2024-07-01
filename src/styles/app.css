@@ -72,6 +72,7 @@ body {
   }
 }
 .landing-content {
+  width: 100vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -106,8 +107,9 @@ body {
 .back-text {
   position: absolute;
   top: 50%;
-  width: 100%;
+  width: 105%;
   transform: rotate(-10deg) translate(-1%, -50%);
+  overflow-x: hidden;
 }
 
 .text-row {

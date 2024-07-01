@@ -11,7 +11,6 @@ import { MatchDiary } from './works/MatchDiary';
 
 /* TODO
   - 모바일 반응형 적용
-  - 헤더 스크롤링 적용
   - 라우팅
 */
 

@@ -43,7 +43,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="*"
+          path="/"
           element={
             <Suspense fallback={<Loading />}>
               {isScrollPage ? (
