@@ -77,6 +77,10 @@ p {
       justify-content: space-between;
       font-size: 14rem;
     }
+
+    @media (max-width: 768px) {
+      height: 200vh;
+    }
   }
 }
 
@@ -170,31 +174,20 @@ p {
     }
 
     @media (max-width: 768px) {
-      top: 220vh;
+      top: 200vh;
       gap: 16px;
+      grid-template-columns: repeat(1, minmax(300px, auto));
 
       > div {
-        height: 88px;
+        height: 300px;
 
-        &:first-of-type {
-          width: 100%;
-          margin-bottom: 24px;
+        h3 {
+          font-size: 120%;
         }
-        &:nth-of-type(2) {
-          width: 100%;
-          justify-content: space-evenly;
-        }
-        > div {
-          width: 88px;
-          aspect-ratio: 1 / 1;
-          padding: 0 8px;
-          box-sizing: border-box;
-
-          img {
-            width: 32px;
-          }
-          h2 {
-            font-size: 0.8rem;
+        p {
+          font-size: 90%;
+          &:last-of-type {
+            font-size: 70%;
           }
         }
       }
@@ -202,13 +195,13 @@ p {
   }
   /* contact 컴포넌트는 floating-wrapper 의 자식 */
   &.contact {
+    top: 330vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
     width: 30%;
     height: fit-content;
     position: absolute;
-    top: 330vh;
 
     > div {
       img {
@@ -222,6 +215,7 @@ p {
 
     @media (max-width: 768px) {
       width: 90%;
+      top: 470vh;
     }
   }
 }
@@ -316,6 +310,10 @@ p {
     font-weight: 700;
     color: #fafafa;
     margin-top: 5px;
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -339,10 +337,14 @@ p {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 70%;
+    padding: 8px;
+    border-radius: 16px;
 
     h3,
     p {
-      text-align: right;
+      text-align: left;
       /* font-family: 'Jua', sans-serif; */
       font-family: 'IBM Plex Sans KR', sans-serif;
 

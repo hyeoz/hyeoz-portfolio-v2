@@ -10,6 +10,7 @@ import { Kovo } from './works/Kovo';
 import { MatchDiary } from './works/MatchDiary';
 import { CustomScrollStateType } from '../types/canvas';
 import '../styles/content.css';
+import useIsMobile from '../hooks/useIsMobile';
 
 /* TODO
   - 모바일 반응형 적용
@@ -118,21 +119,23 @@ function FirstSection() {
 }
 
 function SecondSection({ scrollState }: CustomScrollStateType) {
+  const isMobile = useIsMobile();
   const isAnimationStart = scrollState >= 3 / 4;
+
   return (
     <section className="section-wrapper">
-      <div className="flex items-center justify-end h-full mr-12">
+      <div className="flex items-center justify-end h-full mr-12 mobile:mr-8">
         <div
-          className={`skills-animation ${isAnimationStart ? 'start' : ''} w-1/2 text-right flex flex-col gap-[128px]`}
+          className={`skills-animation ${isAnimationStart ? 'start' : ''} w-1/2 text-right flex flex-col gap-[128px] mobile:gap-[64px]`}
         >
           <div className="relative">
             <img
               src="/svg/typescript.svg"
               alt="skills-typescript"
-              width={64}
-              className="absolute top-[-24px] right-[45%] translate-x-[100%]"
+              width={isMobile ? 28 : 64}
+              className="absolute top-[-24px] right-[45%] mobile:right-[90%] translate-x-[100%]"
             />
-            <span className="absolute top-[48px] right-0 w-[45%] h-[40px] bg-[#5fc576] rounded-[32px] shadow-xl">
+            <span className="absolute top-[48px] mobile:top-2 right-0 w-[45%] mobile:w-[90%] h-[40px] mobile:h-6 bg-[#5fc576] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">TypeScript</p>
             </span>
           </div>
@@ -140,10 +143,10 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             <img
               src="/svg/react.svg"
               alt="skills-react"
-              width={64}
-              className="absolute top-[-24px] right-[50%] translate-x-[100%]"
+              width={isMobile ? 28 : 64}
+              className="absolute top-[-24px] right-[50%] mobile:right-[95%] translate-x-[100%]"
             />
-            <span className="absolute top-[48px] right-0 w-[50%] h-[40px] bg-[#5fc576] rounded-[32px] shadow-xl">
+            <span className="absolute top-[48px] mobile:top-2 right-0 w-[50%] mobile:w-[95%] h-[40px] mobile:h-6 bg-[#5fc576] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">React</p>
             </span>
           </div>
@@ -151,11 +154,11 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             <img
               src="/svg/react.svg"
               alt="skills-react-native"
-              width={64}
-              className="absolute top-[-24px] right-[40%] translate-x-[100%]"
+              width={isMobile ? 28 : 64}
+              className="absolute top-[-24px] right-[40%] mobile:right-[85%] translate-x-[100%]"
             />
 
-            <span className="absolute top-[48px] right-0 w-[40%] h-[40px] bg-[#88c644] rounded-[32px] shadow-xl">
+            <span className="absolute top-[48px] mobile:top-2 right-0 w-[40%] mobile:w-[85%] h-[40px] mobile:h-6 bg-[#88c644] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">React Native</p>
             </span>
           </div>
@@ -163,10 +166,10 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             <img
               src="/svg/three.svg"
               alt="skills-three"
-              width={64}
-              className="absolute top-[-24px] right-[35%] translate-x-[100%]"
+              width={isMobile ? 28 : 64}
+              className="absolute top-[-24px] right-[35%] mobile:right-[75%] translate-x-[100%]"
             />
-            <span className="absolute top-[48px] right-0 w-[35%] h-[40px] bg-[#c5c848] rounded-[32px] shadow-xl">
+            <span className="absolute top-[48px] mobile:top-2 right-0 w-[35%] mobile:w-[75%] h-[40px] mobile:h-6 bg-[#c5c848] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">Three.js</p>
             </span>
           </div>
@@ -174,10 +177,10 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             <img
               src="/svg/python.svg"
               alt="skills-python"
-              width={64}
-              className="absolute top-[-24px] right-[30%] translate-x-[100%]"
+              width={isMobile ? 28 : 64}
+              className="absolute top-[-24px] right-[30%] mobile:right-[60%] translate-x-[100%]"
             />
-            <span className="absolute top-[48px] right-0 w-[30%] h-[40px] bg-[#c5c848] rounded-[32px] shadow-xl">
+            <span className="absolute top-[48px] mobile:top-2 right-0 w-[30%] mobile:w-[60%] h-[40px] mobile:h-6 bg-[#c5c848] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">Python</p>
             </span>
           </div>

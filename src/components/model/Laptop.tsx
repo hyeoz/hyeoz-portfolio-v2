@@ -44,15 +44,22 @@ export default function Laptop(props: GroupProps & CustomScrollStateType) {
       return;
 
     setScrollState(scroll.offset);
+    const POSITION_BREAKPOINT = isMobile ? 1 : 2;
+    const SCROLL_BREAKPOINT = [1.2, 2.4];
 
     // 스크롤에 따라 position / scale 변경
-    if (scroll.offset <= 1.2) {
-      group.current.position.x = 2 - (scroll.offset * 4) / 1.2;
+    if (scroll.offset <= SCROLL_BREAKPOINT[0]) {
+      group.current.position.x =
+        POSITION_BREAKPOINT -
+        (scroll.offset * (isMobile ? 2 : 4)) / SCROLL_BREAKPOINT[0];
       // group.current.scale.x = 2.4 - (scroll.offset * 2.4) / 1.2;
       // group.current.scale.y = 2.4 - (scroll.offset * 2.4) / 1.2;
       // group.current.scale.z = 2.4 - (scroll.offset * 2.4) / 1.2;
-    } else if (scroll.offset <= 2.4) {
-      group.current.position.x = -2 + ((scroll.offset - 1.2) / 1.2) * 2;
+    } else if (scroll.offset <= SCROLL_BREAKPOINT[1]) {
+      group.current.position.x =
+        -POSITION_BREAKPOINT +
+        ((scroll.offset - SCROLL_BREAKPOINT[0]) / SCROLL_BREAKPOINT[0]) *
+          (isMobile ? 1 : 2);
     } else {
       group.current.position.x = 0;
     }
@@ -75,7 +82,7 @@ export default function Laptop(props: GroupProps & CustomScrollStateType) {
       {...props}
       dispose={null}
       scale={isMobile ? 1.7 : 3}
-      position={isMobile ? [-1, -0.5, 0] : [-2, -1, 0]}
+      position={isMobile ? [-0.5, -0.5, 0] : [-2, -1, 0]}
     >
       <primitive object={scene} />
     </group>

@@ -13,16 +13,16 @@ export function WorksCard({
 }) {
   return (
     <div
-      className="flex flex-col h-[450px] border rounded-xl p-4 justify-between cursor-pointer"
+      className="flex flex-col h-[450px] border rounded-xl p-4 mobile:p-2 justify-between cursor-pointer"
       style={{
-        backgroundColor: 'rgba(255,255,255,0.8)',
+        backgroundColor: 'rgba(255,255,255,0.4)',
       }}
       onClick={() => onClick()}
     >
       <img
         src={image}
         alt={`image-${title}`}
-        className="w-full h-[300px] object-cover object-top"
+        className="w-full h-[300px] mobile:h-[200px] object-cover object-top"
       />
       <div className="flex flex-col justify-between">
         <div>

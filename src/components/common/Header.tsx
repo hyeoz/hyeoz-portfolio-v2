@@ -1,6 +1,9 @@
+import useIsMobile from '../../hooks/useIsMobile';
 import { CustomScrollStateType } from '../../types/canvas';
 
 export function Header({ scrollState, setScrollState }: CustomScrollStateType) {
+  const isMobile = useIsMobile();
+
   const isSelected = () => {
     if (scrollState <= 3 / 4) {
       return 'INFO';
@@ -42,12 +45,12 @@ export function Header({ scrollState, setScrollState }: CustomScrollStateType) {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          gap: 48,
+          gap: isMobile ? 12 : 48,
           fontFamily: 'IBM Plex Sans KR',
           fontWeight: 700,
-          fontSize: '1.5rem',
+          fontSize: isMobile ? '0.5rem' : '1.5rem',
           backgroundColor: '#fff',
-          padding: '8px 48px',
+          padding: isMobile ? '4px' : '8px 48px',
           borderRadius: '32px',
           margin: '0 auto',
         }}
