@@ -154,7 +154,7 @@ p {
       grid-template-areas:
         'a a b b c c'
         '. d d e e .';
-      gap: 12px;
+      gap: 20px;
 
       > div:nth-of-type(1) {
         grid-area: a;
@@ -223,7 +223,7 @@ p {
 .html-wrapper .content.info {
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  /* gap: 32px; */
 
   > div:last-of-type {
     h3,
@@ -232,7 +232,7 @@ p {
       /* font-family: 'Jua', sans-serif; */
       font-family: 'IBM Plex Sans KR', sans-serif;
       color: #000;
-      font-size: 2vw;
+      font-size: 1.8vw;
     }
     h3 {
       color: #555;
