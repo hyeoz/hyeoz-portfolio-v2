@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 
 // import Scene from './Scene';
 const Scene = lazy(() => import('./Scene'));
