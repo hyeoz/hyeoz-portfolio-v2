@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useRef, useState } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 // import Scene from './Scene';

@@ -1,7 +1,7 @@
 import useIsMobile from '../../hooks/useIsMobile';
 import { CustomScrollStateType } from '../../types/canvas';
 
-export function Header({ scrollState, setScrollState }: CustomScrollStateType) {
+export function Header({ scrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
 
   const isSelected = () => {

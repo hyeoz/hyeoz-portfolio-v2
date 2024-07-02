@@ -7,7 +7,7 @@ import useIsMobile from '../../hooks/useIsMobile';
 import { CustomScrollStateType } from '../../types/canvas';
 
 export default function Laptop(props: GroupProps & CustomScrollStateType) {
-  const { scrollState, setScrollState } = props;
+  const { setScrollState } = props;
 
   const isMobile = useIsMobile();
   const group = useRef<Group<Object3DEventMap> | any>(null);
