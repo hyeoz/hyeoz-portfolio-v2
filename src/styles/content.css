@@ -17,11 +17,12 @@
   position: fixed;
   width: 100%;
   padding: 16px;
-  z-index: 9;
+  z-index: 999;
 
   h1 {
-    font-family: 'Coiny', system-ui;
-    text-align: center;
+    /* font-family: 'Coiny', system-ui; */
+    font-family: 'Bagel Fat One', system-ui;
+    /* text-align: center; */
     font-size: 2rem;
 
     @media (max-width: 768px) {
@@ -76,6 +77,10 @@ p {
       justify-content: space-between;
       font-size: 14rem;
     }
+
+    @media (max-width: 768px) {
+      height: 200vh;
+    }
   }
 }
 
@@ -104,7 +109,7 @@ p {
 }
 .content {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
@@ -116,162 +121,73 @@ p {
   /* z-index: 3; */
 
   p {
-    font-size: 3rem;
-    font-family: 'Jua', system-ui;
+    font-size: 2rem;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+  }
+  .skills-hide {
+    display: none;
   }
 
-  &.skills {
-    padding: 0 5%;
-    width: 100%;
-    height: fit-content;
-    top: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    > div {
-      position: relative;
-
-      &.react {
-        width: 330px;
-      }
-      &.js-ts {
-        width: 280px;
-      }
-      &.three {
-        width: 250px;
-      }
-      &.react-native {
-        width: 250px;
-      }
-      &.python {
-        width: 190px;
-      }
-
-      img {
-        width: 100%;
-      }
-      p {
-        width: 100%;
-        font-size: 2rem;
-        text-align: center;
-        position: absolute;
-        transform: translateY(-46px);
-      }
-    }
-
-    @media (max-width: 768px) {
-      top: 60%;
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      height: 200px;
-
-      > div {
-        margin: auto;
-        &.react {
-          width: 100%;
-          grid-column: 1 / 3;
-        }
-        &.js-ts {
-          width: 85%;
-          grid-column: 3 / 5;
-        }
-        &.three {
-          width: 75%;
-          grid-column: 5 / 7;
-        }
-        &.react-native {
-          width: 70%;
-          grid-column: 2 / 4;
-        }
-        &.python {
-          width: 60%;
-          grid-column: 4 / 6;
-        }
-
-        p {
-          width: 100%;
-          font-size: 1rem;
-          text-align: center;
-          position: absolute;
-          transform: translateY(-30px);
-        }
-      }
-    }
-  }
   /* works 컴포넌트는 floating-wrapper 의 자식 */
   &.works {
     position: absolute;
     top: 220vh;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(300px, auto));
+    gap: 12px;
+    z-index: 9;
 
-    > div {
-      width: 100%;
-      height: 200px;
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
+    h3 {
+      font-size: 200%;
+      font-family: 'Jua', system-ui;
+    }
+    p {
+      font-size: 100%;
+      font-family: 'IBM Plex Sans KR', sans-serif;
+    }
 
-      &:first-of-type {
-        margin-bottom: 150px;
+    @media (max-width: 1653px) and (min-width: 769px) {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(200px, auto));
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        'a a b b c c'
+        '. d d e e .';
+      gap: 12px;
+
+      > div:nth-of-type(1) {
+        grid-area: a;
       }
-      &:nth-of-type(2) {
-        width: 80%;
-        margin: auto;
+      > div:nth-of-type(2) {
+        grid-area: b;
       }
-
-      > div {
-        width: 200px;
-        background-color: #f0f7da;
-        border-radius: 99px;
-        box-shadow: rgba(2, 2, 3, 0.2) 0px 8px 24px;
-        display: flex;
-        /* flex-direction: column; */
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        gap: 16px;
-
-        img {
-          width: 64px;
-          aspect-ratio: 1 / 1;
-          /* display: none; */
-        }
-        h2 {
-          display: none;
-        }
-        &:hover {
-          background-color: #c9df8a;
-        }
-        transition: all 0.3s;
+      > div:nth-of-type(3) {
+        grid-area: c;
+      }
+      > div:nth-of-type(4) {
+        grid-area: d;
+      }
+      > div:nth-of-type(5) {
+        grid-area: e;
       }
     }
 
     @media (max-width: 768px) {
-      top: 220vh;
+      top: 200vh;
       gap: 16px;
+      grid-template-columns: repeat(1, minmax(300px, auto));
 
       > div {
-        height: 88px;
+        height: 300px;
 
-        &:first-of-type {
-          width: 100%;
-          margin-bottom: 24px;
+        h3 {
+          font-size: 120%;
         }
-        &:nth-of-type(2) {
-          width: 100%;
-          justify-content: space-evenly;
-        }
-        > div {
-          width: 88px;
-          aspect-ratio: 1 / 1;
-          padding: 0 8px;
-          box-sizing: border-box;
-
-          img {
-            width: 32px;
-          }
-          h2 {
-            font-size: 0.8rem;
+        p {
+          font-size: 90%;
+          &:last-of-type {
+            font-size: 70%;
           }
         }
       }
@@ -279,13 +195,13 @@ p {
   }
   /* contact 컴포넌트는 floating-wrapper 의 자식 */
   &.contact {
+    top: 330vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
     width: 30%;
     height: fit-content;
     position: absolute;
-    top: 330vh;
 
     > div {
       img {
@@ -299,6 +215,7 @@ p {
 
     @media (max-width: 768px) {
       width: 90%;
+      top: 470vh;
     }
   }
 }
@@ -309,40 +226,32 @@ p {
   gap: 64px;
 
   > div:last-of-type {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-
-    > div {
-      width: 30%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      > div {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-
     h3,
     p {
-      text-align: center;
-      font-family: 'Jua', sans-serif;
-      font-weight: 600;
-      color: #333;
+      /* text-align: center; */
+      /* font-family: 'Jua', sans-serif; */
+      font-family: 'IBM Plex Sans KR', sans-serif;
+      color: #000;
+      font-size: 2vw;
     }
     h3 {
-      color: #000;
+      color: #555;
+      font-weight: 600;
+    }
+    p {
+      font-weight: 700;
     }
   }
   h2,
   h3 {
     text-align: center;
     font-size: 3rem;
-    font-family: 'Bagel Fat One', system-ui;
+    /* font-family: 'Bagel Fat One', system-ui; */
+    font-family: 'IBM Plex Sans KR', sans-serif;
     margin: 0;
+  }
+  h2 {
+    font-weight: 700;
   }
   h3 {
     font-size: 2rem;
@@ -355,6 +264,59 @@ p {
     display: none;
   }
 }
+
+.skills-animation {
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.start {
+    opacity: 1; /* 특정 지점에 도달하면 리스트를 보이게 함 */
+
+    > div {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  div {
+    transform: translateY(-200px);
+    transition:
+      transform 0.8s ease-in-out,
+      opacity 0.8s ease-in-out;
+  }
+
+  /* Sequential animation delays */
+  div:nth-of-type(1) {
+    transition-delay: 0s;
+  }
+  div:nth-of-type(2) {
+    transition-delay: 0.1s;
+  }
+  div:nth-of-type(3) {
+    transition-delay: 0.2s;
+  }
+  div:nth-of-type(4) {
+    transition-delay: 0.3s;
+  }
+  div:nth-of-type(5) {
+    transition-delay: 0.4s;
+  }
+
+  div p {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fafafa;
+    margin-top: 5px;
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
 .floating-wrapper .content.info {
   position: absolute;
   width: 100vw;
@@ -375,11 +337,17 @@ p {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 70%;
+    padding: 8px;
+    border-radius: 16px;
 
     h3,
     p {
-      text-align: right;
-      font-family: 'Jua', sans-serif;
+      text-align: left;
+      /* font-family: 'Jua', sans-serif; */
+      font-family: 'IBM Plex Sans KR', sans-serif;
+
       font-weight: 600;
       color: #222;
       margin: 0;
@@ -394,68 +362,4 @@ p {
   @media (min-width: 769px) {
     display: none;
   }
-}
-
-/* Carousel */
-.carousel-wrapper {
-  box-sizing: border-box;
-  position: relative;
-  height: 100%;
-  min-height: 0;
-}
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-100%);
-  background: #fff;
-  /* border: 1px solid #ddd; */
-  border: 1px solid #fff;
-  cursor: pointer;
-  z-index: 9;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-  img {
-    width: 16px;
-    height: 16px;
-  }
-
-  &:first-of-type {
-    left: 0;
-    transform: translate(-50%, -100%);
-  }
-  &:last-of-type {
-    right: 0;
-    transform: translate(50%, -100%);
-
-    img {
-      transform: rotate(180deg);
-    }
-  }
-}
-.carousel-image-wrapper,
-.works-content-wrapper {
-  height: 100%;
-  overflow-y: scroll;
-  position: relative;
-}
-.carousel-image {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  &.visible {
-    opacity: 1;
-  }
-  &.hidden {
-    opacity: 0;
-  }
-
-  transition: opacity 0.5s ease-in-out;
 }

@@ -3,7 +3,7 @@ import { GroupProps, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import { Group, Material, Object3D, Object3DEventMap } from 'three';
 
-import useIsMobile from '../hooks/useIsMobile';
+import useIsMobile from '../../hooks/useIsMobile';
 
 export default function Baseball(props: GroupProps) {
   const isMobile = useIsMobile();
