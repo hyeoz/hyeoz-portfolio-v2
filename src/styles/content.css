@@ -137,6 +137,13 @@ p {
     gap: 12px;
     z-index: 9;
 
+    > div {
+      box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
+      &:hover {
+        box-shadow: 24px 24px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
     h3 {
       font-size: 200%;
       font-family: 'Jua', system-ui;

@@ -17,7 +17,6 @@ export function WorksCard({
       style={{
         backgroundColor: 'rgba(255,255,255,0.4)',
         backdropFilter: 'blur(8px)',
-        boxShadow: '12px 12px 12px rgba(0,0,0,0.1)',
       }}
       onClick={() => onClick()}
     >
