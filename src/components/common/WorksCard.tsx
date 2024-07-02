@@ -13,7 +13,7 @@ export function WorksCard({
 }) {
   return (
     <div
-      className="flex flex-col h-[450px] border rounded-xl p-4 mobile:p-2 justify-between cursor-pointer hover:translate-y-[-20px] transition-all shadow-lg"
+      className="flex flex-col h-[450px] border rounded-xl p-4 mobile:p-2 justify-between cursor-pointer hover:translate-y-[-20px] transition-all"
       style={{
         backgroundColor: 'rgba(255,255,255,0.4)',
         backdropFilter: 'blur(8px)',

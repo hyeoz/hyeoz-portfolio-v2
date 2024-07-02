@@ -7,7 +7,6 @@ const Laptop = lazy(() => import('./components/model/Laptop'));
 // const Airplane = lazy(() => import('./components/model/Airplane'));
 // const Baseball = lazy(() => import('./components/model/Baseball'));
 // const Football = lazy(() => import('./components/model/Football'));
-// import Particles from './components/Particles';
 
 function Scene() {
   const [scrollState, setScrollState] = useState(0);
@@ -21,7 +20,6 @@ function Scene() {
           {/* <Baseball /> */}
           {/* <Airplane /> */}
           {/* <Football /> */}
-          {/* <Particles size={7000} /> */}
         </Scroll>
       </ScrollControls>
       <Html className="html-component-wrapper">

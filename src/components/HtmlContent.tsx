@@ -12,10 +12,6 @@ import { CustomScrollStateType } from '../types/canvas';
 import '../styles/content.css';
 import useIsMobile from '../hooks/useIsMobile';
 
-/* TODO
-  - 모바일 반응형 적용
-*/
-
 function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
   return (
     <>
@@ -43,11 +39,11 @@ function FirstSection() {
       <div className="content-wrapper">
         <div className="content info">
           <div>
-            <h2>
+            <h2 className="!text-[32px]">
               안녕하세요, {/* <br /> */} 3년차 프론트엔드 개발자 이혜원입니다!
             </h2>
             <br />
-            <p>
+            <p className="!text-[20px]">
               데이터 분석을 시작으로 프론트엔드 개발을 접하게 되었고, 현재는
               리액트와 리액트 네이티브를 주로 사용하는 웹/앱 개발자가
               되었습니다.
@@ -61,7 +57,7 @@ function FirstSection() {
                 aspectRatio: 1 / 1,
                 backgroundColor: 'rgba(255,255,255,0.8)',
                 padding: 'auto',
-                width: '50%',
+                width: '40%',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '8px',
@@ -69,28 +65,28 @@ function FirstSection() {
                 borderRadius: 999,
               }}
             >
-              <div>
+              <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
                 <h3>1997.02.03</h3>
                 <p>출생</p>
               </div>
-              <div>
+              <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
                 <h3>2015.03 - 2020.02</h3>
-                <p>서울여자대학교 졸업</p>
+                <p>서울여자대학교 (졸업)</p>
               </div>
-              <div>
+              <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
                 <h3>2021.04 - 2021.10</h3>
                 <p>도미네이트 (데이터 분석)</p>
               </div>
-              <div>
+              <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
                 <h3>2022.04 - </h3>
-                <p>
+                <p className="!text-left">
                   메이데이 파트너스 <br />
                   (프론트엔드 개발)
                 </p>
               </div>
-              <div>
+              <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
                 <h3>2023.12 -</h3>
-                <p className="text-left">
+                <p className="!text-left">
                   프로그래머스 <br /> KDT 클라우딩 어플리케이션
                   <br /> 엔지니어링 과정 멘토
                 </p>
@@ -100,12 +96,12 @@ function FirstSection() {
               style={{
                 aspectRatio: 1 / 1,
                 borderRadius: 999,
-                width: '30vw',
-                height: '30vw',
+                width: '25vw',
+                height: '25vw',
                 backgroundColor: 'rgba(0,0,0,0.2)',
                 margin: '0 32px',
                 position: 'absolute',
-                left: '60%',
+                left: '45%',
                 top: '80%',
                 transform: 'translate(-100%, -10%)',
                 zIndex: 0,
@@ -332,10 +328,20 @@ function FloatingContact() {
     <article className="floating-wrapper">
       <div className="content contact">
         <div onClick={() => window.open('https://github.com/hyeoz')}>
-          <img src="/svg/github.svg" alt="contact-github" />
+          <img
+            src="/svg/github.svg"
+            alt="contact-github"
+            width={48}
+            className="mobile:w-8"
+          />
         </div>
         <div onClick={() => window.open('https://www.instagram.com/hye_oz/')}>
-          <img src="/svg/instagram.svg" alt="contact-instagram" />
+          <img
+            src="/svg/instagram.svg"
+            alt="contact-instagram"
+            width={48}
+            className="mobile:w-8"
+          />
         </div>
         <div
           onClick={() =>
@@ -344,13 +350,28 @@ function FloatingContact() {
             )
           }
         >
-          <img src="/svg/linkedin.svg" alt="contact-linkedin" />
+          <img
+            src="/svg/linkedin.svg"
+            alt="contact-linkedin"
+            width={48}
+            className="mobile:w-8"
+          />
         </div>
         <div onClick={() => window.open('https://hyeoz.tistory.com/')}>
-          <img src="/svg/tistory.svg" alt="contact-tistory" />
+          <img
+            src="/svg/tistory.svg"
+            alt="contact-tistory"
+            width={48}
+            className="mobile:w-8"
+          />
         </div>
         <div onClick={() => window.open('https://www.youtube.com/@hye_oz')}>
-          <img src="/svg/youtube.svg" alt="contact-youtube" />
+          <img
+            src="/svg/youtube.svg"
+            alt="contact-youtube"
+            width={48}
+            className="mobile:w-8"
+          />
         </div>
       </div>
     </article>

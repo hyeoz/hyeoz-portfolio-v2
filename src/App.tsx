@@ -1,12 +1,12 @@
 import { Suspense, lazy, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Canvas, useThree } from '@react-three/fiber';
 
 // import Scene from './Scene';
 const Scene = lazy(() => import('./Scene'));
 import Landing from './components/Landing';
 import Loading from './components/common/Loading';
 import useIsMobile from './hooks/useIsMobile';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Shakerrr } from './components/works/Shakerrr';
 import { Dokdo } from './components/works/Dokdo';
 import { Wevent } from './components/works/Wevent';
@@ -56,15 +56,24 @@ function App() {
 function Main() {
   return (
     <Suspense fallback={<Loading />}>
-      <article
+      <div
         style={{
-          height: '100%',
+          background: 'linear-gradient(to bottom, #f6ead5,  #c9df8a)',
+          width: '100vw',
+          height: '100vh',
+          zIndex: -9,
+          position: 'absolute',
+        }}
+      />
+      <Canvas
+        id="canvas"
+        frameloop="demand"
+        style={{
+          zIndex: 1,
         }}
       >
-        <Canvas id="canvas">
-          <Scene />
-        </Canvas>
-      </article>
+        <Scene />
+      </Canvas>
     </Suspense>
   );
 }
