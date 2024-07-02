@@ -1,17 +1,18 @@
 import { useState } from 'react';
 
-import Modal from './Modal';
-import '../styles/content.css';
-import { CustomScrollStateType } from '../types/canvas';
+import Modal from './common/Modal';
+import { Header } from './common/Header';
+import { WorksCard } from './common/WorksCard';
 import { Shakerrr } from './works/Shakerrr';
 import { Dokdo } from './works/Dokdo';
 import { Wevent } from './works/Wevent';
 import { Kovo } from './works/Kovo';
 import { MatchDiary } from './works/MatchDiary';
+import { CustomScrollStateType } from '../types/canvas';
+import '../styles/content.css';
 
 /* TODO
   - 모바일 반응형 적용
-  - 라우팅
 */
 
 function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
@@ -32,89 +33,6 @@ function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
       <FloatingWorks />
       <FloatingContact />
     </>
-  );
-}
-
-function Header({ scrollState, setScrollState }: CustomScrollStateType) {
-  const isSelected = () => {
-    if (scrollState <= 3 / 4) {
-      return 'INFO';
-    } else if (scrollState <= 6 / 4) {
-      return 'SKILLS';
-    } else if (scrollState <= 9 / 4) {
-      return 'WORKS';
-    } else {
-      return 'CONTACT';
-    }
-  };
-
-  const onClickTab = (tab: string) => {
-    switch (tab) {
-      case 'INFO':
-      default:
-    }
-  };
-
-  return (
-    <div
-      className="html-header"
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      <h1>hyeoz</h1>
-
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: 48,
-          fontFamily: 'IBM Plex Sans KR',
-          fontWeight: 700,
-          fontSize: '1.5rem',
-          backgroundColor: '#fff',
-          padding: '8px 48px',
-          borderRadius: '32px',
-          margin: '0 auto',
-        }}
-      >
-        <p
-          className="transition ease-in-out delay-150"
-          style={{
-            color: isSelected() === 'INFO' ? '#f6ead5' : '#000',
-          }}
-          onClick={() => onClickTab('INFO')}
-        >
-          INFO
-        </p>
-        <p
-          className="transition ease-in-out delay-150"
-          style={{
-            color: isSelected() === 'SKILLS' ? '#f6d9d5' : '#000',
-          }}
-        >
-          SKILLS
-        </p>
-        <p
-          className="transition ease-in-out delay-150"
-          style={{
-            color: isSelected() === 'WORKS' ? '#bae1ff' : '#000',
-          }}
-        >
-          WORKS
-        </p>
-        <p
-          className="transition ease-in-out delay-150"
-          style={{
-            color: isSelected() === 'CONTACT' ? '#c9df8a' : '#000',
-          }}
-        >
-          CONTACT
-        </p>
-      </div>
-    </div>
   );
 }
 
@@ -203,11 +121,7 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
   const isAnimationStart = scrollState >= 3 / 4;
   return (
     <section className="section-wrapper">
-      {/* <div className="back-title">
-        <h1>SKILLS</h1>
-      </div> */}
       <div className="flex items-center justify-end h-full mr-12">
-        {/* {isAnimationStart && ( */}
         <div
           className={`skills-animation ${isAnimationStart ? 'start' : ''} w-1/2 text-right flex flex-col gap-[128px]`}
         >
@@ -221,7 +135,6 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             <span className="absolute top-[48px] right-0 w-[45%] h-[40px] bg-[#5fc576] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">TypeScript</p>
             </span>
-            {/* <span className="absolute w-1/2 h-[2px] bg-[#b4b4b4] bottom-[-50px] right-0" /> */}
           </div>
           <div className="relative">
             <img
@@ -233,7 +146,6 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             <span className="absolute top-[48px] right-0 w-[50%] h-[40px] bg-[#5fc576] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">React</p>
             </span>
-            {/* <span className="absolute w-1/2 h-[2px] bg-[#b4b4b4] bottom-[-50px] right-0" /> */}
           </div>
           <div className="relative">
             <img
@@ -246,7 +158,6 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             <span className="absolute top-[48px] right-0 w-[40%] h-[40px] bg-[#88c644] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">React Native</p>
             </span>
-            {/* <span className="absolute w-1/2 h-[2px] bg-[#b4b4b4] bottom-[-50px] right-0" /> */}
           </div>
           <div className="relative">
             <img
@@ -258,7 +169,6 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             <span className="absolute top-[48px] right-0 w-[35%] h-[40px] bg-[#c5c848] rounded-[32px] shadow-xl">
               <p className="ml-2 text-left">Three.js</p>
             </span>
-            {/* <span className="absolute w-1/2 h-[2px] bg-[#b4b4b4] bottom-[-50px] right-0" /> */}
           </div>
           <div className="relative">
             <img
@@ -272,35 +182,17 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
             </span>
           </div>
         </div>
-        {/* )} */}
       </div>
     </section>
   );
 }
 
 function ThirdSection() {
-  return (
-    <section className="section-wrapper">
-      {/* <div className="back-title">
-        <h1>
-          <span>WORKS</span>
-        </h1>
-      </div> */}
-    </section>
-  );
+  return <section className="section-wrapper"></section>;
 }
 
 function FourthSection() {
-  return (
-    <section className="section-wrapper">
-      {/* <div className="back-title">
-        <h1>
-          <span>CON</span>
-          <span>TACT</span>
-        </h1>
-      </div> */}
-    </section>
-  );
+  return <section className="section-wrapper"></section>;
 }
 
 function MobileFloatingInfo() {
@@ -374,8 +266,10 @@ function FloatingWorks() {
         return <Wevent isModal={true} />;
       case 'kovo':
         return <Kovo isModal={true} />;
-      default:
+      case 'matchdiary':
         return <MatchDiary isModal={true} />;
+      default:
+        return <></>;
     }
   };
 
@@ -427,43 +321,6 @@ function FloatingWorks() {
         onClose={() => setModalType('')}
       />
     </article>
-  );
-}
-
-function WorksCard({
-  image,
-  title,
-  desc,
-  stack,
-  onClick,
-}: {
-  image: string;
-  title: string;
-  desc: string;
-  stack: string[];
-  onClick: () => void;
-}) {
-  return (
-    <div
-      className="flex flex-col h-[450px] border rounded-xl p-4 justify-between cursor-pointer"
-      style={{
-        backgroundColor: 'rgba(255,255,255,0.8)',
-      }}
-      onClick={() => onClick()}
-    >
-      <img
-        src={image}
-        alt={`image-${title}`}
-        className="w-full h-[300px] object-cover object-top"
-      />
-      <div className="flex flex-col justify-between">
-        <div>
-          <h3>{title}</h3>
-          <p>{desc}</p>
-        </div>
-        <p className="text-[#4f5bd5]">{stack.map((st) => `#${st} `)}</p>
-      </div>
-    </div>
   );
 }
 

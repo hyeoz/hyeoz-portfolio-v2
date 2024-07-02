@@ -1,9 +1,6 @@
-import { useNavigate } from 'react-router-dom';
-import Carousel from '../Carousel';
+import Carousel from '../common/Carousel';
 
 export function Kovo({ isModal }: { isModal: boolean }) {
-  const navigate = useNavigate();
-
   return (
     <>
       {!isModal && (
@@ -11,7 +8,9 @@ export function Kovo({ isModal }: { isModal: boolean }) {
           <p className="text-[250%] font-bold">한국배구연맹(KOVO)</p>
           <button
             className="px-8 py-2 border-2 text-[150%] text-[#2837e6] border-[#2837e6] rounded-lg hover:bg-[#2837e6] hover:text-[#fff] transition-all"
-            onClick={() => navigate('/')}
+            onClick={() =>
+              window.location.replace(window.location.origin + '/main')
+            }
           >
             MAIN
           </button>

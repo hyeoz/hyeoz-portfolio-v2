@@ -11,7 +11,7 @@ const Laptop = lazy(() => import('./components/model/Laptop'));
 
 function Scene() {
   const [scrollState, setScrollState] = useState(0);
-  // console.log(scrollState);
+
   return (
     <>
       <ScrollControls pages={1} damping={0.1}>

@@ -5,6 +5,7 @@
 body {
   margin: 0;
 }
+/* 로딩바 */
 .loading-wrapper {
   width: 100vw;
   height: 100vh;
@@ -47,7 +48,7 @@ body {
     border-radius: 8px;
   }
 }
-
+/* 랜딩화면 */
 #canvas {
   width: 100vw !important;
   height: 100vh !important;
@@ -111,7 +112,6 @@ body {
   transform: rotate(-10deg) translate(-1%, -50%);
   overflow-x: hidden;
 }
-
 .text-row {
   display: flex;
   white-space: no-wrap;
@@ -188,7 +188,7 @@ body {
     }
   }
 }
-
+/* HTML 영역 */
 div:has(.html-component-wrapper) {
   transform: none !important;
 

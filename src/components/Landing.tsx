@@ -1,12 +1,10 @@
-import { Dispatch, SetStateAction } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Landing({
-  setState,
-}: {
-  setState: Dispatch<SetStateAction<boolean>>;
-}) {
+function Landing() {
+  const navigate = useNavigate();
+
   const onClickEnter = () => {
-    setState(true);
+    navigate('/main');
   };
 
   return (
