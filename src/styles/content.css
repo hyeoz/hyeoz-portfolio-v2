@@ -147,7 +147,7 @@ p {
     }
 
     @media (max-width: 1653px) and (min-width: 769px) {
-      width: 80%;
+      /* width: 80%; */
       display: grid;
       grid-template-columns: repeat(6, minmax(200px, auto));
       grid-template-rows: 1fr 1fr;
