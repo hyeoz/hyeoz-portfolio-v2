@@ -11,6 +11,32 @@ const Laptop = lazy(() => import('./components/model/Laptop'));
 
 function Scene() {
   const [scrollState, setScrollState] = useState(0);
+  // useFrame(({ gl, camera, size }) => {
+  //   const { width, height } = size;
+  //   (camera as PerspectiveCamera).aspect = width / height;
+  //   camera.updateProjectionMatrix();
+  //   gl.setSize(width, height);
+  // });
+
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     const width = window.innerWidth;
+  //     const height = window.innerHeight;
+  //     (camera as any).aspect = width / height;
+  //     camera.updateProjectionMatrix();
+  //     gl.setSize(width, height);
+  //     invalidate();
+  //   };
+
+  //   window.addEventListener('resize', handleResize);
+
+  //   // 초기 사이즈 설정
+  //   handleResize();
+
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, [gl, camera]);
 
   return (
     <>
@@ -21,7 +47,6 @@ function Scene() {
           {/* <Baseball /> */}
           {/* <Airplane /> */}
           {/* <Football /> */}
-          {/* <Particles size={7000} /> */}
         </Scroll>
       </ScrollControls>
       <Html className="html-component-wrapper">

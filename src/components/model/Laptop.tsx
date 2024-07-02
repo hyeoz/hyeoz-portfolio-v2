@@ -6,7 +6,9 @@ import { GroupProps, useFrame } from '@react-three/fiber';
 import useIsMobile from '../../hooks/useIsMobile';
 import { CustomScrollStateType } from '../../types/canvas';
 
-export default function Laptop(props: GroupProps & CustomScrollStateType) {
+export default function Laptop({
+  ...props
+}: GroupProps & CustomScrollStateType) {
   const { setScrollState } = props;
 
   const isMobile = useIsMobile();
@@ -18,7 +20,6 @@ export default function Laptop(props: GroupProps & CustomScrollStateType) {
     animations: any;
     scene: any;
   } = useGLTF('./models/laptop-rose.glb');
-
   const { actions, names } = useAnimations(animations, scene);
   const scroll = useScroll();
 
@@ -52,9 +53,6 @@ export default function Laptop(props: GroupProps & CustomScrollStateType) {
       group.current.position.x =
         POSITION_BREAKPOINT -
         (scroll.offset * (isMobile ? 2 : 4)) / SCROLL_BREAKPOINT[0];
-      // group.current.scale.x = 2.4 - (scroll.offset * 2.4) / 1.2;
-      // group.current.scale.y = 2.4 - (scroll.offset * 2.4) / 1.2;
-      // group.current.scale.z = 2.4 - (scroll.offset * 2.4) / 1.2;
     } else if (scroll.offset <= SCROLL_BREAKPOINT[1]) {
       group.current.position.x =
         -POSITION_BREAKPOINT +
@@ -72,8 +70,6 @@ export default function Laptop(props: GroupProps & CustomScrollStateType) {
     // action1.time = (action1.getClip().duration * scroll.offset) / 2;
     // @ts-ignore
     action2.time = (action2.getClip().duration * scroll.offset) / 3;
-
-    // console.log(scroll.offset);
   });
 
   return (

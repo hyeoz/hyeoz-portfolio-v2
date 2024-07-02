@@ -1,12 +1,12 @@
 import { Suspense, lazy, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Canvas, useThree } from '@react-three/fiber';
 
 // import Scene from './Scene';
 const Scene = lazy(() => import('./Scene'));
 import Landing from './components/Landing';
 import Loading from './components/common/Loading';
 import useIsMobile from './hooks/useIsMobile';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Shakerrr } from './components/works/Shakerrr';
 import { Dokdo } from './components/works/Dokdo';
 import { Wevent } from './components/works/Wevent';
