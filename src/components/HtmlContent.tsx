@@ -27,8 +27,8 @@ function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
       </section>
 
       <MobileFloatingInfo />
-      <FloatingWorks />
       <FloatingContact />
+      <FloatingWorks />
     </>
   );
 }
@@ -116,7 +116,7 @@ function FirstSection() {
 
 function SecondSection({ scrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
-  const isAnimationStart = scrollState >= 3 / 4;
+  const isAnimationStart = scrollState >= 3 / 5;
 
   return (
     <section className="section-wrapper">
