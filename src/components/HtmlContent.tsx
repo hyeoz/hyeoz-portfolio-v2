@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Modal from './common/Modal';
 import { Header } from './common/Header';
@@ -116,13 +116,26 @@ function FirstSection() {
 
 function SecondSection({ scrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
-  const isAnimationStart = scrollState >= 3 / 5;
+  const isAnimationStartRef = useRef(scrollState >= 3 / 5);
+  const [isResized, setIsResized] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('resize', () => setIsResized(true));
+
+    return () => window.removeEventListener('resize', () => setIsResized(true));
+  }, []);
+
+  useEffect(() => {
+    isAnimationStartRef.current = !isResized
+      ? scrollState >= 3 / 5
+      : scrollState >= 1 / 5;
+  }, [scrollState, isResized]);
 
   return (
     <section className="section-wrapper">
-      <div className="flex items-center justify-end h-full mr-12 mobile:mr-8">
+      <div className="flex justify-end h-full mr-12 mobile:mr-8">
         <div
-          className={`skills-animation ${isAnimationStart ? 'start' : ''} w-1/2 text-right flex flex-col gap-[128px] mobile:gap-[64px]`}
+          className={`skills-animation ${isAnimationStartRef.current ? 'start' : ''} w-1/2 text-right flex flex-col gap-[128px] mobile:gap-[64px]`}
         >
           <div className="relative">
             <img
