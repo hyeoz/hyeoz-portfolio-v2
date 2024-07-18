@@ -150,7 +150,7 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
 
   return (
     <section className="section-wrapper">
-      <div className="flex justify-end h-full mr-12 mobile:mr-4 mobile:h-[80%] mobile:mt-[25%]">
+      <div className="flex justify-end h-full mr-12 mt-[20%] mobile:mr-4 mobile:h-[80%] mobile:mt-[25%]">
         <div
           className={`skills-animation ${isAnimationStartRef.current ? 'start' : ''} w-1/2 text-right flex flex-col gap-[128px] mobile:gap-[64px]`}
         >

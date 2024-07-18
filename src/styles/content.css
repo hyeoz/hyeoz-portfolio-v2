@@ -133,6 +133,7 @@ p {
   &.works {
     position: absolute;
     top: 220vh;
+
     display: grid;
     grid-template-columns: repeat(5, minmax(300px, auto));
     gap: 12px;
@@ -155,9 +156,8 @@ p {
     }
 
     @media (max-width: 1653px) and (min-width: 769px) {
-      /* width: 80%; */
       display: grid;
-      grid-template-columns: repeat(6, minmax(200px, auto));
+      grid-template-columns: repeat(6, minmax(100px, auto));
       grid-template-rows: 1fr 1fr;
       grid-template-areas:
         'a a b b c c'
@@ -203,7 +203,7 @@ p {
   }
   /* contact 컴포넌트는 floating-wrapper 의 자식 */
   &.contact {
-    top: 330vh;
+    top: 350vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
