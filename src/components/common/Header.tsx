@@ -22,10 +22,11 @@ export function Header({ scrollState }: CustomScrollStateType) {
       style={{
         display: 'flex',
         alignItems: 'center',
+        backdropFilter: 'blur(4px)',
       }}
     >
       <h1
-        className="cursor-pointer"
+        className="cursor-pointer mobile:!text-[1.2rem]"
         onClick={() => {
           window.location.replace(window.location.origin);
         }}
@@ -41,7 +42,7 @@ export function Header({ scrollState }: CustomScrollStateType) {
           gap: isMobile ? 12 : 48,
           fontFamily: 'IBM Plex Sans KR',
           fontWeight: 700,
-          fontSize: isMobile ? '0.5rem' : '1.5rem',
+          fontSize: isMobile ? '1rem' : '1.5rem',
           backgroundColor: '#fff',
           padding: isMobile ? '4px 10px' : '8px 48px',
           borderRadius: '32px',

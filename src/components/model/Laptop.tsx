@@ -61,7 +61,7 @@ export default function Laptop({
         (scroll.offset * (isMobile ? 2 : 4)) / SCROLL_BREAKPOINT[0];
       if (isMobile) {
         group.current.position.y =
-          2 - (scroll.offset * 2) / SCROLL_BREAKPOINT[0];
+          1.5 - (scroll.offset * 2) / SCROLL_BREAKPOINT[0];
       }
     } else if (scroll.offset <= SCROLL_BREAKPOINT[1]) {
       group.current.position.x =
@@ -70,6 +70,7 @@ export default function Laptop({
           (isMobile ? 1 : 2);
       if (isMobile) {
         group.current.position.y =
+          -0.5 +
           ((scroll.offset - SCROLL_BREAKPOINT[0]) / SCROLL_BREAKPOINT[0]) * 0.2;
       }
     } else {
@@ -97,7 +98,7 @@ export default function Laptop({
       {...props}
       dispose={null}
       scale={isMobile ? 1.7 : 3}
-      position={isMobile ? [-0.5, 2, 0] : [-2, -1, 0]}
+      position={isMobile ? [-0.5, 1.5, 0] : [-2, -1, 0]}
     >
       <primitive object={scene} />
     </group>

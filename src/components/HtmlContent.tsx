@@ -140,15 +140,11 @@ function FirstSection() {
 function SecondSection({ scrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
   const isResized = useIsResized();
-  const isAnimationStartRef = useRef(
-    isMobile ? scrollState >= 4 / 5 : scrollState >= 3 / 5
-  );
+  const isAnimationStartRef = useRef(scrollState >= 3 / 5);
 
   useEffect(() => {
     isAnimationStartRef.current = !isResized
-      ? isMobile
-        ? scrollState >= 4 / 5
-        : scrollState >= 3 / 5
+      ? scrollState >= 3 / 5
       : scrollState >= 1 / 5;
   }, [scrollState, isResized, isMobile]);
 
@@ -239,18 +235,6 @@ function MobileFloatingInfo() {
             3년차 프론트엔드 개발자
             <br /> 이혜원입니다!
           </h2>
-          <br />
-          <p>
-            데이터 분석을 시작으로 프론트엔드 개발을 접하게 되었고, 현재는
-            리액트와 리액트 네이티브를 주로 사용하는 웹/앱 개발자가 되었습니다.
-            <br /> 동시에 프론트엔드 교육 과정의 멘토로 2기째 활동중이고, 직접
-            개발한 직관일기 라는 서비스를 운영하는 운영자 이기도 합니다.
-            {/* 저는 파이썬을 통한 데이터분석으로 코딩에 입문하여, 현재는 웹, 앱
-            프론트엔드 개발자로 일하고 있습니다. */}
-            {/* 리액트를 주로 사용하고,
-            리액트-스러운 개발을 위헤 컴포넌트 재사용성에 대해 고민함과 동시에
-            사용자 편리성을 위해 더 나은 기능을 구현하려고 노력하고 있습니다! */}
-          </p>
         </div>
         <div className="history">
           <div>
