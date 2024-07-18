@@ -9,13 +9,35 @@ import { Wevent } from './works/Wevent';
 import { Kovo } from './works/Kovo';
 import { MatchDiary } from './works/MatchDiary';
 import { CustomScrollStateType } from '../types/canvas';
-import '../styles/content.css';
 import useIsMobile from '../hooks/useIsMobile';
+import useIsResized from '../hooks/useIsResized';
+import '../styles/content.css';
 
 function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
+  const isMobile = useIsMobile();
+  const isResized = useIsResized();
+
+  const getChevronDeg = () => {
+    if (isMobile) {
+      return scrollState === 4 ? 'rotate-[90deg]' : 'rotate-[270deg]';
+    } else if (isResized) {
+      return scrollState === 1 ? 'rotate-[90deg]' : 'rotate-[270deg]';
+    } else {
+      return scrollState === 3 ? 'rotate-[90deg]' : 'rotate-[270deg]';
+    }
+  };
+
   return (
     <>
       <Header scrollState={scrollState} setScrollState={setScrollState} />
+      <div className="fixed bottom-0 z-[999] w-full h-[200px] mobile:h-[50px] flex flex-col justify-end bg-gradient-to-transparent">
+        <div className="w-1/2 px-3 py-1 mx-auto animate-bounce">
+          <img
+            src="/svg/chevron.svg"
+            className={`${getChevronDeg()} mx-auto w-[32px] h-[32px] mobile:w-[16px] mobile:h-[16px] mb-4 mobile:mb-1`}
+          />
+        </div>
+      </div>
       <section className="html-wrapper">
         <FirstSection />
         <SecondSection
@@ -63,6 +85,7 @@ function FirstSection() {
                 gap: '8px',
                 justifyContent: 'center',
                 borderRadius: 999,
+                position: 'relative',
               }}
             >
               <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
@@ -91,22 +114,22 @@ function FirstSection() {
                   <br /> 엔지니어링 과정 멘토
                 </p>
               </div>
+              <div
+                style={{
+                  aspectRatio: 1 / 1,
+                  borderRadius: 999,
+                  width: '25vw',
+                  height: '25vw',
+                  backgroundColor: 'rgba(0,0,0,0.2)',
+                  margin: '0 32px',
+                  position: 'absolute',
+                  left: '45%',
+                  top: '80%',
+                  transform: 'translate(10%, -40%)',
+                  zIndex: 0,
+                }}
+              />
             </div>
-            <div
-              style={{
-                aspectRatio: 1 / 1,
-                borderRadius: 999,
-                width: '25vw',
-                height: '25vw',
-                backgroundColor: 'rgba(0,0,0,0.2)',
-                margin: '0 32px',
-                position: 'absolute',
-                left: '45%',
-                top: '80%',
-                transform: 'translate(-100%, -10%)',
-                zIndex: 0,
-              }}
-            />
           </div>
         </div>
       </div>
@@ -116,24 +139,22 @@ function FirstSection() {
 
 function SecondSection({ scrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
-  const isAnimationStartRef = useRef(scrollState >= 3 / 5);
-  const [isResized, setIsResized] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('resize', () => setIsResized(true));
-
-    return () => window.removeEventListener('resize', () => setIsResized(true));
-  }, []);
+  const isResized = useIsResized();
+  const isAnimationStartRef = useRef(
+    isMobile ? scrollState >= 4 / 5 : scrollState >= 3 / 5
+  );
 
   useEffect(() => {
     isAnimationStartRef.current = !isResized
-      ? scrollState >= 3 / 5
+      ? isMobile
+        ? scrollState >= 4 / 5
+        : scrollState >= 3 / 5
       : scrollState >= 1 / 5;
-  }, [scrollState, isResized]);
+  }, [scrollState, isResized, isMobile]);
 
   return (
     <section className="section-wrapper">
-      <div className="flex justify-end h-full mr-12 mobile:mr-8">
+      <div className="flex justify-end h-full mr-12 mobile:mr-4 mobile:h-[80%] mobile:mt-[25%]">
         <div
           className={`skills-animation ${isAnimationStartRef.current ? 'start' : ''} w-1/2 text-right flex flex-col gap-[128px] mobile:gap-[64px]`}
         >

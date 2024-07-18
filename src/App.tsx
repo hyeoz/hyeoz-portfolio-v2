@@ -6,7 +6,6 @@ import { Canvas } from '@react-three/fiber';
 const Scene = lazy(() => import('./Scene'));
 import Landing from './components/Landing';
 import Loading from './components/common/Loading';
-import useIsMobile from './hooks/useIsMobile';
 import { Shakerrr } from './components/works/Shakerrr';
 import { Dokdo } from './components/works/Dokdo';
 import { Wevent } from './components/works/Wevent';
@@ -48,7 +47,7 @@ function Main() {
       />
       <Canvas
         id="canvas"
-        frameloop="demand"
+        // frameloop="demand"
         style={{
           zIndex: 1,
         }}

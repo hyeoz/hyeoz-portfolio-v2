@@ -16,13 +16,6 @@ export function Header({ scrollState }: CustomScrollStateType) {
     }
   };
 
-  const onClickTab = (tab: string) => {
-    switch (tab) {
-      case 'INFO':
-      default:
-    }
-  };
-
   return (
     <div
       className="html-header"
@@ -50,7 +43,7 @@ export function Header({ scrollState }: CustomScrollStateType) {
           fontWeight: 700,
           fontSize: isMobile ? '0.5rem' : '1.5rem',
           backgroundColor: '#fff',
-          padding: isMobile ? '4px' : '8px 48px',
+          padding: isMobile ? '4px 10px' : '8px 48px',
           borderRadius: '32px',
           margin: '0 auto',
         }}
@@ -60,7 +53,6 @@ export function Header({ scrollState }: CustomScrollStateType) {
           style={{
             color: isSelected() === 'INFO' ? '#f6ead5' : '#000',
           }}
-          onClick={() => onClickTab('INFO')}
         >
           INFO
         </p>

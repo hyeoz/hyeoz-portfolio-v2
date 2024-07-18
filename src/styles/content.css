@@ -222,7 +222,7 @@ p {
 
     @media (max-width: 768px) {
       width: 90%;
-      top: 470vh;
+      top: 480vh;
     }
   }
 }
@@ -368,5 +368,11 @@ p {
 
   @media (min-width: 769px) {
     display: none;
+  }
+
+  @media (max-width: 769px) {
+    p {
+      font-size: 14px;
+    }
   }
 }

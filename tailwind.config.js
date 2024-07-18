@@ -2,7 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        'gradient-to-transparent':
+          'linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0))',
+      }),
+    },
     screens: {
       mobile: { max: '768px' },
     },
