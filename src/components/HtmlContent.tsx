@@ -12,10 +12,33 @@ import { CustomScrollStateType } from '../types/canvas';
 import useIsMobile from '../hooks/useIsMobile';
 import useIsResized from '../hooks/useIsResized';
 import '../styles/content.css';
+import { WorksTitleType, WorksType } from '../types/works';
 
 function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
   const isResized = useIsResized();
+  const [modalType, setModalType] = useState<WorksType | undefined>();
+
+  const onClickWorks = (works: WorksType) => {
+    setModalType(works);
+  };
+
+  const renderComponent = () => {
+    switch (modalType) {
+      case 'shakerrr':
+        return <Shakerrr isModal={true} />;
+      case 'dokdo':
+        return <Dokdo isModal={true} />;
+      case 'wevent':
+        return <Wevent isModal={true} />;
+      case 'kovo':
+        return <Kovo isModal={true} />;
+      case 'matchdiary':
+        return <MatchDiary isModal={true} />;
+      default:
+        return <></>;
+    }
+  };
 
   const getChevronDeg = () => {
     if (isMobile) {
@@ -50,7 +73,14 @@ function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
 
       <MobileFloatingInfo />
       <FloatingContact />
-      <FloatingWorks />
+      <FloatingWorks onClickWorks={onClickWorks} />
+
+      <Modal
+        open={!!modalType}
+        title={WorksTitleType[modalType as WorksType]}
+        content={renderComponent()}
+        onClose={() => setModalType(undefined)}
+      />
     </>
   );
 }
@@ -152,7 +182,7 @@ function SecondSection({ scrollState }: CustomScrollStateType) {
     <section className="section-wrapper">
       <div className="flex justify-end h-full mr-12 mt-[20%] mobile:mr-4 mobile:h-[80%] mobile:mt-[25%]">
         <div
-          className={`skills-animation ${isAnimationStartRef.current ? 'start' : ''} w-1/2 text-right flex flex-col gap-[128px] mobile:gap-[64px]`}
+          className={`skills-animation ${isAnimationStartRef.current ? 'start' : ''} w-1/2 mobile:w-[60%] text-right flex flex-col gap-[128px] mobile:gap-[64px]`}
         >
           <div className="relative">
             <img
@@ -236,7 +266,7 @@ function MobileFloatingInfo() {
             <br /> 이혜원입니다!
           </h2>
         </div>
-        <div className="history">
+        <div className="mt-[80px] history !mr-4 !w-full [&_h3]:!text-[16px] [&_p]:!text-[18px]">
           <div>
             <h3>1997.02.03</h3>
             <p>출생</p>
@@ -266,30 +296,11 @@ function MobileFloatingInfo() {
   );
 }
 
-function FloatingWorks() {
-  const [modalType, setModalType] = useState('');
-
-  const onClickWorks = (works: string) => {
-    setModalType(works);
-  };
-
-  const renderComponent = () => {
-    switch (modalType) {
-      case 'shakerrr':
-        return <Shakerrr isModal={true} />;
-      case 'dokdo':
-        return <Dokdo isModal={true} />;
-      case 'wevent':
-        return <Wevent isModal={true} />;
-      case 'kovo':
-        return <Kovo isModal={true} />;
-      case 'matchdiary':
-        return <MatchDiary isModal={true} />;
-      default:
-        return <></>;
-    }
-  };
-
+function FloatingWorks({
+  onClickWorks,
+}: {
+  onClickWorks: (value: WorksType) => void;
+}) {
   return (
     <article className="floating-wrapper">
       <div className="content works">
@@ -330,13 +341,6 @@ function FloatingWorks() {
           onClick={() => onClickWorks('matchdiary')}
         />
       </div>
-
-      <Modal
-        open={!!modalType}
-        title={modalType.toLocaleUpperCase()}
-        content={renderComponent()}
-        onClose={() => setModalType('')}
-      />
     </article>
   );
 }

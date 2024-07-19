@@ -5,11 +5,11 @@ export function Header({ scrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
 
   const isSelected = () => {
-    if (scrollState <= 3 / 4) {
+    if (!isMobile ? scrollState <= 3 / 4 : scrollState <= 1) {
       return 'INFO';
-    } else if (scrollState <= 6 / 4) {
+    } else if (!isMobile ? scrollState <= 6 / 4 : scrollState <= 2) {
       return 'SKILLS';
-    } else if (scrollState <= 9 / 4) {
+    } else if (!isMobile ? scrollState <= 9 / 4 : scrollState <= 3) {
       return 'WORKS';
     } else {
       return 'CONTACT';
@@ -48,6 +48,7 @@ export function Header({ scrollState }: CustomScrollStateType) {
           borderRadius: '32px',
           margin: '0 auto',
         }}
+        className="!z-[990]"
       >
         <p
           className="transition ease-in-out delay-150"
