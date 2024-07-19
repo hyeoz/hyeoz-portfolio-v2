@@ -38,7 +38,7 @@ p {
 
 .section-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   z-index: -1;
 
@@ -80,7 +80,7 @@ p {
     }
 
     @media (max-width: 768px) {
-      height: 200vh;
+      height: calc(var(--vh, 1vh) * 200);
     }
   }
 }
@@ -88,7 +88,7 @@ p {
 .back-title {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   box-sizing: border-box;
   /* z-index: 1; */
 
@@ -132,7 +132,7 @@ p {
   /* works 컴포넌트는 floating-wrapper 의 자식 */
   &.works {
     position: absolute;
-    top: 220vh;
+    top: calc(var(--vh, 1vh) * 220);
 
     display: grid;
     grid-template-columns: repeat(5, minmax(300px, auto));
@@ -182,7 +182,7 @@ p {
     }
 
     @media (max-width: 768px) {
-      top: 200vh;
+      top: calc(var(--vh, 1vh) * 200);
       gap: 16px;
       grid-template-columns: repeat(1, minmax(300px, auto));
 
@@ -203,7 +203,7 @@ p {
   }
   /* contact 컴포넌트는 floating-wrapper 의 자식 */
   &.contact {
-    top: 350vh;
+    top: calc(var(--vh, 1vh) * 350);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 24px;
@@ -223,7 +223,7 @@ p {
 
     @media (max-width: 768px) {
       width: 90%;
-      top: 480vh;
+      top: calc(var(--vh, 1vh) * 480);
     }
   }
 }
@@ -328,7 +328,7 @@ p {
 .floating-wrapper .content.info {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   transform: translate(-50%, 10%);
 
   .information {

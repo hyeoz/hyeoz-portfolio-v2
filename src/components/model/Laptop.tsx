@@ -30,11 +30,9 @@ export default function Laptop({
 
     // 애니메이션 초기화 및 재생
     // @ts-ignore
-    // actions[names[0]].reset().setLoop(LoopRepeat, Infinity).play();
     actions[names[0]].reset().play();
     // @ts-ignore
     actions[names[1]].reset().play();
-    // actions[names[1]].reset().setLoop(LoopRepeat, Infinity).play();
   }, [actions, names]);
 
   useFrame((_, delta) => {
@@ -47,8 +45,6 @@ export default function Laptop({
       !actions[names[1]].getClip().duration
     )
       return;
-
-    // console.log('delta:', scrollState); // delta 값 로그 출력
 
     setScrollState(scroll.offset);
     const POSITION_BREAKPOINT = isMobile ? 1 : 2;

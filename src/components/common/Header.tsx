@@ -5,11 +5,11 @@ export function Header({ scrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
 
   const isSelected = () => {
-    if (!isMobile ? scrollState <= 3 / 4 : scrollState <= 1) {
+    if (scrollState <= 3 / 4) {
       return 'INFO';
-    } else if (!isMobile ? scrollState <= 6 / 4 : scrollState <= 2) {
+    } else if (scrollState <= 6 / 4) {
       return 'SKILLS';
-    } else if (!isMobile ? scrollState <= 9 / 4 : scrollState <= 3) {
+    } else if (scrollState <= 11 / 4) {
       return 'WORKS';
     } else {
       return 'CONTACT';
@@ -43,7 +43,6 @@ export function Header({ scrollState }: CustomScrollStateType) {
           fontFamily: 'IBM Plex Sans KR',
           fontWeight: 700,
           fontSize: isMobile ? '1rem' : '1.5rem',
-          backgroundColor: '#fff',
           padding: isMobile ? '4px 10px' : '8px 48px',
           borderRadius: '32px',
           margin: '0 auto',
@@ -53,7 +52,8 @@ export function Header({ scrollState }: CustomScrollStateType) {
         <p
           className="transition ease-in-out delay-150"
           style={{
-            color: isSelected() === 'INFO' ? '#f6ead5' : '#000',
+            color: isSelected() === 'INFO' ? '#000' : '#666',
+            fontWeight: isSelected() === 'INFO' ? 700 : 500,
           }}
         >
           INFO
@@ -61,7 +61,8 @@ export function Header({ scrollState }: CustomScrollStateType) {
         <p
           className="transition ease-in-out delay-150"
           style={{
-            color: isSelected() === 'SKILLS' ? '#f6d9d5' : '#000',
+            color: isSelected() === 'SKILLS' ? '#000' : '#666',
+            fontWeight: isSelected() === 'SKILLS' ? 700 : 500,
           }}
         >
           SKILLS
@@ -69,7 +70,8 @@ export function Header({ scrollState }: CustomScrollStateType) {
         <p
           className="transition ease-in-out delay-150"
           style={{
-            color: isSelected() === 'WORKS' ? '#bae1ff' : '#000',
+            color: isSelected() === 'WORKS' ? '#000' : '#666',
+            fontWeight: isSelected() === 'WORKS' ? 700 : 500,
           }}
         >
           WORKS
@@ -77,7 +79,8 @@ export function Header({ scrollState }: CustomScrollStateType) {
         <p
           className="transition ease-in-out delay-150"
           style={{
-            color: isSelected() === 'CONTACT' ? '#c9df8a' : '#000',
+            color: isSelected() === 'CONTACT' ? '#000' : '#666',
+            fontWeight: isSelected() === 'CONTACT' ? 700 : 500,
           }}
         >
           CONTACT

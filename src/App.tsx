@@ -18,6 +18,14 @@ lazy : 처음 렌더링될 때까지 컴포넌트 코드를 지연시킴
 */
 
 function App() {
+  const setVh = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
+
+  window.addEventListener('resize', setVh);
+  setVh();
+
   return (
     <BrowserRouter>
       <Routes>
@@ -40,10 +48,11 @@ function Main() {
         style={{
           background: 'linear-gradient(to bottom, #f6ead5,  #c9df8a)',
           width: '100vw',
-          height: '100vh',
+          // height: '100vh',
           zIndex: -9,
           position: 'absolute',
         }}
+        className="h-screen-vh"
       />
       <Canvas
         id="canvas"

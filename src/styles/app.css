@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --vh: 100vh;
+}
 body {
   margin: 0;
 }
 /* 로딩바 */
 .loading-wrapper {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +53,7 @@ body {
 }
 #canvas {
   width: 100vw !important;
-  height: 100vh !important;
+  height: calc(var(--vh, 1vh) * 100) !important;
   background-size: contain;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -58,7 +61,7 @@ body {
 
 /* 랜딩화면 */
 .landing-wrapper {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color: #fff5ee;
 }
 .landing-header {
@@ -269,7 +272,7 @@ div:has(.html-component-wrapper) {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   z-index: 995;
   background: rgba(0, 0, 0, 0.7);
 }
@@ -394,7 +397,7 @@ div:has(.html-component-wrapper) {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
-  height: calc(100vh - 72px);
+  height: calc(calc(var(--vh, 1vh) * 100) - 72px);
   font-family: 'IBM Plex Sans KR', sans-serif;
 
   li {
