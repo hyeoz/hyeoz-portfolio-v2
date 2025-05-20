@@ -131,17 +131,23 @@ function FirstSection() {
                 <p>도미네이트 (데이터 분석)</p>
               </div>
               <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
-                <h3>2022.04 - </h3>
+                <h3>2022.04 - 2024.07</h3>
                 <p className="!text-left">
                   메이데이 파트너스 <br />
                   (프론트엔드 개발)
                 </p>
               </div>
               <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
-                <h3>2023.12 -</h3>
+                <h3>2023.12 - 2024.09</h3>
                 <p className="!text-left">
                   프로그래머스 <br /> KDT 클라우딩 어플리케이션
                   <br /> 엔지니어링 과정 멘토
+                </p>
+              </div>
+              <div className="flex justify-center gap-2 [&_p]:!text-[20px] max-w-[1155px]:!text-[12px]">
+                <h3>2024.09 - </h3>
+                <p className="!text-left">
+                  핏투게더 <br /> 소프트웨어팀 <br /> (프론트엔드 개발)
                 </p>
               </div>
               <div
