@@ -13,6 +13,7 @@ import useIsMobile from '../hooks/useIsMobile';
 import useIsResized from '../hooks/useIsResized';
 import '../styles/content.css';
 import { WorksTitleType, WorksType } from '../types/works';
+import { Ohcoach } from './works/Ohcoach';
 
 function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
   const isMobile = useIsMobile();
@@ -35,6 +36,8 @@ function HtmlContent({ scrollState, setScrollState }: CustomScrollStateType) {
         return <Kovo isModal={true} />;
       case 'matchdiary':
         return <MatchDiary isModal={true} />;
+      case 'ohcoach':
+        return <Ohcoach isModal={true} />;
       default:
         return <></>;
     }
@@ -92,14 +95,14 @@ function FirstSection() {
         <div className="content info">
           <div>
             <h2 className="!text-[32px]">
-              안녕하세요, {/* <br /> */} 3년차 프론트엔드 개발자 이혜원입니다!
+              안녕하세요, {/* <br /> */} 4년차 프론트엔드 개발자 이혜원입니다!
             </h2>
             <br />
             <p className="!text-[20px]">
               데이터 분석을 시작으로 프론트엔드 개발을 접하게 되었고, 현재는
               리액트와 리액트 네이티브를 주로 사용하는 웹/앱 개발자가
               되었습니다.
-              <br /> 동시에 프론트엔드 교육 과정의 멘토로 2기째 활동중이고, 직접
+              <br /> 동시에 프론트엔드 교육 과정의 멘토로 2기째 활동하였고, 직접
               개발한 직관일기 라는 서비스를 운영하는 운영자 이기도 합니다.
             </p>
           </div>
@@ -268,7 +271,7 @@ function MobileFloatingInfo() {
           <h2>
             안녕하세요,
             <br />
-            3년차 프론트엔드 개발자
+            4년차 프론트엔드 개발자
             <br /> 이혜원입니다!
           </h2>
         </div>
@@ -343,8 +346,15 @@ function FloatingWorks({
           image={"/works/5.5' (1).png"}
           title="직관일기"
           desc="쉽게 나의 직관 일기를 기록할 수 있는 직관일기 서비스를 기획 / 디자인 / 개발 하여 운영하고 있습니다."
-          stack={['React Native', 'Zustand', 'Python', 'Strapi', 'Heroku']}
+          stack={['React Native', 'Zustand', 'Python', 'AWS', 'Node.js']}
           onClick={() => onClickWorks('matchdiary')}
+        />
+        <WorksCard
+          image={'/works/ohcoach_5.png'}
+          title="오코치"
+          desc="GPS 기반 웨어러블 EPTS인 OHCOACH 의 웹서비스 프론트엔드를 Vue2 에서 React로 마이그레이션 하는 프로젝트를 맡았습니다."
+          stack={['React', 'TypeScript', 'Next.js', 'React Query', 'D3']}
+          onClick={() => onClickWorks('ohcoach')}
         />
       </div>
     </article>

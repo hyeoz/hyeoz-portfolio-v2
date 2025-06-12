@@ -11,7 +11,7 @@ import { Dokdo } from './components/works/Dokdo';
 import { Wevent } from './components/works/Wevent';
 import { Kovo } from './components/works/Kovo';
 import { MatchDiary } from './components/works/MatchDiary';
-
+import { Ohcoach } from './components/works/Ohcoach';
 /* NOTE 
 Suspense : 렌더링 하려는 자식 컴포넌트가 일시정지되면 fallback 화면을 띄워줌
 lazy : 처음 렌더링될 때까지 컴포넌트 코드를 지연시킴
@@ -36,6 +36,7 @@ function App() {
         <Route path="wevent" element={<Wevent isModal={false} />} />
         <Route path="kovo" element={<Kovo isModal={false} />} />
         <Route path="match-diary" element={<MatchDiary isModal={false} />} />
+        <Route path="ohcoach" element={<Ohcoach isModal={false} />} />
       </Routes>
     </BrowserRouter>
   );

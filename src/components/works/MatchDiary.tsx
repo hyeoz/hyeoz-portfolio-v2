@@ -30,14 +30,24 @@ export function MatchDiary({ isModal }: { isModal: boolean }) {
           <ul className="[&_li]:list-disc">
             <li>
               쉽게 나의 직관 일기를 기록할 수 있는 <strong>직관일기</strong>{' '}
-              서비스를 기획 / 디자인 / 개발 하여 앱스토어에 배포했습니다.(
+              서비스를 기획 / 디자인 / 개발 하여 앱스토어와 플레이스토어에
+              배포했습니다.(
               <a
                 href="https://apps.apple.com/kr/app/%EC%A7%81%EA%B4%80%EC%9D%BC%EA%B8%B0/id6503297796?l=en-GB"
                 target="_blank"
                 rel="noreferrer"
                 // className="disabled-link"
               >
-                LINK
+                APPSTORE
+              </a>
+              ,
+              <a
+                href="https://play.google.com/store/apps/details?id=com.matchdiary.origin"
+                target="_blank"
+                rel="noreferrer"
+                // className="disabled-link"
+              >
+                PLAYSTORE
               </a>
               )
             </li>
@@ -46,27 +56,33 @@ export function MatchDiary({ isModal }: { isModal: boolean }) {
               진행하였습니다.
             </li>
             <li>
-              기록한 사진과 텍스트에 대해서는 스토리지를 이용하여 기기 자체에
-              저장하도록 구현하여 로그인 및 인증 로직이 필요없도록
-              개발하였습니다.
+              Node.js 와 express 를 이용하여 서버를 구성하고, API 를
+              개발하였습니다. AWS EC2 로 백엔드 서버를 배포하고, pm2 를 통해 EC2
+              인스턴스를 재시작할 때 서버도 자동적으로 재시작 할 수 있도록
+              구성하였습니다.
+            </li>
+            <li>
+              기록을 서버에 저장할 수 있도록 하였고, 갤러리 사진을 뿐만 아니라
+              직접 카메라를 통해 사진을 찍어 기록할 수 있도록 구현하였습니다.
             </li>
             <li>
               랜덤으로 닉네임을 부여하는 로직을 작성하고, 경기장 별 커뮤니티
               기능을 개발하였습니다.
             </li>
             <li>
-              React Native Background Geolocation 기능과 Naver map api 를
-              사용하여 경기장 접근시 노티피케이션이 울리도록 구현하였습니다.
+              웹뷰와 네이버 지도 API 를 이용하여 기록을 남긴 경기장을 지도에서
+              확인할 수 있는 기능을 개발하였습니다.
             </li>
             <li>
               Python requests 와 beautifulsoup 모듈을 사용하여 경기 일정 정적
-              크롤링하고, Strapi 를 통해 구축한 백엔드 서버에 데이터를
-              저장하였습니다.
+              크롤링하고, EC2 컴퓨터에서 crontab 으로 파이썬 크롤링 자동화가
+              가능하도록 구현하였습니다. 그 결과를 슬랙으로 받을 수 있도록 웹
+              훅을 연결하였습니다.
             </li>
             <li>
-              크롤링은 heroku 스케쥴러를 설정하여 매일 밤 12시에 작동하도록
-              하고, 크롤링이 정상적으로 작동했는지는 Slack webhook을 이용하여
-              메세지로 확인할 수 있습니다.
+              서버 오류 원인을 찾기위해 Sentry 연결 및 오류 내용을 슬랙 웹 훅을
+              통해 알 수 있도록 연결하였습니디. 크롤링 결과 또한 슬랙으로 알 수
+              있도록 연결하였습니다.
             </li>
             <li>레포지토리 확인</li>
             <ul>
@@ -94,10 +110,11 @@ export function MatchDiary({ isModal }: { isModal: boolean }) {
             <div className="stack-tag">REACT Native</div>
             <div className="stack-tag">zustand</div>
             <div className="stack-tag">python</div>
-            <div className="stack-tag">strapi</div>
-            <div className="stack-tag">heroku</div>
+            <div className="stack-tag">AWS</div>
+            <div className="stack-tag">pm2</div>
             <div className="stack-tag">naver map api</div>
             <div className="stack-tag">slack webhook</div>
+            <div className="stack-tag">sentry</div>
           </div>
         </div>
       </div>
